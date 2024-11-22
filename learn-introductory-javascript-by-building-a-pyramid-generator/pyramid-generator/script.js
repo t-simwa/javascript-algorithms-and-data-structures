@@ -1,7 +1,7 @@
 // PYRAMID GENERATOR
 
 const character = "#"; // Declares a constant 'character' to represent the symbol used in the pattern.
-const count = 8; // Declares a constant 'count' to define the total number of rows for the pattern.
+const count = 10; // Declares a constant 'count' to define the total number of rows for the pattern.
 const rows = []; // Initializes an empty array 'rows' to store each row of the pattern.
 let inverted = false; // Initializes a flag 'inverted' to determine the direction of row arrangement (false = normal, true = reversed).
 
@@ -33,10 +33,10 @@ for (let i = 1; i <= count; i++) {
 }*/
 // This commented-out loop builds the pattern in reverse order, starting from 'count' and decreasing to 1.
 
-let result = ""; // Initializes an empty string 'result' to store the final pattern.
+let result = "Ted's Pyramid Generator:" + '\n' + '\n'; // Initializes an empty string 'result' to store the final pattern.
 
 for (const row of rows) { // Iterates over each row in the 'rows' array.
-    result = result + row + "\n"; // Adds the current row to 'result' with a newline character for formatting.
+    result = result + row + '\n'; // Adds the current row to 'result' with a newline character for formatting.
 }
 
 console.log(result); // Outputs the complete pattern to the console.
