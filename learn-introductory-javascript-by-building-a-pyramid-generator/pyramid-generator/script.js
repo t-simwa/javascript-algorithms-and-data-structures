@@ -1,3 +1,5 @@
+// PYRAMID GENERATOR
+
 const character = "#"; // Declares a constant 'character' to represent the symbol used in the pattern.
 const count = 8; // Declares a constant 'count' to define the total number of rows for the pattern.
 const rows = []; // Initializes an empty array 'rows' to store each row of the pattern.
