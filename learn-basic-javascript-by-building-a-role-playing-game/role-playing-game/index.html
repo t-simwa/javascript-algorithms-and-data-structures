@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"> <!-- Specifies the character encoding for the document as UTF-8 -->
+    <link rel="stylesheet" href="./styles.css"> <!-- Links the external CSS file for styling -->
+    <title>RPG - Dragon Repeller</title> <!-- Sets the title of the webpage -->
+</head>
+
+<body>
+    <div id="game"> <!-- Main container for the game elements -->
+        <div id="stats"> <!-- Section displaying player's current stats -->
+            <span class="stat">XP: <strong><span id="xpText">0</span></strong></span>
+            <!-- Player's experience points -->
+            <span class="stat">Health: <strong><span id="healthText">100</span></strong></span> <!-- Player's health -->
+            <span class="stat">Gold: <strong><span id="goldText">50</span></strong></span> <!-- Player's gold -->
+        </div>
+        <div id="controls"> <!-- Section containing interactive buttons for game actions -->
+            <button id="button1">Go to store</button> <!-- Button to navigate to the store -->
+            <button id="button2">Go to cave</button> <!-- Button to navigate to the cave -->
+            <button id="button3">Fight dragon</button> <!-- Button to initiate a fight with the dragon -->
+        </div>
+        <div id="monsterStats"> <!-- Section displaying monster's stats -->
+            <span class="stat">Monster Name: <strong><span id="monsterName"></span></strong></span>
+            <!-- Monster's name -->
+            <span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span>
+            <!-- Monster's health -->
+        </div>
+        <div id="text"> <!-- Section for narrative text and instructions -->
+            Welcome to Dragon Repeller. You must defeat the dragon that is preventing people from leaving the town.
+            You are in the town square. Where do you want to go? Use the buttons above.
+        </div>
+    </div>
+    <script src="./script.js"></script> <!-- Links the external JavaScript file for game logic -->
+</body>
+
+</html>
