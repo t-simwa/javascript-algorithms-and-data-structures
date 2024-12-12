@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Specifies the document type and language of the page as English -->
+
+<head>
+    <meta charset="utf-8" />
+    <!-- Sets the character encoding to UTF-8 for proper text rendering -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures the page is responsive by setting the viewport for mobile devices -->
+
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Links the external CSS file for styling -->
+
+    <title>Calorie Counter</title>
+    <!-- Sets the title of the webpage, displayed in the browser tab -->
+</head>
+
+<body>
+    <main>
+        <!-- The main content of the page -->
+        <h1>Calorie Counter</h1>
+        <!-- Page heading -->
+
+        <div class="container">
+            <!-- Container for the form and other related content -->
+
+            <form id="calorie-counter">
+                <!-- Form for user input related to calorie tracking -->
+
+                <label for="budget">Budget</label>
+                <input type="number" min="0" id="budget" placeholder="Daily calorie budget" required />
+                <!-- Input field for the daily calorie budget, requires a positive number -->
+
+                <fieldset id="breakfast">
+                    <legend>Breakfast</legend>
+                    <!-- Section for logging breakfast items -->
+                    <div class="input-container"></div>
+                    <!-- Placeholder for dynamically added input fields -->
+                </fieldset>
+
+                <fieldset id="lunch">
+                    <legend>Lunch</legend>
+                    <!-- Section for logging lunch items -->
+                    <div class="input-container"></div>
+                </fieldset>
+
+                <fieldset id="dinner">
+                    <legend>Dinner</legend>
+                    <!-- Section for logging dinner items -->
+                    <div class="input-container"></div>
+                </fieldset>
+
+                <fieldset id="snacks">
+                    <legend>Snacks</legend>
+                    <!-- Section for logging snack items -->
+                    <div class="input-container"></div>
+                </fieldset>
+
+                <fieldset id="exercise">
+                    <legend>Exercise</legend>
+                    <!-- Section for logging exercise activities -->
+                    <div class="input-container"></div>
+                </fieldset>
+
+                <div class="controls">
+                    <!-- Container for controls related to adding entries -->
+                    <span>
+                        <label for="entry-dropdown">Add food or exercise:</label>
+                        <select id="entry-dropdown" name="options">
+                            <!-- Dropdown menu for selecting a category -->
+                            <option value="breakfast" selected>Breakfast</option>
+                            <option value="lunch">Lunch</option>
+                            <option value="dinner">Dinner</option>
+                            <option value="snacks">Snacks</option>
+                            <option value="exercise">Exercise</option>
+                        </select>
+                        <button type="button" id="add-entry">Add Entry</button>
+                        <!-- Button to trigger adding a new entry dynamically -->
+                    </span>
+                </div>
+
+                <div>
+                    <!-- Section for form submission and reset controls -->
+                    <button type="submit">
+                        Calculate Remaining Calories
+                    </button>
+                    <!-- Button to calculate the remaining calories -->
+                    <button type="button" id="clear">Clear</button>
+                    <!-- Button to clear all input fields -->
+                </div>
+            </form>
+
+            <div id="output" class="output hide"></div>
+            <!-- Placeholder for displaying calculated results or messages, initially hidden -->
+        </div>
+    </main>
+
+    <script src="./script.js"></script>
+    <!-- Links the external JavaScript file for handling form behavior and interactions -->
+</body>
+
+</html>

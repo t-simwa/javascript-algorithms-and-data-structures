@@ -1,0 +1,121 @@
+:root {
+    --light-grey: #f5f6f7;
+    /* Light grey color for general background and text */
+    --dark-blue: #0a0a23;
+    /* Dark blue color for text and accents */
+    --fcc-blue: #1b1b32;
+    /* Custom blue color for the background */
+    --light-yellow: #fecc4c;
+    /* Light yellow color for button backgrounds */
+    --dark-yellow: #feac32;
+    /* Dark yellow color for button borders */
+    --light-pink: #ffadad;
+    /* Light pink color for surplus text */
+    --dark-red: #850000;
+    /* Dark red color (not currently used) */
+    --light-green: #acd157;
+    /* Light green color for deficit text */
+}
+
+body {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    /* Sets the font stack for the body */
+    font-size: 18px;
+    /* Base font size for body text */
+    background-color: var(--fcc-blue);
+    /* Sets the background color to the custom blue */
+    color: var(--light-grey);
+    /* Sets the text color to light grey for contrast */
+}
+
+h1 {
+    text-align: center;
+    /* Centers the heading text */
+}
+
+.container {
+    width: 90%;
+    /* Makes the container take 90% of the viewport width */
+    max-width: 680px;
+    /* Limits the container width to a maximum of 680px */
+}
+
+h1,
+.container,
+.output {
+    margin: 20px auto;
+    /* Adds vertical spacing and centers elements horizontally */
+}
+
+label,
+legend {
+    font-weight: bold;
+    /* Makes labels and legends bold for emphasis */
+}
+
+.input-container {
+    display: flex;
+    /* Enables flexbox layout for input elements */
+    flex-direction: column;
+    /* Stacks input elements vertically */
+}
+
+button {
+    cursor: pointer;
+    /* Changes the cursor to a pointer when hovering over buttons */
+    text-decoration: none;
+    /* Removes any underline from button text */
+    background-color: var(--light-yellow);
+    /* Sets the button background color to light yellow */
+    border: 2px solid var(--dark-yellow);
+    /* Adds a border with the dark yellow color */
+}
+
+button,
+input,
+select {
+    min-height: 24px;
+    /* Ensures a consistent minimum height for buttons, inputs, and dropdowns */
+    color: var(--dark-blue);
+    /* Sets the text color to dark blue for good readability */
+}
+
+fieldset,
+label,
+button,
+input,
+select {
+    margin-bottom: 10px;
+    /* Adds spacing below form elements for better layout */
+}
+
+.output {
+    border: 2px solid var(--light-grey);
+    /* Adds a border with the light grey color */
+    padding: 10px;
+    /* Adds padding inside the output box */
+    text-align: center;
+    /* Centers the text inside the output box */
+}
+
+.hide {
+    display: none;
+    /* Hides elements with this class */
+}
+
+.output span {
+    font-weight: bold;
+    /* Makes the text inside the output span bold */
+    font-size: 1.2em;
+    /* Increases the font size of the output span for emphasis */
+}
+
+.surplus {
+    color: var(--light-pink);
+    /* Sets the text color for surplus values to light pink */
+}
+
+.deficit {
+    color: var(--light-green);
+    /* Sets the text color for deficit values to light green */
+}
