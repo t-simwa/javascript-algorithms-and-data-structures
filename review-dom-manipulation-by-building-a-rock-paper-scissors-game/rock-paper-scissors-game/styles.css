@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    /* Removes default margin from all elements, pseudo-elements included */
+    padding: 0;
+    /* Removes default padding from all elements, pseudo-elements included */
+    box-sizing: border-box;
+    /* Ensures padding and border are included in an element's total width and height */
+}
+
+:root {
+    --very-dark-blue: #0a0a23;
+    /* Defines a custom CSS variable for a dark blue color */
+    --white: #ffffff;
+    /* Defines a custom CSS variable for white color */
+    --yellow: #f1be32;
+    /* Defines a custom CSS variable for yellow color */
+    --golden-yellow: #feac32;
+    /* Defines a custom CSS variable for golden yellow color */
+}
+
+body {
+    background-color: var(--very-dark-blue);
+    /* Sets the background color of the body to dark blue */
+    text-align: center;
+    /* Centers text horizontally */
+    color: var(--white);
+    /* Sets the text color to white */
+}
+
+h1 {
+    margin: 15px 0 20px;
+    /* Adds vertical spacing: 15px at the top, 20px at the bottom, and none on the sides */
+}
+
+.btn {
+    cursor: pointer;
+    /* Changes the cursor to a pointer when hovering over the button */
+    width: 100px;
+    /* Sets the width of the button to 100 pixels */
+    margin: 10px;
+    /* Adds 10px of spacing around the button */
+    color: var(--very-dark-blue);
+    /* Sets the text color to dark blue */
+    background-color: var(--golden-yellow);
+    /* Sets the background color to golden yellow */
+    background-image: linear-gradient(#fecc4c, #ffac33);
+    /* Applies a gradient background from a lighter to darker yellow */
+    border-color: var(--golden-yellow);
+    /* Sets the border color to golden yellow */
+    border-width: 3px;
+    /* Sets the border width to 3 pixels */
+}
+
+.btn:hover {
+    background-image: linear-gradient(#ffcc4c, #f89808);
+    /* Changes the gradient to a different yellow shade when hovered */
+}
+
+.rules-container {
+    padding: 10px 0;
+    /* Adds vertical padding of 10px, no horizontal padding */
+    margin: auto;
+    /* Centers the container horizontally */
+    border-radius: 15px;
+    /* Rounds the corners with a radius of 15px */
+    border: 5px solid var(--yellow);
+    /* Sets a 5px solid border using the yellow color */
+    background-color: var(--white);
+    /* Sets the background color to white */
+    color: var(--very-dark-blue);
+    /* Sets the text color to dark blue */
+}
+
+.rules-container ul {
+    list-style-type: none;
+    /* Removes the default bullet points from the unordered list */
+}
+
+.rules-container p {
+    margin: 10px 0;
+    /* Adds vertical spacing: 10px above and below, none on the sides */
+}
+
+@media (min-width: 760px) {
+
+    /* Styles applied when the screen width is at least 760px */
+    .rules-container {
+        width: 60%;
+        /* Sets the width of the container to 60% of the viewport width */
+    }
+}
+
+.score-container {
+    display: flex;
+    /* Aligns children in a flexible row layout */
+    justify-content: space-around;
+    /* Distributes children evenly with space between them */
+    margin: 30px 0;
+    /* Adds vertical spacing: 30px above and below */
+    font-size: 1.2rem;
+    /* Sets the font size to 1.2 times the root font size */
+}
+
+.score {
+    font-weight: 500;
+    /* Sets the font weight to medium */
+}
+
+.results-container {
+    font-size: 1.3rem;
+    /* Sets the font size to 1.3 times the root font size */
+    margin: 15px 0;
+    /* Adds vertical spacing: 15px above and below */
+}
+
+#winner-msg {
+    margin-top: 25px;
+    /* Adds 25px spacing above the winner message */
+}
+
+#reset-game-btn {
+    display: none;
+    /* Hides the reset game button by default */
+    margin: 20px auto;
+    /* Adds 20px vertical margin and centers the button horizontally */
+}
