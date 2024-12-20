@@ -1,0 +1,578 @@
+:root {
+    /* Custom properties (CSS variables) for consistent design */
+    --primary-color: #dfdfe2;
+    /* Light shade used for primary text */
+    --secondary-color: #ffffff;
+    /* White for secondary text or backgrounds */
+    --app-background-color: #4d4d62;
+    /* Dark background for the app */
+    --background-color: #1b1b32;
+    /* Deep background for specific sections */
+    --foreground-color: #3b3b4f;
+    /* Foreground elements like bars or panels */
+    --highlight-color: #f1be32;
+    /* Bright yellow for accents and highlights */
+
+    /* Define base font size and scale typography consistently */
+    --root-font-size: 16px;
+    /* Base font size for rem calculations */
+    font-size: var(--root-font-size);
+    /* Apply the base size to the document */
+
+    /* Font families for specific elements */
+    --font-headline: "Roboto Mono", monospace;
+    /* Font for titles or headlines */
+    --font-family: "Lato", sans-serif;
+    /* Default font for general text */
+}
+
+*,
+*::after,
+*::before {
+    /* Set box-sizing to include padding and borders in element size */
+    box-sizing: border-box;
+}
+
+body {
+    /* Apply global styling for the document body */
+    background-color: var(--app-background-color);
+    /* App's primary background */
+    color: var(--primary-color);
+    /* Default text color */
+    font-family: var(--font-family);
+    /* Use defined sans-serif font */
+}
+
+h1 {
+    /* Main heading styles */
+    font-size: 1.125rem;
+    /* Slightly larger than the root size */
+    line-height: 1.6;
+    /* Enhance readability with line spacing */
+}
+
+h2 {
+    /* Secondary heading styles */
+    font-size: var(--root-font-size);
+    /* Matches root font size */
+}
+
+ul {
+    /* Remove default margin for unordered lists */
+    margin: 0;
+}
+
+.container {
+    /* Flex container for aligning content centrally */
+    margin-top: 10px;
+    /* Space above the container */
+    display: flex;
+    /* Flexbox for layout */
+    flex-direction: column;
+    /* Stack children vertically */
+    justify-content: center;
+    /* Center content vertically */
+    align-items: center;
+    /* Center content horizontally */
+    row-gap: 5px;
+    /* Spacing between rows */
+}
+
+.player,
+.playlist {
+    /* Common styles for player and playlist components */
+    width: 450px;
+    /* Fixed width */
+    background-color: var(--background-color);
+    /* Panel background color */
+    border: 3px solid var(--foreground-color);
+    /* Highlighted border */
+}
+
+.player {
+    /* Specific layout and appearance for the player section */
+    height: 260px;
+    /* Fixed height for the player */
+    padding: 10px;
+    /* Inner padding around content */
+    display: flex;
+    /* Use flexbox for layout */
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center content horizontally */
+    row-gap: 10px;
+    /* Vertical spacing between child elements */
+}
+
+.player-bar,
+.playlist-bar {
+    /* Shared layout for control bars in player/playlist */
+    display: flex;
+    /* Flex layout */
+    justify-content: space-between;
+    /* Space between elements */
+    align-items: center;
+    /* Align content vertically */
+    padding: 0 5px;
+    /* Horizontal padding */
+    width: 100%;
+    /* Full width */
+    height: 30px;
+    /* Fixed height for the bars */
+    background-color: var(--foreground-color);
+    /* Background for bars */
+}
+
+.parallel-lines {
+    /* Layout for decorative lines */
+    display: flex;
+    /* Use flexbox */
+    flex-wrap: wrap;
+    /* Allow wrapping to the next row */
+    row-gap: 6px;
+    /* Vertical spacing between rows */
+    padding: 0 5px;
+    /* Horizontal padding inside the container */
+}
+
+.parallel-lines>div {
+    /* Styles for each decorative line */
+    height: 2px;
+    /* Thin line height */
+    width: 100%;
+    /* Full width of the container */
+    min-width: 75px;
+    /* Ensure a minimum width */
+    background-color: var(--highlight-color);
+    /* Highlight color for lines */
+}
+
+.fcc-title,
+.playlist-title {
+    /* Titles within the player or playlist sections */
+    color: var(--secondary-color);
+    /* Text color for visibility */
+    margin: 0 10px;
+    /* Horizontal spacing */
+    font-family: var(--font-headline);
+    /* Monospace font for a distinct look */
+}
+
+.player-content {
+    /* Inner layout for player-specific content */
+    display: flex;
+    /* Flex layout for alignment */
+    background-color: var(--foreground-color);
+    /* Background for the section */
+    width: 430px;
+    /* Slightly narrower than the player */
+    height: 200px;
+    /* Fixed height */
+    column-gap: 13px;
+    /* Horizontal spacing between elements */
+    align-items: center;
+    /* Center items vertically */
+    justify-content: center;
+    /* Center items horizontally */
+}
+
+#player-album-art {
+    /* Styling for album art container */
+    background-color: var(--secondary-color);
+    /* Background for the album art */
+    border: 6px solid var(--background-color);
+    /* Border around album art */
+}
+
+#player-album-art img {
+    /* Specific styling for the album art image */
+    width: 150px;
+    /* Fixed width for the image */
+    display: block;
+    /* Block display to prevent inline spacing */
+}
+
+.player-display {
+    /* Layout for the player display section */
+    display: flex;
+    /* Flexbox for layout */
+    flex-direction: column;
+    /* Stack elements vertically */
+    row-gap: 20px;
+    /* Vertical spacing between children */
+    padding: 14px;
+    /* Padding inside the display */
+    background-color: var(--background-color);
+    /* Section background */
+    height: 153px;
+    /* Fixed height */
+    width: 226px;
+    /* Fixed width */
+}
+
+.player-display-song-artist {
+    /* Section for song and artist details */
+    height: 80px;
+    /* Fixed height for consistent layout */
+}
+
+.player-buttons svg {
+    /* Styling for SVG icons in player buttons */
+    fill: var(--primary-color);
+    /* Default color for icons */
+}
+
+.playing>svg {
+    /* Active state for playing icon */
+    fill: var(--highlight-color);
+    /* Highlight color to indicate activity */
+}
+
+.player-buttons {
+    /* Layout for control buttons in the player */
+    display: flex;
+    /* Flexbox for layout */
+    justify-content: space-around;
+    /* Even spacing between buttons */
+}
+
+button {
+    /* Global button styling */
+    background: transparent;
+    /* Transparent background for buttons */
+    border: none;
+    /* Remove default button border */
+    color: var(--primary-color);
+    /* Button text color */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font-size: var(--root-font-size);
+    /* Base font size for text */
+    outline-color: var(--highlight-color);
+    /* Highlight outline on focus */
+    text-align: center;
+    /* Center-align text */
+}
+
+.playlist-song {
+    /* Outline styling for playlist songs */
+    outline-color: var(--highlight-color);
+    /* Highlight color for outlines */
+}
+
+.playlist li:not(:last-child) {
+    /* Border styling for playlist items */
+    border-bottom: 1px solid var(--background-color);
+    /* Separator between items */
+}
+
+button:focus,
+.playlist-song:focus {
+    /* Focus styling for buttons and playlist songs */
+    outline-style: dashed;
+    /* Dashed outline for focused elements */
+    outline-width: 2px;
+    /* Thickness of the outline */
+}
+
+.playlist {
+    /* Layout for the playlist section */
+    height: auto;
+    /* Flexible height */
+    padding: 10px;
+    /* Inner spacing */
+    display: flex;
+    /* Flex layout */
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center items horizontally */
+    row-gap: 10px;
+    /* Spacing between rows */
+}
+
+#playlist-songs {
+    /* Container for playlist songs */
+    width: 430px;
+    /* Fixed width */
+    height: 100%;
+    /* Flexible height */
+    background-color: var(--foreground-color);
+    /* Background color */
+    display: flex;
+    /* Flexbox layout */
+    flex-direction: column;
+    /* Stack songs vertically */
+    row-gap: 8px;
+    /* Spacing between songs */
+    padding: 8px 9px;
+    /* Padding inside the container */
+    visibility: visible;
+    /* Ensure visibility */
+    justify-content: start;
+    /* Align content at the top */
+    list-style: none;
+    /* Remove default list styling */
+}
+
+.playlist-song {
+    /* Individual playlist song styling */
+    display: flex;
+    /* Flex layout for alignment */
+    height: 55px;
+    /* Fixed height for consistent appearance */
+    justify-content: space-between;
+    /* Space between elements */
+    align-items: center;
+    /* Center items vertically */
+    padding: 5px;
+    /* Inner spacing */
+}
+
+[aria-current="true"] {
+    /* Active state for the currently playing song */
+    background-color: var(--background-color);
+    /* Background for the active item */
+}
+
+[aria-current="true"] p {
+    /* Styling for text in the currently playing song */
+    color: var(--highlight-color);
+    /* Highlight color for active text */
+}
+
+.playlist-song-info {
+    /* Layout for song information in the playlist */
+    height: 100%;
+    /* Full height */
+    display: flex;
+    /* Flexbox layout */
+    flex-direction: row;
+    /* Align elements in a row */
+    align-items: center;
+    /* Center items vertically */
+    justify-content: space-around;
+    /* Space around elements */
+    column-gap: 7px;
+    /* Spacing between elements */
+    padding: 5px 0;
+    /* Vertical padding */
+    font-family: var(--font-family);
+    /* Default font */
+}
+
+#player-song-title,
+#player-song-artist {
+    /* Remove default margin for song title and artist */
+    margin: 0;
+}
+
+#player-song-artist {
+    /* Specific styling for the artist name */
+    color: var(--highlight-color);
+    /* Highlighted text color */
+    font-size: 0.75rem;
+    /* Smaller font size */
+}
+
+#player-song-title {
+    /* Styling for the song title */
+    font-size: 1.125rem;
+    /* Slightly larger font size */
+}
+
+.playlist-song-title {
+    /* Styling for song titles in the playlist */
+    font-size: 0.85rem;
+    /* Smaller font size */
+    width: 241px;
+    /* Fixed width for consistent alignment */
+    text-align: left;
+    /* Align text to the left */
+}
+
+.playlist-song-artist {
+    /* Styling for artist names in the playlist */
+    font-size: 0.725rem;
+    /* Smaller font size */
+    width: 80px;
+    /* Fixed width */
+}
+
+.playlist-song-duration {
+    /* Styling for song duration */
+    font-size: 0.725rem;
+    /* Smaller font size */
+    margin: auto;
+    /* Center align */
+    font-family: var(--font-headline);
+    /* Monospace font */
+    width: 30px;
+    /* Fixed width */
+}
+
+.playlist-song-delete {
+    /* Styling for delete button */
+    padding: 0;
+    /* Remove default padding */
+    width: 20px;
+    /* Small size for the button */
+    height: 20px;
+    /* Matching height */
+}
+
+.playlist-song-delete,
+.playlist-song-delete {
+    /* Styling for delete icons */
+    fill: var(--foreground-color);
+    /* Default icon color */
+}
+
+.playlist-song-delete:hover circle,
+.playlist-song-delete:focus circle {
+    /* Hover and focus state for delete icon */
+    fill: #ff0000;
+    /* Red color to indicate delete action */
+}
+
+@media (max-width: 700px) {
+
+    /* Responsive styling for small screens */
+    .player,
+    .playlist {
+        width: 300px;
+        /* Reduce width for smaller devices */
+    }
+
+    .player {
+        height: 340px;
+        /* Increase height for the player */
+    }
+
+    #playlist-songs {
+        height: 280px;
+        /* Adjust height for smaller screens */
+        padding: 5px 6px;
+        /* Reduce padding */
+        overflow-y: scroll;
+        /* Enable vertical scrolling */
+        overflow-x: hidden;
+        /* Prevent horizontal scrolling */
+        scrollbar-color: var(--background-color) var(--secondary-color);
+        /* Custom scrollbar colors */
+        scrollbar-width: thin;
+        /* Thin scrollbar */
+    }
+
+    #playlist-songs::-webkit-scrollbar {
+        width: 5px;
+        /* Narrow scrollbar width */
+    }
+
+    #playlist-songs::-webkit-scrollbar-track {
+        background: var(--background-color);
+        /* Track color */
+    }
+
+    #playlist-songs::-webkit-scrollbar-thumb {
+        background: var(--secondary-color);
+        /* Thumb color */
+    }
+
+    h1 {
+        font-size: 0.813rem;
+        /* Smaller font size for headings */
+    }
+
+    h2 {
+        font-size: 0.75rem;
+        /* Smaller font size for subheadings */
+    }
+
+    .player-bar,
+    .playlist-bar,
+    .player-content,
+    #playlist-songs {
+        width: 280px;
+        /* Adjust width for responsiveness */
+    }
+
+    .playlist-song {
+        justify-content: space-between;
+        /* Adjust spacing for songs */
+    }
+
+    .playlist-song-title {
+        width: 140px;
+        /* Reduce width for song titles */
+    }
+
+    .playlist-song-artist {
+        width: 40px;
+        /* Reduce width for artist names */
+    }
+
+    .playlist-song-duration>button {
+        padding: 0;
+        /* Remove padding for duration buttons */
+    }
+
+    .player-content {
+        display: inline;
+        /* Inline layout for content */
+        position: relative;
+        /* Relative positioning */
+        justify-items: center;
+        /* Center items */
+        height: 100%;
+        /* Flexible height */
+    }
+
+    #player-album-art {
+        z-index: -100;
+        /* Push behind other elements */
+        height: 280px;
+        /* Adjust height */
+        box-shadow: none;
+        /* Remove shadow */
+        background: #000;
+        /* Black background */
+    }
+
+    #player-album-art img {
+        width: 100%;
+        /* Full width */
+        opacity: 0.6;
+        /* Slight transparency */
+    }
+
+    .player-display-song-artist {
+        padding: 0 10px;
+        /* Adjust padding for song artist display */
+    }
+
+    .player-display-song-artist>p {
+        white-space: pre-wrap;
+        /* Allow text wrapping */
+    }
+
+    .player-display {
+        position: absolute;
+        /* Absolute positioning */
+        width: 100%;
+        /* Full width */
+        z-index: 1000;
+        /* Bring to front */
+        background-color: transparent;
+        /* Transparent background */
+        top: 0;
+        /* Position at the top */
+        height: 280px;
+        /* Adjust height */
+        justify-content: space-between;
+        /* Space between items */
+        text-align: center;
+        /* Center text */
+    }
+}
