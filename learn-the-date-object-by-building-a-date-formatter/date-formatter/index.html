@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Declares the document type as HTML5 and sets the language to English -->
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- Specifies the character encoding for the document -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Ensures compatibility with Internet Explorer and uses the latest rendering mode -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Configures the viewport for responsive design, scaling the layout to the device's width -->
+
+    <title>Learn the Date Object by Building a Date Formatter</title>
+    <!-- Sets the title of the web page -->
+
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- Links to an external CSS file for styling -->
+</head>
+
+<body>
+    <main>
+        <!-- Main content container of the page -->
+
+        <div class="title-container">
+            <!-- Container for the page's title and its accompanying SVG graphic -->
+
+            <h1 class="title">Today's Date</h1>
+            <!-- Displays the primary title of the page -->
+
+            <svg class="date-svg" xmlns="http://www.w3.org/2000/svg" version="1.0" width="512.000000pt"
+                height="512.000000pt" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+                <!-- SVG graphic for decorative purposes, illustrating a calendar icon -->
+
+                <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#fff" stroke="none">
+                    <!-- SVG group element that defines the scale and fill of the calendar graphic -->
+
+                    <path d="M1145 4777 ..." />
+                    <!-- Various paths that make up the calendar SVG design -->
+                </g>
+            </svg>
+        </div>
+
+        <div class="divider"></div>
+        <!-- A horizontal divider for visual separation of content -->
+
+        <div class="dropdown-container">
+            <!-- Container for the dropdown menu and its accompanying icon -->
+
+            <select name="date-options" id="date-options">
+                <!-- Dropdown menu for selecting a date format -->
+
+                <option value="dd-mm-yyyy">Day, Month, Year</option>
+                <!-- Dropdown option: Day-Month-Year format -->
+
+                <option value="yyyy-mm-dd">Year, Month, Day</option>
+                <!-- Dropdown option: Year-Month-Day format -->
+
+                <option value="mm-dd-yyyy-h-mm">
+                    Month, Day, Year, Hours, Minutes
+                </option>
+                <!-- Dropdown option: Month-Day-Year with time -->
+            </select>
+
+            <div class="select-icon">
+                <!-- Container for the dropdown's decorative icon -->
+
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="25" height="35" viewBox="0 0 24 24">
+                    <!-- SVG icon resembling a dropdown arrow -->
+
+                    <rect x="0" fill="none" width="24" height="24" />
+                    <!-- Invisible rectangle to define the SVG view area -->
+
+                    <g>
+                        <path d="M7 10l5 5 5-5" />
+                        <!-- Path defining the arrow shape for the dropdown -->
+                    </g>
+                </svg>
+            </div>
+        </div>
+
+        <p id="current-date"></p>
+        <!-- Placeholder paragraph where the formatted current date will be displayed -->
+    </main>
+
+    <script src="./script.js"></script>
+    <!-- Links to an external JavaScript file that provides interactivity -->
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    /* Removes all default margin for all elements and their pseudo-elements */
+    padding: 0;
+    /* Removes all default padding for all elements and their pseudo-elements */
+    box-sizing: border-box;
+    /* Ensures padding and border are included in the element's total width and height */
+}
+
+:root {
+    --dark-grey: #0a0a23;
+    /* Defines a custom CSS variable for a dark grey color */
+    --white: #ffffff;
+    /* Defines a custom CSS variable for white color */
+    --yellow: #f1be32;
+    /* Defines a custom CSS variable for yellow color */
+}
+
+body {
+    color: var(--white);
+    /* Sets the text color to the white variable */
+    background-color: var(--dark-grey);
+    /* Sets the background color to the dark grey variable */
+}
+
+.title-container {
+    margin: 10px 0;
+    /* Adds vertical spacing above and below the container */
+    display: flex;
+    /* Enables flexbox layout for aligning child elements */
+    align-items: center;
+    /* Vertically aligns items in the center of the container */
+    justify-content: center;
+    /* Horizontally centers items in the container */
+    gap: 8px;
+    /* Sets a spacing of 8px between child elements */
+}
+
+.title {
+    font-size: 2.5rem;
+    /* Sets the font size of the title text to 2.5 times the root font size */
+}
+
+.date-svg {
+    width: 30px;
+    /* Sets the width of the SVG to 30px */
+    height: 30px;
+    /* Sets the height of the SVG to 30px */
+}
+
+.divider {
+    margin: auto;
+    /* Centers the divider horizontally */
+    width: 150px;
+    /* Sets the divider's width to 150px */
+    height: 10px;
+    /* Sets the divider's height to 10px */
+    background-color: var(--yellow);
+    /* Sets the divider's background color to the yellow variable */
+}
+
+.dropdown-container {
+    width: 50%;
+    /* Sets the width of the container to 50% of its parent */
+    margin: 40px auto;
+    /* Centers the container horizontally and adds 40px of vertical spacing at the top and bottom */
+    position: relative;
+    /* Establishes a positioning context for absolutely positioned child elements */
+}
+
+select {
+    display: block;
+    /* Makes the dropdown a block-level element */
+    margin: 20px auto 0;
+    /* Centers the dropdown horizontally with 20px of top margin and no bottom margin */
+    width: 100%;
+    /* Sets the dropdown's width to 100% of its parent */
+    height: 50px;
+    /* Sets the height of the dropdown to 50px */
+    font-size: 100%;
+    /* Ensures the font size scales relative to the root font size */
+    font-weight: bold;
+    /* Makes the dropdown's text bold */
+    cursor: pointer;
+    /* Changes the cursor to a pointer when hovering over the dropdown */
+    background-color: var(--white);
+    /* Sets the dropdown's background color to white */
+    border: none;
+    /* Removes the border from the dropdown */
+    color: var(--dark-grey);
+    /* Sets the dropdown's text color to dark grey */
+    appearance: none;
+    /* Removes the default styling of the dropdown */
+    padding: 10px;
+    /* Adds padding inside the dropdown */
+    padding-right: 38px;
+    /* Adds additional padding on the right to make room for the dropdown icon */
+    -webkit-appearance: none;
+    /* Removes default styling in WebKit browsers */
+    -moz-appearance: none;
+    /* Removes default styling in Mozilla browsers */
+    transition: color 0.3s ease, background-color 0.3s ease, border-bottom-color 0.3s ease;
+    /* Smoothly animates changes in text color, background color, and border color over 0.3 seconds */
+}
+
+.select-icon {
+    position: absolute;
+    /* Positions the icon relative to its parent (the container) */
+    top: 4px;
+    /* Places the icon 4px from the top of the container */
+    right: 4px;
+    /* Places the icon 4px from the right edge of the container */
+    width: 30px;
+    /* Sets the width of the icon to 30px */
+    height: 36px;
+    /* Sets the height of the icon to 36px */
+    pointer-events: none;
+    /* Disables pointer events on the icon to ensure clicks go to the dropdown */
+    padding-left: 5px;
+    /* Adds padding on the left for better alignment */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    /* Smoothly animates changes in the icon's background color and border color */
+}
+
+.select-icon svg.icon {
+    transition: fill 0.3s ease;
+    /* Smoothly animates changes in the fill color over 0.3 seconds */
+    fill: var(--dark-grey);
+    /* Sets the fill color of the SVG icon to dark grey */
+}
+
+#current-date {
+    font-size: 2rem;
+    /* Sets the font size of the displayed date to 2 times the root font size */
+    text-align: center;
+    /* Centers the text horizontally */
+}
+
+@media (max-width: 375px) {
+    /* Applies styles for devices with a maximum width of 375px */
+
+    .title {
+        font-size: 2rem;
+        /* Reduces the font size of the title for smaller screens */
+    }
+
+    .dropdown-container {
+        width: 80%;
+        /* Increases the width of the dropdown container to 80% for better usability */
+    }
+
+    .date-svg {
+        display: none;
+        /* Hides the SVG calendar icon on small screens to save space */
+    }
+}
