@@ -1,0 +1,111 @@
+/* Apply global box-sizing and reset margin and padding for all elements */
+*,
+/* Selects all elements */
+*::before,
+/* Selects the ::before pseudo-elements */
+*::after {
+    /* Selects the ::after pseudo-elements */
+    box-sizing: border-box;
+    /* Ensures padding and border are included in the element's total width and height */
+    margin: 0;
+    /* Removes default margin */
+    padding: 0;
+    /* Removes default padding */
+}
+
+/* Define CSS custom properties (variables) for consistent styling */
+:root {
+    --dark-grey: #0a0a23;
+    /* Dark grey color used for the background */
+    --light-grey: #f5f6f7;
+    /* Light grey color used for card backgrounds */
+    --white: #ffffff;
+    /* White color for text and other elements */
+    --black: #000;
+    /* Black color, not currently used */
+}
+
+/* Style the body element */
+body {
+    background-color: var(--dark-grey);
+    /* Sets the background color using the dark-grey variable */
+    text-align: center;
+    /* Centers text horizontally */
+    padding: 10px;
+    /* Adds padding around the body */
+}
+
+/* Style elements with specific classes collectively */
+.title,
+/* Styles the main title of the page */
+.options-label,
+/* Styles the label for the dropdown */
+.team-stats,
+/* Styles the container for team stats */
+footer {
+    /* Styles the footer section */
+    color: var(--white);
+    /* Sets the text color to white */
+}
+
+/* Style the title of the page */
+.title {
+    margin: 1.3rem 0;
+    /* Adds vertical margin to the title */
+}
+
+/* Style the team-stats container */
+.team-stats {
+    display: flex;
+    /* Enables flexbox for layout */
+    justify-content: space-around;
+    /* Distributes items evenly with space around them */
+    flex-wrap: wrap;
+    /* Allows items to wrap to the next line if necessary */
+    font-size: 1.3rem;
+    /* Sets the font size for team stats */
+    margin: 1.2rem 0;
+    /* Adds vertical margin around the team stats */
+}
+
+/* Style the label for the dropdown menu */
+.options-label {
+    font-size: 1.2rem;
+    /* Sets the font size for the label text */
+}
+
+/* Style the container for player cards */
+.cards {
+    display: flex;
+    /* Enables flexbox for layout */
+    flex-wrap: wrap;
+    /* Allows cards to wrap to the next line if necessary */
+    justify-content: center;
+    /* Centers the cards horizontally */
+    align-items: center;
+    /* Centers the cards vertically */
+}
+
+/* Style individual player cards */
+.player-card {
+    background-color: var(--light-grey);
+    /* Sets the background color using the light-grey variable */
+    padding: 1.3rem;
+    /* Adds padding inside the card */
+    margin: 1.2rem;
+    /* Adds margin outside the card */
+    width: 300px;
+    /* Sets a fixed width for the cards */
+    border-radius: 15px;
+    /* Rounds the corners of the card */
+}
+
+/* Add responsive design for smaller screens */
+@media (max-width: 768px) {
+
+    /* Applies styles when the screen width is 768px or less */
+    .team-stats {
+        flex-direction: column;
+        /* Stacks items vertically for smaller screens */
+    }
+}
