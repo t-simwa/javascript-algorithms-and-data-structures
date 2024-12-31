@@ -1,0 +1,274 @@
+:root {
+    --white: #fff;
+    /* Defines a CSS variable for white color */
+    --light-grey: #f5f6f7;
+    /* CSS variable for a light grey shade */
+    --dark-grey: #0a0a23;
+    /* CSS variable for a dark grey shade */
+    --yellow: #f1be32;
+    /* CSS variable for yellow */
+    --golden-yellow: #feac32;
+    /* CSS variable for a golden yellow shade */
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    /* Removes default margins for all elements and pseudo-elements */
+    padding: 0;
+    /* Removes default padding for all elements and pseudo-elements */
+    box-sizing: border-box;
+    /* Ensures padding and borders are included in element dimensions */
+}
+
+body {
+    background-color: var(--dark-grey);
+    /* Sets the background color of the body using a custom variable */
+}
+
+main {
+    display: flex;
+    /* Enables flexbox layout */
+    flex-direction: column;
+    /* Arranges children in a column */
+    justify-content: center;
+    /* Centers children vertically */
+    align-items: center;
+    /* Centers children horizontally */
+}
+
+h1 {
+    color: var(--light-grey);
+    /* Sets the text color of the heading using a custom variable */
+    margin: 20px 0 40px 0;
+    /* Adds vertical spacing: 20px top, 40px bottom */
+}
+
+.todo-app {
+    background-color: var(--white);
+    /* Sets background color to white */
+    width: 300px;
+    /* Sets the width of the todo app container */
+    height: 350px;
+    /* Sets the height of the todo app container */
+    border: 5px solid var(--yellow);
+    /* Adds a yellow border */
+    border-radius: 8px;
+    /* Rounds the corners */
+    padding: 15px;
+    /* Adds padding inside the container */
+    position: relative;
+    /* Positions it relative for child positioning */
+    display: flex;
+    /* Enables flexbox layout */
+    flex-direction: column;
+    /* Arranges children in a column */
+    gap: 10px;
+    /* Adds spacing between children */
+}
+
+.btn {
+    cursor: pointer;
+    /* Changes cursor to a pointer on hover */
+    width: 100px;
+    /* Sets the button width */
+    margin: 10px;
+    /* Adds margin around the button */
+    color: var(--dark-grey);
+    /* Sets text color */
+    background-color: var(--golden-yellow);
+    /* Sets background color */
+    background-image: linear-gradient(#fecc4c, #ffac33);
+    /* Adds gradient background */
+    border-color: var(--golden-yellow);
+    /* Sets border color */
+    border-width: 3px;
+    /* Sets border thickness */
+}
+
+.btn:hover {
+    background-image: linear-gradient(#ffcc4c, #f89808);
+    /* Changes background gradient on hover */
+}
+
+.large-btn {
+    width: 80%;
+    /* Sets button width to 80% of the parent */
+    font-size: 1.2rem;
+    /* Increases font size */
+    align-self: center;
+    /* Aligns the button to the center horizontally */
+    justify-self: center;
+    /* Centers the button within the grid if used in a grid container */
+}
+
+.close-task-form-btn {
+    background: none;
+    /* Removes background styling */
+    border: none;
+    /* Removes border styling */
+    cursor: pointer;
+    /* Changes cursor to pointer on hover */
+}
+
+.close-icon {
+    width: 20px;
+    /* Sets the width of the close icon */
+    height: 20px;
+    /* Sets the height of the close icon */
+}
+
+.task-form {
+    display: flex;
+    /* Enables flexbox layout */
+    position: absolute;
+    /* Positions the form absolutely within its container */
+    top: 50%;
+    /* Moves the form 50% from the top */
+    left: 50%;
+    /* Moves the form 50% from the left */
+    transform: translate(-50%, -50%);
+    /* Centers the form */
+    background-color: var(--white);
+    /* Sets background color to white */
+    border-radius: 5px;
+    /* Rounds the corners */
+    padding: 15px;
+    /* Adds padding inside the form */
+    width: 300px;
+    /* Sets the width of the form */
+    height: 350px;
+    /* Sets the height of the form */
+    flex-direction: column;
+    /* Arranges children in a column */
+    justify-content: space-between;
+    /* Adds space between children */
+    overflow: auto;
+    /* Enables scrolling for overflowing content */
+}
+
+.task-form-header {
+    display: flex;
+    /* Enables flexbox layout */
+    justify-content: flex-end;
+    /* Aligns children to the right */
+}
+
+.task-form-body {
+    display: flex;
+    /* Enables flexbox layout */
+    flex-direction: column;
+    /* Arranges children in a column */
+    justify-content: space-around;
+    /* Adds space around children */
+}
+
+.task-form-footer {
+    display: flex;
+    /* Enables flexbox layout */
+    justify-content: center;
+    /* Centers children horizontally */
+}
+
+.task-form-label,
+#title-input,
+#date-input,
+#description-input {
+    display: block;
+    /* Displays each element as a block */
+}
+
+.task-form-label {
+    margin-bottom: 5px;
+    /* Adds spacing below the label */
+    font-size: 1.3rem;
+    /* Sets font size */
+    font-weight: bold;
+    /* Makes the text bold */
+}
+
+#title-input,
+#date-input,
+#description-input {
+    width: 100%;
+    /* Sets the width to 100% of the parent */
+    margin-bottom: 10px;
+    /* Adds spacing below the input */
+    padding: 2px;
+    /* Adds padding inside the input */
+}
+
+#confirm-close-dialog {
+    padding: 10px;
+    /* Adds padding inside the dialog */
+    margin: 10px auto;
+    /* Centers the dialog and adds vertical margin */
+    border-radius: 15px;
+    /* Rounds the corners */
+}
+
+.confirm-close-dialog-btn-container {
+    display: flex;
+    /* Enables flexbox layout */
+    justify-content: center;
+    /* Centers children horizontally */
+    margin-top: 10px;
+    /* Adds spacing above the container */
+}
+
+.discard-message-text {
+    font-weight: bold;
+    /* Makes the text bold */
+    font-size: 1.5rem;
+    /* Sets font size */
+}
+
+#tasks-container {
+    height: 100%;
+    /* Sets the height to fill the parent */
+    overflow-y: auto;
+    /* Enables vertical scrolling for overflowing content */
+}
+
+.task {
+    margin: 5px 0;
+    /* Adds vertical spacing between tasks */
+}
+
+.hidden {
+    display: none;
+    /* Hides the element */
+}
+
+@media (min-width: 576px) {
+
+    /* Styles applied for screens larger than 576px */
+    .todo-app,
+    .task-form {
+        width: 400px;
+        /* Increases width */
+        height: 450px;
+        /* Increases height */
+    }
+
+    .task-form-label {
+        font-size: 1.5rem;
+        /* Increases font size */
+    }
+
+    #title-input,
+    #date-input {
+        height: 2rem;
+        /* Increases input height */
+    }
+
+    #title-input,
+    #date-input,
+    #description-input {
+        padding: 5px;
+        /* Adds padding inside inputs */
+        margin-bottom: 20px;
+        /* Adds more spacing below inputs */
+    }
+}
