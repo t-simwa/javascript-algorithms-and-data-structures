@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- The DOCTYPE declaration defines the document type and version of HTML being used. -->
+<!-- Sets the language of the document to English for proper accessibility and search engine optimization. -->
+
+<head>
+    <!-- Metadata and configuration for the webpage -->
+    <meta charset="UTF-8" />
+    <!-- Defines the character encoding as UTF-8 to support a wide range of characters. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Ensures compatibility with modern rendering engines in browsers like Edge. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures the webpage is responsive by setting the viewport width to the device's width. -->
+    <title>Decimal to Binary Converter</title>
+    <!-- Specifies the title of the page, displayed on the browser tab. -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Links an external CSS file for styling the webpage. -->
+</head>
+
+<body>
+    <!-- The main content of the webpage -->
+    <h1>
+        Decimal to Binary <br />
+        Converter
+    </h1>
+    <!-- The main heading of the webpage, styled as a block with a line break for visual separation. -->
+
+    <section class="input-container">
+        <!-- Section to take user input -->
+        <label for="number-input">Enter a decimal number:</label>
+        <!-- Describes the purpose of the input field for accessibility. The "for" attribute links the label to the input. -->
+        <input value="" type="number" name="decimal number input" id="number-input" class="number-input" />
+        <!-- A numeric input field to accept the decimal number from the user. -->
+        <button class="convert-btn" id="convert-btn">Convert</button>
+        <!-- A button to trigger the conversion process when clicked. -->
+    </section>
+
+    <section class="output-container">
+        <!-- Section to display the conversion result and additional information -->
+        <output id="result" for="number-input"></output>
+        <!-- An output element to show the binary conversion result, linked to the input via the "for" attribute. -->
+        <h2>Call stack</h2>
+        <!-- Subheading to indicate the area where the call stack information will be shown. -->
+        <div id="animation-container"></div>
+        <!-- A container to visually display the call stack animation or related graphical output. -->
+    </section>
+
+    <script src="script.js"></script>
+    <!-- Links the JavaScript file that handles the logic for the converter. -->
+</body>
+
+</html>
