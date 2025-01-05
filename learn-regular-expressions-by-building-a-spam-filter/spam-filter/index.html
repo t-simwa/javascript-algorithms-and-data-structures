@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Declares the document as HTML5 and sets the language to English -->
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- Sets character encoding to UTF-8 to support a wide range of characters -->
+    <meta name="viewport" content="width=device-width" />
+    <!-- Ensures proper rendering and responsiveness on various devices by setting the viewport -->
+    <title>Learn Regular Expressions by Building a Spam Filter</title>
+    <!-- Defines the title of the page that appears in the browser tab -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Links to the external CSS file for styling -->
+</head>
+
+<body>
+    <header class="main-text">
+        <!-- Semantic <header> tag to group the main introductory content -->
+        <h1 class="title">Is this Spam?</h1>
+        <!-- Displays the primary title of the page -->
+        <p class="description">
+            Enter a phrase to check if it would be marked as spam or not.
+        </p>
+        <!-- Provides a brief description of the application's functionality -->
+    </header>
+
+    <main>
+        <!-- Semantic <main> tag to denote the core content of the page -->
+        <label class="message-label" for="message-input">Message: </label>
+        <!-- Associates the label with the textarea for accessibility -->
+        <textarea placeholder="Enter message here" value="" type="text" name="message" id="message-input" rows="10"
+            cols="40"></textarea>
+        <!-- A multi-line input field for the user to enter a message -->
+        <button class="btn" id="check-message-btn" type="button">
+            Check message
+        </button>
+        <!-- Button to trigger the spam-checking function -->
+        <p id="result"></p>
+        <!-- Paragraph to display the result of the spam check -->
+    </main>
+
+    <footer class="footer">&copy; freeCodeCamp</footer>
+    <!-- Semantic <footer> tag for page footer; includes copyright information -->
+    <script src="./script.js"></script>
+    <!-- Links the external JavaScript file for functionality -->
+</body>
+
+</html>

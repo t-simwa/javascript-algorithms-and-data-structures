@@ -1,0 +1,115 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    /* Ensures consistent box model across all elements, including pseudo-elements */
+    margin: 0;
+    /* Removes default margin for all elements */
+    padding: 0;
+    /* Removes default padding for all elements */
+}
+
+:root {
+    --dark-grey: #1b1b32;
+    /* Defines a dark grey color variable for consistent usage */
+    --light-grey: #f5f6f7;
+    /* Defines a light grey color variable */
+    --golden-yellow: #fecc4c;
+    /* Defines a golden yellow color variable */
+    --yellow: #ffcc4c;
+    /* Defines a yellow color variable */
+    --gold: #feac32;
+    /* Defines a gold color variable */
+    --orange: #ffac33;
+    /* Defines an orange color variable */
+    --dark-orange: #f89808;
+    /* Defines a dark orange color variable */
+}
+
+body {
+    background-color: var(--dark-grey);
+    /* Sets the background color of the page to dark grey */
+    color: var(--light-grey);
+    /* Sets the text color to light grey for contrast */
+}
+
+body,
+#message-input:placeholder-shown {
+    text-align: center;
+    /* Centers text alignment for the body and the placeholder text in the textarea */
+}
+
+textarea {
+    max-width: 90%;
+    /* Limits the width of the textarea to 90% of its parent container */
+}
+
+.main-text {
+    margin: 25px 0;
+    /* Adds vertical spacing around the main text container */
+}
+
+.title {
+    font-size: 2.5rem;
+    /* Sets a large font size for the title */
+}
+
+.description {
+    margin-top: 15px;
+    /* Adds space above the description text */
+    font-size: 1.4rem;
+    /* Sets a slightly smaller font size for the description */
+}
+
+.message-label {
+    display: block;
+    /* Forces the label to take up the full width of its container */
+    margin-bottom: 20px;
+    /* Adds space below the label */
+    font-size: 1.5rem;
+    /* Sets a larger font size for better readability */
+}
+
+#message-input:placeholder-shown,
+textarea {
+    font-size: 1.1rem;
+    /* Sets the font size for the placeholder text and textarea content */
+}
+
+.btn {
+    display: block;
+    /* Makes the button take up the full width of its parent container */
+    cursor: pointer;
+    /* Changes the cursor to a pointer when hovering over the button */
+    width: 200px;
+    /* Sets a fixed width for the button */
+    margin: 10px auto;
+    /* Centers the button horizontally and adds vertical spacing */
+    color: var(--dark-grey);
+    /* Sets the text color to dark grey */
+    background-color: var(--gold);
+    /* Sets the background color to gold */
+    background-image: linear-gradient(var(--golden-yellow), var(--orange));
+    /* Creates a gradient background transitioning from golden yellow to orange */
+    border-color: var(--gold);
+    /* Sets the border color to gold */
+    border-width: 3px;
+    /* Specifies a thick border width */
+}
+
+.btn:hover {
+    background-image: linear-gradient(var(--yellow), var(--dark-orange));
+    /* Changes the button's gradient background on hover */
+}
+
+#result {
+    font-size: 2rem;
+    /* Sets a large font size for the result text */
+    margin: 20px 0;
+    /* Adds vertical spacing around the result */
+}
+
+.footer {
+    margin-top: 10px;
+    /* Adds space above the footer */
+}
