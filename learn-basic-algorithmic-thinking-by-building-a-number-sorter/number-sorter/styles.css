@@ -1,0 +1,211 @@
+:root {
+    --gray-00: #ffffff;
+    /* Defines a white color variable for general use. */
+    --gray-05: #f5f6f7;
+    /* Light gray color for softer background elements. */
+    --gray-15: #d0d0d5;
+    /* A medium light gray for subtle text or borders. */
+    --gray-75: #3b3b4f;
+    /* Darker gray used for elements requiring high contrast. */
+    --gray-85: #1b1b32;
+    /* Very dark gray, used as a background color. */
+    --gray-90: #0a0a23;
+    /* Almost black gray for deep contrast and focus. */
+    --blue-50: #198eee;
+    /* A vibrant blue, often used for highlights or calls to action. */
+    --error: #a94442;
+    /* Color for error messages, indicating a problem (e.g., red tones). */
+    --danger-color: #850000;
+    /* Dark red, used for critical or dangerous alerts. */
+    --danger-background: #ffadad;
+    /* Light red background, often for warning or error messages. */
+}
+
+*,
+::before,
+::after {
+    padding: 0;
+    /* Resets all padding across all elements and pseudo-elements. */
+    margin: 0;
+    /* Resets all margins across all elements and pseudo-elements. */
+    box-sizing: border-box;
+    /* Ensures padding and borders are included in the element's total width and height. */
+}
+
+body {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    /* Sets the default font family. */
+    font-size: 18px;
+    /* Sets the default font size for readability. */
+    background-color: var(--gray-85);
+    /* Sets the background color using the predefined gray-85 variable. */
+    color: var(--gray-05);
+    /* Sets the text color using the predefined gray-05 variable for readability. */
+}
+
+main {
+    display: flex;
+    /* Uses flexbox for layout. */
+    flex-direction: column;
+    /* Aligns children elements (e.g., sections, form) vertically. */
+    align-items: center;
+    /* Centers children elements horizontally in the container. */
+}
+
+h1 {
+    margin: 30px auto;
+    /* Adds vertical margin of 30px and centers the h1 element horizontally. */
+}
+
+h2 {
+    margin-bottom: 15px;
+    /* Adds margin below the h2 element for spacing. */
+}
+
+form {
+    width: 100%;
+    /* Makes the form take up the full width of the container. */
+    text-align: center;
+    /* Centers the text within the form. */
+    padding: 15px;
+    /* Adds padding inside the form for spacing. */
+}
+
+fieldset {
+    border: 0 none;
+    /* Removes the default border of fieldsets. */
+    height: 100%;
+    /* Makes the fieldset take up the full height of its container. */
+    margin: auto;
+    /* Centers the fieldset horizontally. */
+    display: flex;
+    /* Uses flexbox to arrange its children (div elements). */
+    justify-content: space-around;
+    /* Distributes the children evenly with space between them. */
+    align-items: center;
+    /* Centers the children vertically inside the fieldset. */
+}
+
+fieldset div {
+    display: flex;
+    /* Uses flexbox for the children of fieldset divs. */
+    justify-content: center;
+    /* Centers the content horizontally in the div. */
+    align-items: center;
+    /* Centers the content vertically in the div. */
+}
+
+.bracket,
+.comma {
+    font-size: 2.3em;
+    /* Sets the font size of the bracket and comma elements to make them larger for emphasis. */
+}
+
+form .comma {
+    margin-left: 2px;
+    /* Adds a small space between the comma and the previous element. */
+}
+
+select {
+    font-family: inherit;
+    /* Inherits the font family from the parent (body) for consistency. */
+    font-size: inherit;
+    /* Inherits the font size from the parent for consistency. */
+    line-height: inherit;
+    /* Inherits the line height from the parent for consistency. */
+    height: 38px;
+    /* Sets the height of the select input for a consistent look. */
+    width: 50px;
+    /* Sets the width of the select input to control its size. */
+    text-align: center;
+    /* Centers the text within the select dropdown. */
+}
+
+button {
+    cursor: pointer;
+    /* Changes the cursor to a pointer when hovering over the button, indicating interactivity. */
+    margin-top: 15px;
+    /* Adds space above the button. */
+    text-decoration: none;
+    /* Removes any default text decoration (e.g., underlines) from the button. */
+    background-image: linear-gradient(#fecc4c, #ffac33);
+    /* Adds a gradient background from yellow to orange. */
+    border: 3px solid #feac32;
+    /* Adds a solid border around the button. */
+    padding: 10px 16px;
+    /* Adds padding inside the button for spacing around the text. */
+    font-size: 23px;
+    /* Sets the font size of the text inside the button. */
+    width: 100%;
+    /* Makes the button take up the full width of its container. */
+}
+
+select:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--blue-50);
+    /* Adds a focus outline when the select or button is focused to indicate focus state with a blue color. */
+}
+
+.output-container {
+    width: 95%;
+    /* Sets the width of the output container to 95% of the parent container. */
+    min-height: 55px;
+    /* Ensures the output container has a minimum height for consistent design. */
+    margin-top: 25px;
+    /* Adds space above the output container. */
+    border-radius: 0;
+    /* Removes any border-radius for sharp corners. */
+    padding: 15px;
+    /* Adds padding inside the container for spacing. */
+    overflow-wrap: break-word;
+    /* Allows words to break and wrap in the container if they exceed the width. */
+    text-align: center;
+    /* Centers the content inside the container. */
+}
+
+.output-array {
+    width: 100%;
+    /* Ensures the output array takes up the full width of its parent container. */
+    margin: auto;
+    /* Centers the output array horizontally. */
+    display: flex;
+    /* Uses flexbox for layout. */
+    align-items: center;
+    /* Centers the items vertically. */
+    justify-content: space-around;
+    /* Distributes the items evenly with space between them. */
+}
+
+.output-value {
+    font-size: 2em;
+    /* Increases the font size of the output values for visibility. */
+}
+
+.alert {
+    background-color: var(--danger-background);
+    /* Sets the background color of alerts using the danger color variable. */
+    border: 3px solid var(--danger-color);
+    /* Adds a solid border around the alert using the danger color variable. */
+    color: var(--danger-color);
+    /* Sets the text color to the danger color for emphasis. */
+}
+
+@media (min-width: 550px) {
+    /* Media query for screen sizes larger than 550px */
+
+    form,
+    .output-container {
+        max-width: 480px;
+        /* Limits the maximum width of the form and output container to 480px for better layout on larger screens. */
+    }
+
+    fieldset {
+        max-width: 400px;
+        /* Limits the maximum width of the fieldset for better layout. */
+    }
+
+    .output-array {
+        max-width: 420px;
+        /* Limits the maximum width of the output array for better layout. */
+    }
+}

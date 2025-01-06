@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Meta tag to specify the character encoding (UTF-8) -->
+    <meta charset="UTF-8" />
+    <!-- Meta tag to make the page responsive, scaling to fit different device widths -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <!-- Title of the page displayed in the browser tab -->
+    <title>Number Sorter</title>
+</head>
+
+<body>
+    <main>
+        <!-- Main heading of the page -->
+        <h1>Number Sorter</h1>
+        <!-- Form that contains the input elements for the numbers -->
+        <form id="form" class="form">
+            <h2>Input:</h2>
+            <fieldset>
+                <!-- Brackets visually representing an array -->
+                <span class="bracket">[</span>
+                <div>
+                    <!-- Dropdown menu for selecting the first number -->
+                    <select name="values" class="values-dropdown" aria-label="first number">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8" selected>8</option>
+                        <option value="9">9</option>
+                    </select>
+                    <!-- Comma to separate numbers visually -->
+                    <span class="comma">,</span>
+                </div>
+                <div>
+                    <!-- Dropdown menu for selecting the second number -->
+                    <select name="values" class="values-dropdown" aria-label="second number">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2" selected>2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                    <!-- Comma separator -->
+                    <span class="comma">,</span>
+                </div>
+                <div>
+                    <!-- Dropdown menu for selecting the third number -->
+                    <select name="values" class="values-dropdown" aria-label="third number">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4" selected>4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                    <!-- Comma separator -->
+                    <span class="comma">,</span>
+                </div>
+                <div>
+                    <!-- Dropdown menu for selecting the fourth number -->
+                    <select name="values" class="values-dropdown" aria-label="fourth number">
+                        <option value="0">0</option>
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                    <!-- Comma separator -->
+                    <span class="comma">,</span>
+                </div>
+                <div>
+                    <!-- Dropdown menu for selecting the fifth number -->
+                    <select name="values" class="values-dropdown" aria-label="fifth number">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3" selected>3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+                <!-- Closing bracket for the array -->
+                <span class="bracket">]</span>
+            </fieldset>
+            <!-- Button to trigger sorting action -->
+            <button id="sort">Sort</button>
+        </form>
+        <!-- Container for the sorted output -->
+        <div class="output-container">
+            <h2>Output:</h2>
+            <!-- Container for displaying the sorted array -->
+            <div class="output-array">
+                <!-- Opening bracket for the output array -->
+                <span class="bracket">[</span>
+                <div>
+                    <!-- Placeholder for the first sorted number -->
+                    <span class="output-value" id="output-value-0">0</span>
+                    <!-- Comma separator -->
+                    <span class="comma">,</span>
+                </div>
+                <div>
+                    <!-- Placeholder for the second sorted number -->
+                    <span class="output-value" id="output-value-1">0</span>
+                    <!-- Comma separator -->
+                    <span class="comma">,</span>
+                </div>
+                <div>
+                    <!-- Placeholder for the third sorted number -->
+                    <span class="output-value" id="output-value-2">0</span>
+                    <!-- Comma separator -->
+                    <span class="comma">,</span>
+                </div>
+                <div>
+                    <!-- Placeholder for the fourth sorted number -->
+                    <span class="output-value" id="output-value-3">0</span>
+                    <!-- Comma separator -->
+                    <span class="comma">,</span>
+                </div>
+                <div>
+                    <!-- Placeholder for the fifth sorted number -->
+                    <span class="output-value" id="output-value-4">0</span>
+                </div>
+                <!-- Closing bracket for the output array -->
+                <span class="bracket">]</span>
+            </div>
+        </div>
+    </main>
+    <!-- Link to the external JavaScript file that will handle sorting logic -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
