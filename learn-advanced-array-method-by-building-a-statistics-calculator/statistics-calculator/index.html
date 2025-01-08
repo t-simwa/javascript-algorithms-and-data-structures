@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Specifies the document type as HTML and declares the language as English. -->
+
+<head>
+    <!-- Metadata about the document -->
+    <meta charset="utf-8" />
+    <!-- Specifies UTF-8 character encoding for proper text rendering. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Ensures the page is responsive, scaling appropriately on different devices. -->
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- Links an external CSS file for styling the page. -->
+    <script src="./script.js"></script>
+    <!-- Links an external JavaScript file for the interactive functionality of the calculator. -->
+    <title>Statistics Calculator</title>
+    <!-- Sets the title of the page, displayed on the browser tab. -->
+</head>
+
+<body>
+    <h1>Statistics Calculator</h1>
+    <!-- Main heading to introduce the purpose of the page. -->
+
+    <p>Enter a list of comma-separated numbers.</p>
+    <!-- Provides user instructions for the input format. -->
+
+    <form onsubmit="calculate(); return false;">
+        <!-- A form that triggers the `calculate()` JavaScript function on submission. 
+           `return false` prevents the default form submission behavior (e.g., page refresh). -->
+
+        <label for="numbers">Numbers:</label>
+        <!-- Label describing the input field for accessibility. -->
+
+        <input type="text" name="numbers" id="numbers" />
+        <!-- Text input field for users to enter a list of numbers. 
+           The `id` links this input to the label above. -->
+
+        <button type="submit">Calculate</button>
+        <!-- Submit button to trigger the calculation. -->
+    </form>
+
+    <div class="results">
+        <!-- Container for displaying the calculated statistical results. -->
+
+        <p>
+            The <dfn>mean</dfn> of a list of numbers is the average, calculated by
+            taking the sum of all numbers and dividing that by the count of numbers.
+        </p>
+        <!-- Explanation of the mean calculation for educational purposes. -->
+
+        <p class="bold">Mean: <span id="mean"></span></p>
+        <!-- Placeholder to display the calculated mean. -->
+
+        <p>
+            The <dfn>median</dfn> of a list of numbers is the number that appears in
+            the middle of the list, when sorted from least to greatest.
+        </p>
+        <!-- Explanation of the median calculation. -->
+
+        <p class="bold">Median: <span id="median"></span></p>
+        <!-- Placeholder to display the calculated median. -->
+
+        <p>
+            The <dfn>mode</dfn> of a list of numbers is the number that appears most
+            often in the list.
+        </p>
+        <!-- Explanation of the mode calculation. -->
+
+        <p class="bold">Mode: <span id="mode"></span></p>
+        <!-- Placeholder to display the calculated mode. -->
+
+        <p>
+            The <dfn>range</dfn> of a list of numbers is the difference between the
+            largest and smallest numbers in the list.
+        </p>
+        <!-- Explanation of the range calculation. -->
+
+        <p class="bold">Range: <span id="range"></span></p>
+        <!-- Placeholder to display the calculated range. -->
+
+        <p>
+            The <dfn>variance</dfn> of a list of numbers measures how far the values
+            are from the mean, on average.
+        </p>
+        <!-- Explanation of the variance calculation. -->
+
+        <p class="bold">Variance: <span id="variance"></span></p>
+        <!-- Placeholder to display the calculated variance. -->
+
+        <p>
+            The <dfn>standard deviation</dfn> of a list of numbers is the square
+            root of the variance.
+        </p>
+        <!-- Explanation of the standard deviation calculation. -->
+
+        <p class="bold">
+            Standard Deviation: <span id="standardDeviation"></span>
+        </p>
+        <!-- Placeholder to display the calculated standard deviation. -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    /* Removes the default margin applied by browsers to the body, ensuring no unwanted spacing around the page. */
+
+    background-color: rgb(27, 27, 50);
+    /* Sets the background color of the body to a dark bluish shade, providing a visually appealing background. */
+
+    text-align: center;
+    /* Centers all inline and block elements horizontally within the body. */
+
+    color: #fff;
+    /* Sets the text color of the body to white, ensuring readability against the dark background. */
+}
+
+button {
+    cursor: pointer;
+    /* Changes the mouse pointer to a pointer icon (usually a hand) when hovering over buttons, indicating interactivity. */
+
+    background-color: rgb(59, 59, 79);
+    /* Sets a dark grayish-blue background color for buttons, complementing the page's dark theme. */
+
+    border: 3px solid white;
+    /* Adds a thick white border around buttons, making them visually distinct. */
+
+    color: white;
+    /* Sets the button text color to white for readability against the dark background. */
+}
+
+input {
+    background-color: rgb(10, 10, 35);
+    /* Sets a very dark bluish background color for input fields to match the overall dark theme. */
+
+    color: white;
+    /* Ensures the text inside input fields is white for contrast against the dark background. */
+
+    border: 1px solid rgb(59, 59, 79);
+    /* Adds a thin border with a dark grayish-blue color around input fields, giving them a subtle outline. */
+}
+
+.bold {
+    font-weight: bold;
+    /* Makes the text in elements with the `bold` class appear bold, emphasizing their importance. */
+}
