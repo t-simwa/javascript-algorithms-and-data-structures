@@ -1,0 +1,30 @@
+#container {
+    display: grid;
+    /* Defines the container as a CSS Grid, enabling grid layout features 
+       for precise and flexible placement of child elements. */
+
+    grid-template-columns: 50px repeat(10, 200px);
+    /* Specifies the column structure of the grid:
+       - The first column is 50px wide.
+       - The next 10 columns are each 200px wide, achieved using the `repeat()` function. */
+
+    grid-template-rows: repeat(11, 30px);
+    /* Specifies the row structure of the grid:
+       - There are 11 rows, each 30px tall, using the `repeat()` function to simplify declaration. */
+}
+
+.label {
+    background-color: lightgray;
+    /* Sets the background color of elements with the "label" class to light gray,
+       making them visually distinct from other elements. */
+
+    text-align: center;
+    /* Centers the text horizontally within the element. */
+
+    vertical-align: middle;
+    /* Aligns content vertically in the middle (effective in certain inline or table elements). */
+
+    line-height: 30px;
+    /* Sets the height of each line of text to 30px, matching the row height in the grid.
+       This ensures the text is vertically centered within the grid cell. */
+}
