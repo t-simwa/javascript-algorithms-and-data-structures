@@ -1,0 +1,195 @@
+/* Apply to all elements, and their ::before and ::after pseudo-elements */
+*,
+*::before,
+*::after {
+    margin: 0;
+    /* Remove default margin from all elements */
+    padding: 0;
+    /* Remove default padding from all elements */
+    box-sizing: border-box;
+    /* Include padding and border in element's width and height */
+}
+
+/* Root element for defining custom CSS variables */
+:root {
+    --dark-grey: #1b1b32;
+    /* A dark grey color for backgrounds */
+    --light-grey: #f5f6f7;
+    /* A light grey color for text or backgrounds */
+    --black: #000;
+    /* Standard black color */
+    --white: #fff;
+    /* Standard white color */
+    --grey: #3b3b4f;
+    /* Neutral grey for additional styling */
+    --golden-yellow: #fecc4c;
+    /* Light golden yellow for gradients */
+    --yellow: #ffcc4c;
+    /* Bright yellow for hover effects */
+    --gold: #feac32;
+    /* A golden shade for buttons */
+    --orange: #ffac33;
+    /* Standard orange shade for gradients */
+    --dark-orange: #f89808;
+    /* A darker orange for hover effects */
+}
+
+/* Styling for the body element */
+body {
+    background-color: var(--dark-grey);
+    /* Set the background to dark grey */
+}
+
+/* Styling for elements with the "title" class */
+.title {
+    color: var(--light-grey);
+    /* Light grey text color for contrast */
+    text-align: center;
+    /* Center-align the title */
+    margin: 25px 0;
+    /* Add vertical spacing */
+}
+
+/* Styling for the dessert card container */
+#dessert-card-container {
+    display: flex;
+    /* Use flexbox for layout */
+    flex-direction: column;
+    /* Stack cards vertically by default */
+    flex-wrap: wrap;
+    /* Allow wrapping of elements when needed */
+    align-items: center;
+    /* Center-align cards horizontally */
+}
+
+/* Styling for individual dessert cards */
+.dessert-card {
+    background-color: var(--light-grey);
+    /* Light grey background for visibility */
+    padding: 15px;
+    /* Inner spacing within the card */
+    text-align: center;
+    /* Center text alignment */
+    border-radius: 15px;
+    /* Rounded corners for aesthetic appeal */
+    margin: 20px 10px;
+    /* Outer spacing around the card */
+}
+
+/* Styling for the price text inside dessert cards */
+.dessert-price {
+    font-size: 1.2rem;
+    /* Slightly larger font for prominence */
+}
+
+/* Generic button styling */
+.btn {
+    display: block;
+    /* Block display for buttons */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+    width: 100px;
+    /* Fixed width for consistency */
+    color: var(--dark-grey);
+    /* Text color to contrast background */
+    background-color: var(--gold);
+    /* Base background color */
+    background-image: linear-gradient(var(--golden-yellow), var(--orange));
+    /* Gradient effect */
+    border-color: var(--gold);
+    /* Border color matching the button */
+    border-width: 3px;
+    /* Thickness of the border */
+}
+
+/* Hover effect for buttons */
+.btn:hover {
+    background-image: linear-gradient(var(--yellow), var(--dark-orange));
+    /* Change gradient for hover state */
+}
+
+/* Specific styling for the cart toggle button */
+#cart-btn {
+    position: absolute;
+    /* Position relative to the nearest positioned ancestor */
+    top: 0;
+    /* Align to the top of the container */
+    right: 0;
+    /* Align to the right of the container */
+}
+
+/* Styling for the "Add to Cart" buttons */
+.add-to-cart-btn {
+    margin: 30px auto 10px;
+    /* Center horizontally and add vertical spacing */
+}
+
+/* Styling for the cart container */
+#cart-container {
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    /* Positioned relative to the container */
+    top: 60px;
+    /* Positioned below the cart button */
+    right: 0;
+    /* Aligned to the right of the container */
+    background-color: var(--light-grey);
+    /* Light grey background for visibility */
+    width: 200px;
+    /* Default width of the cart */
+    height: 400px;
+    /* Fixed height with a scroll bar for overflow */
+    border: 8px double var(--black);
+    /* Double black border for emphasis */
+    border-radius: 15px;
+    /* Rounded corners */
+    text-align: center;
+    /* Center-align content inside */
+    font-size: 1.2rem;
+    /* Larger text for readability */
+    overflow-y: scroll;
+    /* Enable vertical scrolling for content overflow */
+}
+
+/* Styling for individual products in the cart */
+.product {
+    margin: 25px 0;
+    /* Vertical spacing between products */
+}
+
+/* Styling for product count elements */
+.product-count {
+    display: inline-block;
+    /* Align inline with other content */
+    margin-right: 10px;
+    /* Add spacing to the right */
+}
+
+/* Styling for product category elements */
+.product-category {
+    margin: 10px 0;
+    /* Add vertical spacing */
+}
+
+/* Responsive design for screens wider than 768px */
+@media (min-width: 768px) {
+
+    /* Update dessert card container layout for larger screens */
+    #dessert-card-container {
+        flex-direction: row;
+        /* Arrange cards in a row */
+    }
+
+    /* Adjust dessert card size for larger screens */
+    .dessert-card {
+        flex: 1 0 21%;
+        /* Flex-grow: 1, Flex-shrink: 0, Flex-basis: 21% */
+    }
+
+    /* Increase cart width for larger screens */
+    #cart-container {
+        width: 300px;
+        /* Wider cart for better visibility */
+    }
+}

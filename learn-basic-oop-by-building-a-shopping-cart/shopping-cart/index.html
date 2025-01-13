@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Declares the document type as HTML5 and specifies the language as English. -->
+
+<head>
+    <!-- Specifies the character encoding as UTF-8 for universal character support. -->
+    <meta charset="UTF-8" />
+    <!-- Ensures compatibility with Internet Explorer's latest rendering engine. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Sets the viewport for responsive design, ensuring proper scaling on different devices. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Sets the page title that appears in the browser tab. -->
+    <title>freeCodeCamp Shopping Cart</title>
+    <!-- Links an external CSS file for styling the webpage. -->
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <!-- Contains the header section of the webpage. -->
+    <header>
+        <!-- Displays the main title of the webpage. -->
+        <h1 class="title">Desserts Page</h1>
+    </header>
+    <!-- Contains the main interactive and informational content of the webpage. -->
+    <main>
+        <!-- A button to toggle the visibility of the shopping cart. -->
+        <button id="cart-btn" type="button" class="btn">
+            <!-- Text inside the button to indicate action, dynamically updated via JavaScript. -->
+            <span id="show-hide-cart">Show</span> Cart
+        </button>
+        <!-- Container for the shopping cart details. Initially hidden or shown dynamically. -->
+        <div id="cart-container">
+            <!-- Button to clear all items from the cart. -->
+            <button class="btn" id="clear-cart-btn">Clear Cart</button>
+            <!-- Container where products added to the cart will be dynamically rendered. -->
+            <div id="products-container"></div>
+            <!-- Displays the total number of items in the cart, dynamically updated. -->
+            <p>Total number of items: <span id="total-items">0</span></p>
+            <!-- Displays the subtotal cost of items in the cart, dynamically calculated. -->
+            <p>Subtotal: <span id="subtotal">$0</span></p>
+            <!-- Displays the calculated taxes based on the subtotal. -->
+            <p>Taxes: <span id="taxes">$0</span></p>
+            <!-- Displays the total cost including taxes, dynamically calculated. -->
+            <p>Total: <span id="total">$0</span></p>
+        </div>
+        <!-- Container for dessert cards, dynamically populated with products. -->
+        <div id="dessert-card-container"></div>
+    </main>
+    <!-- Links an external JavaScript file to add interactivity and dynamic behavior. -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
