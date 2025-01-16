@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- The document type declaration defines the HTML version as HTML5 -->
+
+<head>
+    <meta charset="utf-8" />
+    <!-- Specifies the character encoding for the document as UTF-8, ensuring compatibility with most languages -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures the page scales correctly on devices of different sizes -->
+
+    <title>Advanced Dice Game</title>
+    <!-- Sets the title of the page as "Advanced Dice Game", which will appear in the browser tab -->
+
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Links the external CSS file for styling the page -->
+</head>
+
+<body>
+    <header>
+        <!-- The header section contains the game title, rules button, and rules container -->
+
+        <h1>Advanced Dice Game</h1>
+        <!-- Displays the main title of the game -->
+
+        <button class="btn" id="rules-btn" type="button">Show rules</button>
+        <!-- Button to toggle the visibility of the rules -->
+
+        <div class="rules-container">
+            <!-- Contains the rules and point system for the game -->
+
+            <h2>Rules</h2>
+            <!-- Heading for the rules section -->
+
+            <ul>
+                <!-- Unordered list of game rules -->
+                <li>There are total of six rounds</li>
+                <li>You can only roll the dice three times per round</li>
+                <li>To start the game, roll the dice</li>
+                <li>Then, choose from one of the selected scores or roll the dice again</li>
+                <li>If you choose a selected score, then you will move to the next round</li>
+                <li>If you decline to choose a selected score, then you can roll the dice again two more times</li>
+            </ul>
+
+            <h2 class="points">Points</h2>
+            <!-- Heading for the points explanation section -->
+
+            <ul>
+                <!-- Unordered list explaining how points are scored -->
+                <li>Three of a kind: Sum of all five dice</li>
+                <li>Four of a kind: Sum of all five dice</li>
+                <li>Full house: Three of a kind and a pair - 25 points</li>
+                <li>Small straight: Four of the dice have consecutive values - 30 points</li>
+                <li>Large straight: All five dice have consecutive values - 40 points</li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- The main section contains the game form, dice, score options, and score history -->
+
+        <form id="game">
+            <!-- Main form for the game interactions -->
+
+            <div id="dice">
+                <!-- Container for the dice elements -->
+
+                <!-- Each .die div represents a single die -->
+                <div class="die"></div>
+                <div class="die"></div>
+                <div class="die"></div>
+                <div class="die"></div>
+                <div class="die"></div>
+            </div>
+
+            <p class="rounds-text">
+                <!-- Paragraph displaying the current rolls and round number -->
+                <strong>Rolls:</strong> <span id="current-round-rolls">0</span> |
+                <strong>Round:</strong> <span id="current-round">1</span>
+            </p>
+
+            <div id="score-options">
+                <!-- Container for the score options, including radio buttons for each scoring category -->
+
+                <div>
+                    <input type="radio" name="score-options" id="three-of-a-kind" value="three-of-a-kind" disabled />
+                    <!-- Radio button for the "Three of a kind" score option -->
+                    <label for="three-of-a-kind">Three of a kind<span></span></label>
+                </div>
+
+                <div>
+                    <input type="radio" name="score-options" id="four-of-a-kind" value="four-of-a-kind" disabled />
+                    <!-- Radio button for the "Four of a kind" score option -->
+                    <label for="four-of-a-kind">Four of a kind<span></span></label>
+                </div>
+
+                <div>
+                    <input type="radio" name="score-options" id="full-house" value="full-house" disabled />
+                    <!-- Radio button for the "Full house" score option -->
+                    <label for="full-house">Full house<span></span></label>
+                </div>
+
+                <div>
+                    <input type="radio" name="score-options" id="small-straight" value="small-straight" disabled />
+                    <!-- Radio button for the "Small straight" score option -->
+                    <label for="small-straight">Small straight<span></span></label>
+                </div>
+
+                <div>
+                    <input type="radio" name="score-options" id="large-straight" value="large-straight" disabled />
+                    <!-- Radio button for the "Large straight" score option -->
+                    <label for="large-straight">Large straight<span></span></label>
+                </div>
+
+                <div>
+                    <input type="radio" name="score-options" id="none" value="none" disabled />
+                    <!-- Radio button for the "None of the above" option -->
+                    <label for="none">None of the above<span></span></label>
+                </div>
+            </div>
+
+            <button class="btn" id="keep-score-btn" type="button">
+                <!-- Button to keep the selected score -->
+                Keep the above selected score
+            </button>
+
+            <button class="btn" id="roll-dice-btn" type="button">
+                <!-- Button to roll the dice -->
+                Roll the dice
+            </button>
+        </form>
+
+        <div id="scores">
+            <!-- Container for displaying the score history -->
+
+            <h3>Score history (Total score: <span id="total-score">0</span>)</h3>
+            <!-- Displays the total score and heading for the score history -->
+
+            <ol id="score-history"></ol>
+            <!-- Ordered list to dynamically display the score history -->
+        </div>
+    </main>
+
+    <script src="./script.js"></script>
+    <!-- Links the external JavaScript file that contains the game logic -->
+</body>
+
+</html>
