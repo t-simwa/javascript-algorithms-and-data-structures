@@ -1,0 +1,121 @@
+/* Applies to all elements to ensure consistent spacing and box-sizing */
+* {
+    margin: 0;
+    /* Removes default margin from all elements */
+    padding: 0;
+    /* Removes default padding from all elements */
+    box-sizing: border-box;
+    /* Ensures padding and borders are included in element's total width and height */
+}
+
+/* Defines custom CSS variables for reuse throughout the stylesheet */
+:root {
+    --main-bg-color: #1b1b32;
+    /* A dark background color for the body */
+    --light-grey: #f5f6f7;
+    /* A light grey color used for text and backgrounds */
+    --dark-purple: #5a01a7;
+    /* A deep purple color for dividers */
+    --golden-yellow: #feac32;
+    /* A golden yellow used for buttons */
+}
+
+/* Styles the body element to set the main appearance of the page */
+body {
+    background-color: var(--main-bg-color);
+    /* Sets the page's background color */
+    text-align: center;
+    /* Centers text horizontally within the body */
+}
+
+/* Styles the title (h1 element) */
+.title {
+    color: var(--light-grey);
+    /* Sets the text color to light grey */
+    margin: 20px 0;
+    /* Adds vertical spacing above and below the title */
+}
+
+/* Styles the container holding author cards */
+#author-container {
+    display: flex;
+    /* Enables a flex container for layout */
+    flex-wrap: wrap;
+    /* Allows child elements to wrap onto new lines */
+    justify-content: center;
+    /* Centers child elements horizontally */
+}
+
+/* Styles individual user cards */
+.user-card {
+    border-radius: 15px;
+    /* Rounds the corners of the card */
+    width: 300px;
+    /* Sets a fixed width for the card */
+    height: 350px;
+    /* Sets a fixed height for the card */
+    background-color: var(--light-grey);
+    /* Sets the card's background color to light grey */
+    margin: 20px;
+    /* Adds spacing around each card */
+}
+
+/* Styles the user image inside the card */
+.user-img {
+    width: 150px;
+    /* Sets the width of the image */
+    height: 150px;
+    /* Sets the height of the image */
+    object-fit: cover;
+    /* Ensures the image fills the dimensions without distortion */
+}
+
+/* Styles the purple divider bar in user cards */
+.purple-divider {
+    background-color: var(--dark-purple);
+    /* Sets the background color to dark purple */
+    width: 100%;
+    /* Makes the divider span the full width of its container */
+    height: 15px;
+    /* Sets a fixed height for the divider */
+}
+
+/* Styles the author name displayed in user cards */
+.author-name {
+    margin: 10px;
+    /* Adds spacing around the author name */
+}
+
+/* Styles the bio section within the user card */
+.bio {
+    margin: 20px;
+    /* Adds spacing around the bio content */
+}
+
+/* Styles error messages displayed on the page */
+.error-msg {
+    color: var(--light-grey);
+    /* Sets the error message color to light grey */
+}
+
+/* Styles the button elements */
+.btn {
+    cursor: pointer;
+    /* Changes the cursor to a pointer on hover */
+    width: 200px;
+    /* Sets a fixed width for the button */
+    margin: 10px;
+    /* Adds spacing around the button */
+    color: var(--main-bg-color);
+    /* Sets the text color to the main background color */
+    font-size: 14px;
+    /* Sets the font size for the button text */
+    background-color: var(--golden-yellow);
+    /* Sets the button's background color */
+    background-image: linear-gradient(#fecc4c, #ffac33);
+    /* Adds a gradient to the button background */
+    border-color: var(--golden-yellow);
+    /* Matches the button's border color to the background color */
+    border-width: 3px;
+    /* Sets the thickness of the button border */
+}
