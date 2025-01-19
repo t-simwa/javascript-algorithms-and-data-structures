@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    /* Removes default margin from all elements */
+    padding: 0;
+    /* Removes default padding from all elements */
+    box-sizing: border-box;
+    /* Includes padding and border in the element's total width and height */
+}
+
+:root {
+    /* Declares CSS variables (custom properties) for consistent theming */
+    --main-bg-color: #2a2a40;
+    /* Dark background color */
+    --black: #000;
+    /* Standard black color */
+    --dark-navy: #0a0a23;
+    /* Very dark navy color */
+    --dark-grey: #d0d0d5;
+    /* Subtle dark grey */
+    --medium-grey: #dfdfe2;
+    /* Neutral medium grey */
+    --light-grey: #f5f6f7;
+    /* Light grey for text and background */
+    --peach: #f28373;
+    /* Peach color for highlights */
+    --salmon-color: #f0aea9;
+    /* Salmon pink for category styling */
+    --light-blue: #8bd9f6;
+    /* Light blue for category highlights */
+    --light-orange: #f8b172;
+    /* Soft orange for category styling */
+    --light-green: #93cb5b;
+    /* Gentle green for category sections */
+    --golden-yellow: #f1ba33;
+    /* Bright golden yellow */
+    --gold: #f9aa23;
+    /* Rich gold shade */
+    --green: #6bca6b;
+    /* Standard green for accents */
+}
+
+body {
+    background-color: var(--main-bg-color);
+    /* Sets the main background color for the page */
+}
+
+nav {
+    background-color: var(--dark-navy);
+    /* Sets a dark background color for the navigation bar */
+    padding: 10px 0;
+    /* Adds vertical padding to the navigation bar */
+}
+
+.fcc-logo {
+    width: 210px;
+    /* Sets a fixed width for the logo image */
+    display: block;
+    /* Makes the image a block element */
+    margin: auto;
+    /* Centers the logo horizontally */
+}
+
+.title {
+    margin: 25px 0;
+    /* Adds vertical spacing above and below the title */
+    text-align: center;
+    /* Centers the title text */
+    color: var(--light-grey);
+    /* Sets the title color to light grey */
+}
+
+.table-wrapper {
+    padding: 0 25px;
+    /* Adds horizontal padding to the table wrapper */
+    overflow-x: auto;
+    /* Enables horizontal scrolling if content overflows */
+}
+
+table {
+    width: 100%;
+    /* Makes the table span the full width of its container */
+    color: var(--dark-grey);
+    /* Sets the text color within the table */
+    margin: auto;
+    /* Centers the table horizontally */
+    table-layout: fixed;
+    /* Ensures consistent column widths */
+    border-collapse: collapse;
+    /* Removes spacing between table borders */
+    overflow-x: scroll;
+    /* Ensures horizontal scroll is available if content overflows */
+}
+
+#topics {
+    text-align: start;
+    /* Aligns text in the "Topics" column to the start (left) */
+    width: 60%;
+    /* Makes the "Topics" column occupy 60% of the table width */
+}
+
+th {
+    border-bottom: 2px solid var(--dark-grey);
+    /* Adds a bottom border to table headers */
+    padding-bottom: 10px;
+    /* Adds spacing below the header text */
+    font-size: 1.3rem;
+    /* Sets the font size for table headers */
+}
+
+td:not(:first-child) {
+    text-align: center;
+    /* Centers the content in all table cells except the first column */
+}
+
+td {
+    border-bottom: 1px solid var(--dark-grey);
+    /* Adds a border below table cells */
+    padding: 20px 0;
+    /* Adds vertical padding to table cells */
+}
+
+.post-title {
+    font-size: 1.2rem;
+    /* Sets the font size for post titles */
+    color: var(--medium-grey);
+    /* Colors post titles with medium grey */
+    text-decoration: none;
+    /* Removes the underline from links */
+}
+
+.category {
+    padding: 3px;
+    /* Adds padding to category tags */
+    color: var(--black);
+    /* Colors the text within categories black */
+    text-decoration: none;
+    /* Removes underline from category links */
+    display: block;
+    /* Makes the category tag a block element */
+    width: fit-content;
+    /* Shrinks the width to fit the content */
+    margin: 10px 0 10px;
+    /* Adds vertical spacing above and below category tags */
+}
+
+.career {
+    background-color: var(--salmon-color);
+    /* Sets the background color for "Career" category */
+}
+
+.feedback,
+.html-css {
+    background-color: var(--light-blue);
+    /* Sets the background color for "Feedback" and "HTML/CSS" categories */
+}
+
+.support {
+    background-color: var(--light-orange);
+    /* Sets the background color for "Support" category */
+}
+
+.general {
+    background-color: var(--light-green);
+    /* Sets the background color for "General" category */
+}
+
+.javascript {
+    background-color: var(--golden-yellow);
+    /* Sets the background color for "JavaScript" category */
+}
+
+.backend {
+    background-color: var(--gold);
+    /* Sets the background color for "Backend" category */
+}
+
+.python {
+    background-color: var(--green);
+    /* Sets the background color for "Python" category */
+}
+
+.motivation {
+    background-color: var(--peach);
+    /* Sets the background color for "Motivation" category */
+}
+
+.avatar-container {
+    display: flex;
+    /* Displays avatars in a flexible layout */
+    justify-content: center;
+    /* Centers the avatars horizontally */
+    gap: 10px;
+    /* Adds spacing between avatars */
+    flex-wrap: wrap;
+    /* Allows avatars to wrap to the next line if needed */
+}
+
+.avatar-container img {
+    width: 30px;
+    /* Sets a fixed width for avatar images */
+    height: 30px;
+    /* Sets a fixed height for avatar images */
+}
+
+@media (max-width: 750px) {
+
+    /* Applies styles for screens 750px wide or smaller */
+    .table-wrapper {
+        padding: 0 15px;
+        /* Reduces horizontal padding on smaller screens */
+    }
+
+    table {
+        width: 700px;
+        /* Sets a fixed table width for better scrolling experience */
+    }
+
+    th {
+        font-size: 1.2rem;
+        /* Slightly reduces header font size on smaller screens */
+    }
+
+    .post-title {
+        font-size: 1.1rem;
+        /* Reduces font size for post titles on smaller screens */
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Specifies the document type and declares it as HTML -->
+    <meta charset="UTF-8" />
+    <!-- Sets the character encoding for the document to UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Ensures proper rendering on modern browsers and compatibility with older versions -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the page responsive by setting the viewport width to the device width -->
+    <title>fCC Forum Leaderboard</title>
+    <!-- The title of the webpage that appears in the browser tab -->
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- Links an external CSS file for styling -->
+</head>
+
+<body>
+    <header>
+        <!-- Defines the header section of the webpage -->
+        <nav>
+            <!-- Navigation bar for branding or links -->
+            <img class="fcc-logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg"
+                alt="freeCodeCamp logo" />
+            <!-- Displays the freeCodeCamp logo -->
+        </nav>
+        <h1 class="title">Latest Topics</h1>
+        <!-- Main title of the page, describing the content -->
+    </header>
+    <main>
+        <!-- Defines the main content area of the webpage -->
+        <div class="table-wrapper">
+            <!-- Wrapper for styling the table layout -->
+            <table>
+                <!-- Defines a table to display data -->
+                <thead>
+                    <!-- Table header -->
+                    <tr>
+                        <!-- Row inside the table header -->
+                        <th id="topics">Topics</th>
+                        <!-- Table header for the "Topics" column -->
+                        <th id="avatars">Avatars</th>
+                        <!-- Table header for the "Avatars" column -->
+                        <th id="replies">Replies</th>
+                        <!-- Table header for the "Replies" column -->
+                        <th id="views">Views</th>
+                        <!-- Table header for the "Views" column -->
+                        <th id="activity">Activity</th>
+                        <!-- Table header for the "Activity" column -->
+                    </tr>
+                </thead>
+                <tbody id="posts-container"></tbody>
+                <!-- Body of the table where rows will be dynamically added by JavaScript -->
+            </table>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+    <!-- Links an external JavaScript file for interactive functionality -->
+</body>
+
+</html>
