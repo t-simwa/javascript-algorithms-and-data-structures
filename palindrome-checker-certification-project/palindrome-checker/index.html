@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Declares the document type as HTML5 and sets the language to English -->
+    <meta charset="UTF-8" />
+    <!-- Sets the character encoding to UTF-8 to support various characters -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Ensures compatibility with older versions of Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures proper scaling and responsiveness on mobile devices -->
+
+    <!-- Adds a favicon to the browser tab for branding -->
+    <link rel="icon" type="image/png" href="https://cdn.freecodecamp.org/universal/favicons/favicon.ico" />
+    <title>Palindrome Checker</title>
+    <!-- Sets the title of the webpage to "Palindrome Checker" -->
+
+    <!-- Links to an external CSS file for styling the page -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <main class="container">
+        <!-- Serves as the main content container, applying styles defined by the "container" class -->
+
+        <!-- Displays the freeCodeCamp logo at the top of the page -->
+        <img class="freecodecamp-logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg"
+            alt="freeCodeCamp Logo" />
+
+        <!-- Page title inviting users to check for palindromes -->
+        <h1 class="title">Check If Your Text Is a Palindrome!</h1>
+
+        <div class="palindrome-div">
+            <!-- Container for the main palindrome input and verification logic -->
+
+            <!-- Label associated with the text input field, provides context for users -->
+            <label for="text-input">Type a word or sentence to verify if it's a palindrome:</label>
+
+            <!-- Input field for users to enter text -->
+            <input class="palindrome-input" id="text-input" value="" type="text" />
+
+            <!-- Button to trigger palindrome verification -->
+            <button class="palindrome-btn" id="check-btn">Verify</button>
+
+            <!-- Placeholder for displaying the result of the palindrome check -->
+            <div class="results-div hidden" id="result"></div>
+        </div>
+
+        <div class="palindrome-definition-div">
+            <!-- Section explaining the concept of a palindrome -->
+
+            <p class="palindrome-definition">
+                <!-- Provides a definition of what a palindrome is -->
+                <span role="img" aria-label="light-bulb">&#128161;</span>
+                A <dfn>palindrome</dfn> is any word, phrase, or number that reads the same forward and backward when
+                spaces, punctuation, and capitalization are disregarded.
+            </p>
+        </div>
+    </main>
+    <!-- Main content area ends -->
+
+    <!-- Links the JavaScript file that handles functionality -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    /* Resets the default margin for all elements */
+    padding: 0;
+    /* Resets the default padding for all elements */
+    box-sizing: border-box;
+    /* Ensures padding and border are included in element's total width and height */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    /* Sets the font for the entire page to Arial or a generic sans-serif if Arial is unavailable */
+    background-color: #11142d;
+    /* Sets a dark blueish background color for the body */
+    color: #f0f0f0;
+    /* Sets a light text color for better contrast against the dark background */
+}
+
+.container {
+    width: 100%;
+    /* Makes the container span the full width of the viewport */
+    min-height: 100vh;
+    /* Ensures the container is at least as tall as the viewport */
+    position: relative;
+    /* Allows for positioning of child elements relative to this container */
+    display: flex;
+    /* Enables a flexbox layout for child elements */
+    align-items: center;
+    /* Vertically centers child elements */
+    justify-content: center;
+    /* Horizontally centers child elements */
+    flex-direction: column;
+    /* Stacks child elements vertically */
+}
+
+.freecodecamp-logo {
+    height: 35px;
+    /* Sets the height of the logo image */
+    margin-bottom: 25px;
+    /* Adds space below the logo */
+}
+
+.title {
+    text-align: center;
+    /* Centers the text horizontally */
+    padding: 15px 0;
+    /* Adds vertical padding to the title */
+    font-size: 3rem;
+    /* Sets a large font size for the title */
+    margin-bottom: 25px;
+    /* Adds space below the title */
+    color: #d4d4f2;
+    /* Gives the title a soft purple color */
+}
+
+.palindrome-div {
+    width: min(100vw, 500px);
+    /* Sets the width to either the full viewport width or 500px, whichever is smaller */
+    min-height: 120px;
+    /* Ensures a minimum height of 120px */
+    border-radius: 25px;
+    /* Rounds the corners of the div */
+    display: flex;
+    /* Enables flexbox layout for this section */
+    align-items: center;
+    /* Vertically centers child elements */
+    justify-content: center;
+    /* Horizontally centers child elements */
+    flex-wrap: wrap;
+    /* Allows child elements to wrap onto new lines if necessary */
+    padding: 25px;
+    /* Adds padding inside the div */
+    margin: 15px 0;
+    /* Adds vertical margin above and below the div */
+    background-color: #e9e9e9;
+    /* Sets a light gray background color */
+    box-shadow: 0 8px 8px rgba(0, 46, 173, 0.4);
+    /* Adds a shadow for a lifted appearance */
+}
+
+label {
+    color: #11142d;
+    /* Sets the text color to dark blue */
+    margin-bottom: 25px;
+    /* Adds space below the label */
+}
+
+.palindrome-btn {
+    width: 110px;
+    /* Sets a fixed width for the button */
+    border: none;
+    /* Removes the default border */
+    padding: 12px;
+    /* Adds internal spacing around the button text */
+    border-radius: 18px;
+    /* Rounds the corners of the button */
+    background-color: #8b00d2;
+    /* Sets the button's background to a purple shade */
+    color: #fff;
+    /* Sets the button text color to white */
+    cursor: pointer;
+    /* Changes the cursor to a pointer on hover */
+    transition: background-color 0.3s ease;
+    /* Smoothly transitions background color changes */
+}
+
+.palindrome-btn:hover {
+    background-color: #a400e6;
+    /* Changes the background color when the button is hovered */
+}
+
+.palindrome-input {
+    height: 35px;
+    /* Sets the height of the input field */
+    width: 270px;
+    /* Sets a fixed width for the input field */
+    text-align: center;
+    /* Centers the text within the input field */
+    font-size: 1.3rem;
+    /* Sets a slightly larger font size */
+    margin: 12px;
+    /* Adds margin around the input field */
+    border: none;
+    /* Removes the default border */
+    border-bottom: 3px solid #8b00d2;
+    /* Adds a purple bottom border for styling */
+    transition: border-bottom 0.3s ease;
+    /* Smoothly transitions changes to the bottom border */
+}
+
+.palindrome-input:focus {
+    border-bottom: 4px solid #8b00d2;
+    /* Increases the border thickness when the input is focused */
+}
+
+.palindrome-input::placeholder {
+    text-align: center;
+    /* Centers the placeholder text */
+    color: #8b00d2;
+    /* Sets the placeholder text color to purple */
+}
+
+.user-input {
+    font-size: 1.6rem;
+    /* Sets a larger font size for user input display */
+    margin-top: 12px;
+    /* Adds space above the element */
+    text-align: center;
+    /* Centers the text */
+    color: #000;
+    /* Sets the text color to black */
+}
+
+.results-div {
+    overflow-y: auto;
+    /* Allows vertical scrolling if content exceeds the height */
+    word-wrap: break-word;
+    /* Breaks words to prevent overflow */
+    min-height: 60px;
+    /* Ensures a minimum height of 60px */
+    color: #333;
+    /* Sets a dark text color */
+    font-weight: bold;
+    /* Makes the text bold */
+}
+
+.hidden {
+    display: none;
+    /* Hides elements by removing them from the layout */
+}
+
+.palindrome-definition-div {
+    width: min(100vw, 500px);
+    /* Sets the width to the smaller of 100% of the viewport or 500px */
+    font-size: 1.4rem;
+    /* Sets a medium font size */
+    min-height: 160px;
+    /* Ensures a minimum height of 160px */
+    background-color: #006400;
+    /* Sets a green background color */
+    margin-top: 25px;
+    /* Adds space above the div */
+    padding: 25px;
+    /* Adds internal spacing */
+    border-radius: 25px;
+    /* Rounds the corners of the div */
+    display: flex;
+    /* Enables flexbox layout */
+    align-items: center;
+    /* Vertically centers child elements */
+    justify-content: center;
+    /* Horizontally centers child elements */
+}
+
+.palindrome-definition {
+    vertical-align: middle;
+    /* Aligns the text vertically to the middle */
+    text-align: center;
+    /* Centers the text horizontally */
+    color: #f4f4f4;
+    /* Sets the text color to a light gray */
+}
