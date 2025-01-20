@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Declares the document type as HTML and sets the language of the document to English. -->
+    <meta charset="UTF-8" />
+    <!-- Sets the character encoding to UTF-8 to support a wide range of characters. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Ensures compatibility with Internet Explorer's latest rendering mode. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Enables responsive design by setting the viewport width to the device width and initial scale to 1. -->
+    <link rel="icon" type="image/png" href="https://cdn.freecodecamp.org/universal/favicons/favicon.ico" />
+    <!-- Adds a favicon for the webpage, enhancing its visual identity in browser tabs. -->
+    <title>Telephone Number Validator</title>
+    <!-- Sets the title of the webpage, which appears in the browser tab. -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Links an external CSS file to style the webpage. -->
+</head>
+
+<body>
+    <main>
+        <!-- The main section contains the primary content of the webpage. -->
+        <h1>Telephone Number Validator</h1>
+        <!-- A heading element displaying the title of the application. -->
+        <div class="phone-container">
+            <!-- A container div for grouping elements related to the phone number input and validation UI. -->
+            <div class="phone-background">
+                <!-- Represents a styled background for the phone container, improving aesthetics. -->
+                <div class="phone-camera"></div>
+                <!-- Represents a decorative camera element for the phone background. -->
+            </div>
+            <label for="user-input">Enter a Phone Number:</label>
+            <!-- A label associated with the input field, providing instructions to the user. -->
+            <input maxlength="20" type="text" id="user-input" value="" />
+            <!-- An input field where the user can type a phone number. It has a maximum length of 20 characters. -->
+            <div id="results-div"></div>
+            <!-- A div to display validation results, dynamically updated by JavaScript. -->
+            <div class="phone-footer">
+                <!-- A footer section within the container for holding action buttons. -->
+                <button class="btn-styles" id="check-btn">Check</button>
+                <!-- A button for initiating the phone number validation process. -->
+                <button class="btn-styles" id="clear-btn">Clear</button>
+                <!-- A button for clearing the input and results, enhancing user experience. -->
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <!-- Links an external JavaScript file to add interactivity to the webpage. -->
+</body>
+
+</html>

@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    /* Removes default margin from all elements. */
+    padding: 0;
+    /* Removes default padding from all elements. */
+    box-sizing: border-box;
+    /* Ensures padding and border are included in element's total width and height. */
+}
+
+:root {
+    --primary-bg: #f7f7f7;
+    /* Light neutral background for the body and other sections. */
+    --secondary-bg: #ffffff;
+    /* Clean white background for specific containers. */
+    --accent-color: #4f66ff;
+    /* Soft blue color used for accents like buttons and highlights. */
+    --text-color: #333;
+    /* Dark gray color for text, ensuring readability. */
+    --input-bg: #f0f0f0;
+    /* Light gray background for input fields. */
+    --border-color: #ddd;
+    /* Light border color for subtle UI accents. */
+    --center-text: center;
+    /* Variable for text alignment. */
+    --font-family: 'Inter', sans-serif;
+    /* A clean, modern sans-serif font for the application. */
+}
+
+body {
+    background-color: var(--primary-bg);
+    /* Sets a light background for the entire page. */
+    font-family: var(--font-family);
+    /* Uses the defined font family for all text in the body. */
+    color: var(--text-color);
+    /* Applies the dark gray color to the text for readability. */
+    line-height: 1.6;
+    /* Improves text readability with sufficient line spacing. */
+    display: flex;
+    /* Enables flexbox layout to center content. */
+    justify-content: center;
+    /* Horizontally centers the content. */
+    align-items: center;
+    /* Vertically centers the content. */
+    height: 100vh;
+    /* Ensures the body takes up the full height of the viewport. */
+}
+
+main {
+    display: flex;
+    /* Uses flexbox for layout. */
+    flex-direction: column;
+    /* Aligns child elements vertically in a column. */
+    align-items: center;
+    /* Centers child elements horizontally. */
+    justify-content: center;
+    /* Centers child elements vertically. */
+    padding: 30px 20px;
+    /* Adds padding inside the container for spacing. */
+    width: 100%;
+    /* Allows the container to take up the full width. */
+    max-width: 600px;
+    /* Limits the container's width for better readability on large screens. */
+    box-sizing: border-box;
+    /* Includes padding and border in the element's width and height. */
+}
+
+.freecodecamp-logo {
+    width: 100%;
+    /* Makes the logo responsive to the container's width. */
+    height: 30px;
+    /* Sets a fixed height for the logo. */
+    margin-bottom: 20px;
+    /* Adds space below the logo. */
+}
+
+h1 {
+    color: var(--text-color);
+    /* Sets the color of the heading to dark gray. */
+    font-size: 2.2rem;
+    /* Increases the font size for prominence. */
+    font-weight: 600;
+    /* Makes the heading slightly bold. */
+    text-align: var(--center-text);
+    /* Centers the text horizontally. */
+    margin-bottom: 25px;
+    /* Adds space below the heading. */
+}
+
+.phone-container {
+    position: relative;
+    /* Allows positioning of child elements relative to this container. */
+    background-color: var(--secondary-bg);
+    /* Uses a white background for contrast. */
+    width: 270px;
+    /* Sets a fixed width for the phone container. */
+    height: 480px;
+    /* Sets a fixed height for the phone container. */
+    margin: 30px auto;
+    /* Centers the container horizontally and adds vertical spacing. */
+    border-radius: 20px;
+    /* Rounds the container's corners for a modern look. */
+    border: 1px solid var(--border-color);
+    /* Adds a light border around the container. */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    /* Adds a subtle shadow for depth. */
+    display: flex;
+    /* Uses flexbox for layout inside the container. */
+    flex-direction: column;
+    /* Aligns child elements vertically. */
+    align-items: center;
+    /* Centers child elements horizontally. */
+    padding: 20px;
+    /* Adds internal spacing within the container. */
+}
+
+.phone-background {
+    background-color: var(--accent-color);
+    /* Fills the background with the accent blue color. */
+    width: 100%;
+    /* Stretches to match the width of the container. */
+    height: 20px;
+    /* Sets a fixed height for the background element. */
+    border-radius: 20px 20px 0 0;
+    /* Rounds the top corners for a smooth appearance. */
+}
+
+.phone-camera {
+    background-color: var(--secondary-bg);
+    /* Sets a white color to mimic a camera lens. */
+    width: 12px;
+    /* Defines the camera's width. */
+    height: 12px;
+    /* Defines the camera's height. */
+    border-radius: 50%;
+    /* Makes the element circular. */
+    position: absolute;
+    /* Positions it relative to the phone container. */
+    top: 10px;
+    /* Places the camera 10px from the top of the container. */
+}
+
+label {
+    margin: 10px auto 5px;
+    /* Adds spacing around the label for readability. */
+    font-size: 1.1rem;
+    /* Sets the font size slightly larger than normal text. */
+    color: var(--text-color);
+    /* Ensures the label matches the text color. */
+}
+
+#user-input {
+    display: block;
+    /* Makes the input field behave as a block element. */
+    margin: 10px auto;
+    /* Centers the input field and adds vertical spacing. */
+    padding: 12px;
+    /* Adds internal spacing inside the input field. */
+    border: 1px solid var(--border-color);
+    /* Uses a light border for a clean look. */
+    border-radius: 10px;
+    /* Rounds the input field's corners. */
+    text-align: center;
+    /* Centers text inside the input field. */
+    width: 90%;
+    /* Sets the input width to 90% of the parent container. */
+    font-size: 16px;
+    /* Sets a readable font size for the input text. */
+    color: var(--text-color);
+    /* Matches the text color with the application's theme. */
+    background-color: var(--input-bg);
+    /* Applies a light gray background for contrast. */
+    transition: border 0.3s ease-in-out;
+    /* Smoothly animates border changes. */
+}
+
+#user-input:focus {
+    border-color: var(--accent-color);
+    /* Highlights the border in blue when focused. */
+    outline: none;
+    /* Removes the default outline for a cleaner appearance. */
+}
+
+.phone-footer {
+    background-color: var(--accent-color);
+    /* Fills the footer with the accent blue color. */
+    width: 100%;
+    /* Stretches to match the width of the container. */
+    height: 45px;
+    /* Sets a fixed height for the footer. */
+    position: absolute;
+    /* Positions the footer at the bottom of the container. */
+    bottom: 0;
+    /* Aligns the footer at the container's bottom edge. */
+    display: flex;
+    /* Uses flexbox to align buttons inside. */
+    align-items: center;
+    /* Vertically centers the buttons. */
+    justify-content: center;
+    /* Horizontally centers the buttons. */
+    border-radius: 0 0 20px 20px;
+    /* Rounds the bottom corners for consistency. */
+}
+
+.btn-styles {
+    cursor: pointer;
+    /* Changes the cursor to a pointer for clickable buttons. */
+    width: 120px;
+    /* Sets a consistent button width. */
+    padding: 12px;
+    /* Adds internal spacing for comfortable clicking. */
+    font-size: 16px;
+    /* Sets a readable font size for button text. */
+    color: #fff;
+    /* Makes the button text white for contrast. */
+    background-color: var(--accent-color);
+    /* Fills the button with the blue accent color. */
+    border: none;
+    /* Removes any default border around the button. */
+    border-radius: 30px;
+    /* Rounds the button's edges for a modern design. */
+    text-transform: uppercase;
+    /* Converts button text to uppercase for emphasis. */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    /* Smooth animations for hover effects. */
+}
+
+.btn-styles:hover {
+    background-color: #3f53e7;
+    /* Darkens the button background on hover. */
+    transform: translateY(-3px);
+    /* Slightly lifts the button for a tactile effect. */
+}
+
+#results-div {
+    overflow-y: auto;
+    /* Allows vertical scrolling if content overflows. */
+    max-height: 250px;
+    /* Limits the maximum height of the results container. */
+    width: 100%;
+    /* Stretches to match the parent container's width. */
+    background-color: var(--secondary-bg);
+    /* Uses a white background for contrast. */
+    border-radius: 8px;
+    /* Rounds the container's corners. */
+    padding: 15px;
+    /* Adds internal spacing inside the results container. */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Adds a subtle shadow for depth. */
+    margin-top: 20px;
+    /* Adds spacing above the results container. */
+}
+
+.results-text {
+    font-size: 1.1rem;
+    /* Sets a readable font size for results text. */
+    text-align: var(--center-text);
+    /* Centers the text inside the container. */
+    color: var(--text-color);
+    /* Matches the text color with the application's theme. */
+    margin: 10px 0;
+    /* Adds vertical spacing around the results text. */
+}
