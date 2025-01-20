@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Declares the document type as HTML5 and sets the primary language to English -->
+    <meta charset="UTF-8" />
+    <!-- Specifies the character encoding as UTF-8, ensuring support for a wide range of characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures responsive design by setting the viewport width to the device width and initial scale to 1 -->
+
+    <!-- Preconnects to Google Fonts to establish early connections for performance optimization -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Links to a specific font (Castoro Titling) from Google Fonts to style the webpage -->
+    <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet" />
+    <!-- Links to an external CSS file to define the webpage's styles -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <!-- Specifies a favicon for the webpage to appear in the browser tab -->
+    <link rel="icon" type="image/png" href="https://cdn.example.com/universal/favicons/favicon.ico" />
+
+    <!-- Defines the title of the webpage that appears in the browser tab -->
+    <title>Roman Numeral Converter</title>
+</head>
+
+<body>
+    <main>
+        <!-- Displays a logo for the application, enhancing visual appeal and branding -->
+        <img class="custom-logo" src="./roman-numerals.webp" alt="Roman Numerals" />
+
+        <!-- Main heading of the webpage, clearly indicating its purpose -->
+        <h1>Roman Numeral Converter</h1>
+
+        <!-- A form element that groups input elements for converting numbers to Roman numerals -->
+        <form id="form" class="form">
+            <fieldset>
+                <!-- Groups related input elements and ensures better accessibility -->
+                <label for="number">Please Enter a Value:</label><br />
+                <!-- Label associated with the input field, describing its purpose -->
+                <input type="number" id="number" required />
+                <!-- Input field for the user to enter a number, marked as required for validation -->
+
+                <!-- Button to trigger the conversion process -->
+                <button type="button" id="convert-btn">Convert</button>
+            </fieldset>
+        </form>
+
+        <!-- A div to display the conversion result, initially hidden to maintain a clean UI -->
+        <div id="output" class="output hidden"></div>
+    </main>
+
+    <!-- Links to an external JavaScript file that handles the functionality of the webpage -->
+    <script src="script.js"></script>
+</body>
+
+</html>

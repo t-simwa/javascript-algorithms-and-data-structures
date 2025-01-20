@@ -1,0 +1,266 @@
+:root {
+    /* Defines custom CSS variables (custom properties) for consistent color usage throughout the stylesheet */
+    --gray-00: #f5f5f5;
+    /* Light gray, often used for backgrounds */
+    --gray-05: #e0e0e0;
+    /* Slightly darker gray */
+    --gray-15: #c1c1c1;
+    /* Medium gray for elements like inputs */
+    --gray-75: #333333;
+    /* Dark gray for text or background */
+    --gray-85: #222222;
+    /* Very dark gray */
+    --gray-90: #121212;
+    /* Almost black, typically used for the main background */
+    --blue-50: #4caf50;
+    /* Accent color for focus or highlights */
+    --error: #f44336;
+    /* Standard error color */
+    --danger-color: #ff5722;
+    /* Bright red-orange for warnings or danger */
+    --danger-background: #ffcdd2;
+    /* Light red background for alerts */
+}
+
+*,
+::before,
+::after {
+    /* Resets margin and padding for all elements and their pseudo-elements */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* Ensures that padding and border are included in element's total width/height */
+}
+
+body {
+    /* Applies styles to the entire body */
+    min-height: 100vh;
+    /* Ensures the body covers the full height of the viewport */
+    padding: 40px 20px;
+    /* Adds padding around the body */
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    /* Sets the default font family */
+    font-size: 18px;
+    /* Base font size for the document */
+    background-color: var(--gray-90);
+    /* Dark background color */
+    color: var(--gray-05);
+    /* Light text color for contrast */
+    display: flex;
+    /* Makes the body a flex container */
+    justify-content: center;
+    /* Centers content horizontally */
+    align-items: center;
+    /* Centers content vertically */
+}
+
+main {
+    /* Styles for the main container */
+    display: flex;
+    /* Enables flexbox layout */
+    flex-direction: column;
+    /* Stacks child elements vertically */
+    align-items: center;
+    /* Centers child elements horizontally */
+    justify-content: center;
+    /* Centers child elements vertically */
+    text-align: center;
+    /* Centers text */
+    background: linear-gradient(135deg, #6a1b9a, #ff4081);
+    /* Creates a diagonal gradient background */
+    padding: 40px;
+    /* Adds space inside the container */
+    border-radius: 12px;
+    /* Rounds the corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    /* Adds a subtle shadow */
+}
+
+.custom-logo {
+    /* Styles for the logo image */
+    height: 40px;
+    /* Sets the image height */
+    margin-bottom: 30px;
+    /* Adds space below the logo */
+    filter: brightness(0) invert(1);
+    /* Inverts the colors to white for dark backgrounds */
+}
+
+h1 {
+    /* Styles for the main heading */
+    font-size: 2.5rem;
+    /* Large font size */
+    margin: 20px auto;
+    /* Adds vertical margin and centers horizontally */
+    max-width: 450px;
+    /* Restricts the heading width */
+    font-family: 'Montserrat', sans-serif;
+    /* Uses a decorative font */
+    color: white;
+    /* Sets the text color */
+}
+
+form {
+    /* Styles for the form container */
+    color: var(--gray-05);
+    /* Light text color */
+    margin: 20px 0;
+    /* Adds vertical spacing */
+    padding: 20px;
+    /* Adds space inside the form */
+    border-radius: 8px;
+    /* Rounds the form corners */
+    text-align: center;
+    /* Centers form content */
+    background-color: var(--gray-85);
+    /* Dark background */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    /* Adds a soft shadow */
+    width: 100%;
+    /* Full width of the container */
+    max-width: 480px;
+    /* Restricts the maximum width */
+}
+
+fieldset {
+    /* Styles for fieldset, a grouping container for form elements */
+    border: none;
+    /* Removes the default border */
+    padding: 20px;
+    /* Adds space inside */
+}
+
+label {
+    /* Styles for labels associated with form inputs */
+    display: block;
+    /* Makes the label a block element */
+    font-size: 1.25rem;
+    /* Slightly larger text */
+    margin-bottom: 12px;
+    /* Adds space below the label */
+    font-weight: 600;
+    /* Makes the text bold */
+}
+
+input:focus-visible,
+button:focus-visible {
+    /* Styles for focused input and button elements for accessibility */
+    outline: 3px solid var(--blue-50);
+    /* Adds a visible blue outline on focus */
+}
+
+input {
+    /* Styles for text input fields */
+    display: block;
+    /* Makes the input a block element */
+    font-size: 1.75rem;
+    /* Large text size */
+    width: 100%;
+    /* Full width */
+    height: 50px;
+    /* Fixed height */
+    padding: 10px 15px;
+    /* Adds inner padding */
+    margin: 12px 0;
+    /* Adds vertical spacing */
+    color: black;
+    /* Text color */
+    background-color: var(--gray-15);
+    /* Light gray background */
+    border: 2px solid var(--gray-05);
+    /* Border with light gray color */
+    border-radius: 8px;
+    /* Rounds the corners */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    /* Smooth color transitions */
+}
+
+input:focus {
+    /* Styles for input fields when focused */
+    background-color: var(--gray-05);
+    /* Lightens the background */
+    border-color: var(--blue-50);
+    /* Highlights the border in blue */
+}
+
+button {
+    /* Styles for buttons */
+    cursor: pointer;
+    /* Changes the cursor to a pointer on hover */
+    margin-top: 15px;
+    /* Adds spacing above */
+    text-decoration: none;
+    /* Removes underline */
+    background-image: linear-gradient(to right, #42a5f5, #2962ff);
+    /* Creates a gradient background */
+    border: 2px solid #1976d2;
+    /* Blue border */
+    padding: 12px 18px;
+    /* Adds padding inside */
+    font-size: 1.2rem;
+    /* Slightly larger text size */
+    border-radius: 8px;
+    /* Rounds the corners */
+    color: white;
+    /* White text color */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    /* Smooth hover effects */
+}
+
+button:hover {
+    /* Styles for buttons on hover */
+    transform: scale(1.05);
+    /* Slightly enlarges the button */
+    background-color: #1e88e5;
+    /* Changes the background color */
+}
+
+.output {
+    /* Styles for the output div */
+    color: white;
+    /* White text color */
+    background-color: var(--gray-75);
+    /* Dark gray background */
+    border: 2px solid var(--gray-05);
+    /* Light gray border */
+    font-size: 1.75rem;
+    /* Large text size */
+    width: 90%;
+    /* 90% width of the container */
+    max-width: 480px;
+    /* Restricts the maximum width */
+    min-height: 50px;
+    /* Ensures a minimum height */
+    margin-top: 30px;
+    /* Adds spacing above */
+    padding: 12px 18px;
+    /* Adds inner padding */
+    border-radius: 8px;
+    /* Rounds the corners */
+    overflow-wrap: break-word;
+    /* Prevents text overflow */
+    text-align: center;
+    /* Centers the text */
+}
+
+.alert {
+    /* Styles for alert messages */
+    font-size: 1.5rem;
+    /* Medium text size */
+    background-color: var(--danger-background);
+    /* Light red background */
+    border: 2px solid var(--danger-color);
+    /* Bright red border */
+    color: var(--danger-color);
+    /* Red text color */
+    padding: 12px;
+    /* Adds inner padding */
+    border-radius: 8px;
+    /* Rounds the corners */
+}
+
+.hidden {
+    /* Utility class to hide elements */
+    display: none;
+    /* Completely hides the element */
+}
