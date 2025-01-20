@@ -1,0 +1,443 @@
+/* 
+  Universal selector to reset margin, padding, and set box-sizing to border-box, ensuring consistent layout and spacing across elements.
+*/
+* {
+    margin: 0;
+    /* Removes default margin from all elements */
+    padding: 0;
+    /* Removes default padding from all elements */
+    box-sizing: border-box;
+    /* Ensures padding and border are included in element's total width/height */
+}
+
+/* 
+  Defining CSS variables in the :root selector for easy global access to commonly used colors and values. 
+  This allows for easy maintenance and theme adjustments.
+*/
+:root {
+    --light-gray: #f5f5f5;
+    /* Light gray color used for text and backgrounds */
+    --dark-blue: #0f111a;
+    /* Dark blue color used for backgrounds and text */
+    --accent-color: #ff7f50;
+    /* Accent color used for buttons and key UI elements */
+    --border-color: #e0e0e0;
+    /* Border color for form fields and elements */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    /* Shadow color with transparency for subtle shadow effects */
+}
+
+/* 
+  Body styles, including background color, font, and layout settings.
+  It uses Flexbox for centering the content both vertically and horizontally.
+*/
+body {
+    background-color: var(--dark-blue);
+    /* Sets dark blue as the body background */
+    color: var(--light-gray);
+    /* Sets light gray as the text color */
+    font-family: 'Roboto', sans-serif;
+    /* Uses Roboto font for text */
+    line-height: 1.5;
+    /* Sets line-height for better readability */
+    display: flex;
+    /* Uses Flexbox to align children elements */
+    justify-content: center;
+    /* Centers content horizontally */
+    align-items: center;
+    /* Centers content vertically */
+    height: 100vh;
+    /* Ensures the body takes up the full height of the viewport */
+}
+
+/* 
+  Main container styling for the project, centering content and applying padding.
+  Ensures the content is responsive and adapts to various screen sizes.
+*/
+main {
+    display: flex;
+    /* Enables Flexbox for the main container */
+    flex-direction: column;
+    /* Stacks child elements vertically */
+    align-items: center;
+    /* Centers child elements horizontally */
+    justify-content: center;
+    /* Centers child elements vertically */
+    padding: 40px;
+    /* Adds padding around the content */
+    max-width: 1200px;
+    /* Limits the maximum width of the main container */
+    width: 100%;
+    /* Ensures the main container takes full available width */
+}
+
+/* 
+  Styling for the logo element, controlling size and spacing.
+  Makes the logo subtle by reducing opacity slightly.
+*/
+.freecodecamp-logo {
+    height: 25px;
+    /* Sets the logo height to 25px */
+    margin-bottom: 20px;
+    /* Adds space below the logo */
+    opacity: 0.9;
+    /* Reduces the opacity for a more subtle appearance */
+}
+
+/* 
+  Heading styling for the project title, including font size and color.
+  Aligns the text in the center and adds space below.
+*/
+h1 {
+    font-size: 2.2rem;
+    /* Sets the font size for the main title */
+    color: var(--light-gray);
+    /* Sets the color of the title to light gray */
+    margin-bottom: 30px;
+    /* Adds space below the title */
+    text-align: center;
+    /* Centers the title horizontally */
+}
+
+/* 
+  Styling for the "change due" text, including font size, color, and alignment.
+  Adds margin for spacing.
+*/
+#change-due {
+    font-size: 1rem;
+    /* Sets font size */
+    color: var(--light-gray);
+    /* Uses light gray color for text */
+    text-align: left;
+    /* Aligns the text to the left */
+    margin: 15px 0;
+    /* Adds vertical margin for spacing */
+}
+
+/* 
+  Container styling for the entire cash register layout.
+  Uses Flexbox to stack content and align items centrally.
+*/
+.container {
+    display: flex;
+    /* Enables Flexbox layout */
+    flex-direction: column;
+    /* Stacks child elements vertically */
+    align-items: center;
+    /* Centers child elements horizontally */
+    width: 100%;
+    /* Takes up full width of its parent container */
+}
+
+/* 
+  Input section styling, centers the elements and applies margin for spacing.
+*/
+.input-div {
+    display: flex;
+    /* Uses Flexbox for input and button alignment */
+    flex-direction: column;
+    /* Stacks input and button vertically */
+    align-items: center;
+    /* Centers elements horizontally */
+    margin: 15px 0;
+    /* Adds vertical spacing */
+    width: 100%;
+    /* Takes up full width */
+}
+
+/* 
+  Label styling for input fields, including font size, color, and weight.
+  Adds spacing below the label.
+*/
+label {
+    font-size: 1rem;
+    /* Sets font size */
+    color: var(--light-gray);
+    /* Light gray color for label text */
+    margin-bottom: 8px;
+    /* Adds space below the label */
+    font-weight: 600;
+    /* Sets font weight to bold */
+}
+
+/* 
+  User input field styling for the cash amount.
+  Defines height, width, padding, font size, border, and shadow for a clean and accessible input.
+*/
+.user-input {
+    height: 40px;
+    /* Defines height of the input field */
+    width: 100%;
+    /* Makes the input field take the full width */
+    padding: 12px;
+    /* Adds padding inside the input field */
+    font-size: 1rem;
+    /* Sets font size */
+    border: 1px solid var(--border-color);
+    /* Adds a border with a light gray color */
+    border-radius: 8px;
+    /* Rounds the corners of the input */
+    background-color: #fff;
+    /* White background for the input field */
+    color: var(--dark-blue);
+    /* Dark blue color for the text inside the input */
+    margin-top: 8px;
+    /* Adds space above the input field */
+    box-shadow: 0 2px 4px var(--shadow-color);
+    /* Applies a subtle shadow around the input */
+}
+
+/* 
+  Styling for the price screen element, including border, background color, font size, and centering.
+  Uses Flexbox to align text within the price screen.
+*/
+.price-screen {
+    border: 8px solid var(--accent-color);
+    /* Adds a solid border with accent color */
+    background-color: black;
+    /* Black background for the price screen */
+    height: 50px;
+    /* Sets the height of the price screen */
+    width: 200px;
+    /* Sets the width of the price screen */
+    margin-left: -22px;
+    /* Offsets the screen slightly to the left */
+    color: white;
+    /* Sets the text color to white */
+    font-size: 1.2rem;
+    /* Sets font size */
+    text-align: center;
+    /* Centers the text inside the price screen */
+    display: flex;
+    /* Uses Flexbox for centering the content */
+    flex-wrap: wrap;
+    /* Allows wrapping of content if needed */
+    align-items: center;
+    /* Vertically centers content */
+    justify-content: center;
+    /* Horizontally centers content */
+}
+
+/* 
+  Styling for the individual price display element inside the price screen.
+  Increases the font size for prominence.
+*/
+#price {
+    font-size: 1.6rem;
+    /* Larger font size for price display */
+}
+
+/* 
+  The connector element between different sections, styled with a background color and rounded corners.
+*/
+.connector {
+    background-color: var(--accent-color);
+    /* Accent color background */
+    height: 40px;
+    /* Height of the connector */
+    width: 50px;
+    /* Width of the connector */
+    margin-left: -25px;
+    /* Offsets connector to the left */
+    border-radius: 6px;
+    /* Rounded corners for the connector */
+}
+
+/* 
+  Top register styling, including layout, background color, padding, and box shadow.
+  This is the section where buttons for actions will be placed.
+*/
+.top-register {
+    display: flex;
+    /* Uses Flexbox for layout */
+    justify-content: space-between;
+    /* Spreads out elements evenly */
+    padding: 30px;
+    /* Adds padding around the content */
+    background-color: var(--accent-color);
+    /* Accent color background */
+    border-radius: 12px;
+    /* Rounded corners for the register */
+    width: 380px;
+    /* Sets a fixed width */
+    margin-bottom: 30px;
+    /* Adds space below the top register */
+    box-shadow: 0 4px 8px var(--shadow-color);
+    /* Applies a shadow effect around the register */
+}
+
+/* 
+  Button container inside the top register, arranged vertically with space around each button.
+*/
+.btns-container {
+    display: flex;
+    /* Enables Flexbox for layout */
+    flex-direction: column;
+    /* Stacks buttons vertically */
+    justify-content: space-around;
+    /* Adds space between buttons */
+    align-items: center;
+    /* Centers buttons horizontally */
+    width: 25%;
+    /* Sets width of the button container */
+}
+
+/* 
+  Button styling for individual buttons, including size, shape, background color, and shadow effects.
+*/
+.btn {
+    width: 30px;
+    /* Width of the button */
+    height: 30px;
+    /* Height of the button */
+    border-radius: 50%;
+    /* Makes the button circular */
+    background-color: var(--dark-blue);
+    /* Dark blue background for the button */
+    border: none;
+    /* Removes border */
+    cursor: pointer;
+    /* Changes the cursor to a pointer on hover */
+    margin: 8px;
+    /* Adds margin around buttons */
+    box-shadow: 0 2px 6px var(--shadow-color);
+    /* Adds shadow to buttons */
+}
+
+/* 
+  Styling for the purchase button, with specific colors, size, and hover effect.
+*/
+.check-btn-styles {
+    cursor: pointer;
+    /* Changes the cursor to a pointer on hover */
+    width: 150px;
+    /* Sets button width */
+    height: 50px;
+    /* Sets button height */
+    margin: 15px 0;
+    /* Adds vertical spacing */
+    color: var(--dark-blue);
+    /* Sets text color */
+    font-size: 1.1rem;
+    /* Sets font size */
+    font-weight: bold;
+    /* Makes text bold */
+    background-color: var(--accent-color);
+    /* Sets background color */
+    border-radius: 8px;
+    /* Rounds the button corners */
+    border: none;
+    /* Removes border */
+    transition: background-color 0.3s ease-in-out;
+    /* Smooth transition for background color on hover */
+}
+
+/* 
+  Hover effect for the purchase button, changing background color on mouse over.
+*/
+.check-btn-styles:hover {
+    background-color: #ff5c39;
+    /* Changes the background color to a lighter shade of orange */
+}
+
+/* 
+  Cash drawer display styling, with padding, border-radius, and shadow effects.
+  Provides a container for displaying the available cash in the drawer.
+*/
+.cash-drawer-display {
+    font-size: 1.2rem;
+    /* Sets font size */
+    background-color: #fff;
+    /* White background for the drawer */
+    color: var(--dark-blue);
+    /* Dark blue text color */
+    padding: 20px;
+    /* Adds padding inside the drawer */
+    width: 65%;
+    /* Sets width */
+    height: 95%;
+    /* Sets height */
+    border-radius: 12px;
+    /* Rounded corners */
+    box-shadow: 0 6px 12px var(--shadow-color);
+    /* Adds shadow around the drawer */
+    display: flex;
+    /* Uses Flexbox for layout */
+    flex-direction: column;
+    /* Stacks elements vertically */
+    justify-content: space-between;
+    /* Adds space between child elements */
+}
+
+/* 
+  Header styling for the cash drawer, with bold text and a margin at the bottom.
+*/
+.cash-drawer-header {
+    font-size: 1.2rem;
+    /* Font size for the header */
+    color: var(--dark-blue);
+    /* Dark blue color */
+    font-weight: bold;
+    /* Bold text */
+    margin-bottom: 15px;
+    /* Adds space below the header */
+}
+
+/* 
+  Content area inside the cash drawer, aligning child elements horizontally with space between.
+*/
+.cash-drawer-contents {
+    display: flex;
+    /* Uses Flexbox for layout */
+    justify-content: space-between;
+    /* Adds space between content */
+    font-size: 1rem;
+    /* Sets font size */
+    padding: 5px 0;
+    /* Adds vertical padding */
+}
+
+/* 
+  Styling for the cash drawer contents' span elements, making text bold and setting color.
+*/
+.cash-drawer-contents span {
+    font-weight: 600;
+    /* Makes text bold */
+    color: var(--light-gray);
+    /* Light gray color for the text */
+}
+
+/* 
+  Bottom register container styling, including background color, height, width, and shadow.
+  Positioned below the top register section.
+*/
+.bottom-register {
+    background-color: var(--accent-color);
+    /* Accent color background */
+    height: 60px;
+    /* Sets height */
+    width: 380px;
+    /* Sets width */
+    margin-top: 20px;
+    /* Adds space above the bottom register */
+    border-radius: 12px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px var(--shadow-color);
+    /* Adds shadow around the register */
+}
+
+/* 
+  Styling for a circular visual element in the bottom register, used for design purposes.
+*/
+.circle {
+    margin: 20px auto;
+    /* Centers the circle horizontally and adds vertical margin */
+    border-radius: 50%;
+    /* Makes the element circular */
+    width: 25px;
+    /* Sets width of the circle */
+    height: 25px;
+    /* Sets height of the circle */
+    background-color: var(--accent-color);
+    /* Accent color background */
+}

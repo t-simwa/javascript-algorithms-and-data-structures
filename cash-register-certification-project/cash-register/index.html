@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Specifies the character encoding for the document, ensuring correct character rendering -->
+    <meta charset="UTF-8" />
+
+    <!-- Ensures the page is optimized for Internet Explorer and the latest version is used -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Sets the viewport properties for responsive web design, adapting to various device screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Sets the favicon for the website, which appears in the browser tab -->
+    <link rel="icon" type="image/png" href="https://cdn.freecodecamp.org/universal/favicons/favicon.ico" />
+
+    <!-- Specifies the title of the page that appears in the browser tab -->
+    <title>Cash Register</title>
+
+    <!-- Links to an external stylesheet for styling the page -->
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <main>
+        <!-- Main heading for the project, introducing the purpose of the page -->
+        <h1>Cash Register Project</h1>
+
+        <!-- Section for displaying the change due, dynamically updated by JavaScript -->
+        <div id="change-due"></div>
+
+        <div class="input-div">
+            <!-- Label for the cash input field, providing context for the user -->
+            <label for="cash">Enter cash from customer:</label>
+
+            <!-- Input field for entering the cash amount, styled by the 'user-input' class -->
+            <input type="number" id="cash" class="user-input" value="" />
+
+            <!-- Button to initiate the purchase process, triggering the validation and calculation functions -->
+            <button class="check-btn-styles" id="purchase-btn">Purchase</button>
+        </div>
+
+        <div class="container">
+            <!-- Container for the top display of the cash register interface -->
+            <div class="top-display-screen-container">
+                <!-- Paragraph element to display the price, dynamically updated -->
+                <p id="price-screen" class="price-screen"></p>
+
+                <!-- A connector/divider element for styling the UI, separating sections -->
+                <div class="connector"></div>
+            </div>
+
+            <!-- Top portion of the cash register, containing buttons for operations -->
+            <div class="top-register">
+                <div class="btns-container">
+                    <!-- Multiple buttons for different actions on the register (such as quantity input) -->
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                </div>
+
+                <!-- A display area for the cash drawer, where the amount in the drawer is shown -->
+                <div id="cash-drawer-display" class="cash-drawer-display"></div>
+            </div>
+
+            <!-- Bottom portion of the register, typically used for additional UI elements (such as buttons or displays) -->
+            <div class="bottom-register">
+                <!-- A circular element used for visual design in the UI -->
+                <div class="circle"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- External JavaScript file, containing the logic and interactivity for the cash register -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
