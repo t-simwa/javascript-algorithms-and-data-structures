@@ -1,0 +1,408 @@
+*,
+*::before,
+*::after {
+    /* Ensures consistent box-sizing across all elements and pseudo-elements */
+    box-sizing: border-box;
+}
+
+* {
+    /* Removes default margin for all elements */
+    margin: 0;
+}
+
+body {
+    /* Sets a consistent line height for better readability */
+    line-height: 1.5;
+}
+
+img {
+    /* Ensures images are displayed as block elements to prevent layout issues */
+    display: block;
+}
+
+/* Project styling */
+
+body {
+    /* Sets the full height of the body to the viewport height */
+    height: 100vh;
+    /* Specifies the font family for the entire document */
+    font-family: sans-serif;
+    /* Applies a dark blue background to match the Pokémon theme */
+    background-color: #2d2d4a;
+    /* Sets the text color to white for better contrast */
+    color: #fff;
+    /* Provides fallback fonts for better compatibility */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+    /* Centers the content both vertically and horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.freecodecamp-logo {
+    /* Keeps the aspect ratio intact while scaling */
+    height: auto;
+    /* Sets a fixed width for the logo image */
+    width: 200px;
+    /* Adds vertical spacing around the logo */
+    margin: 25px 0;
+    /* Ensures the image is scaled without distortion */
+    object-fit: contain;
+}
+
+h1 {
+    /* Sets a light text color for the heading */
+    color: #f5f6f7;
+    /* Increases font size for prominence */
+    font-size: 2em;
+    /* Centers the text horizontally */
+    text-align: center;
+    /* Adds a subtle shadow to the text for a dynamic look */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+    /* Sets a fixed width for the container */
+    width: 325px;
+    /* Adds vertical spacing above and below */
+    margin: 25px 0;
+    /* Applies a dark purple background for contrast */
+    background-color: #3b3b61;
+    /* Adds a light border to frame the container */
+    border: 1px solid #f5f6f7;
+    /* Rounds the corners for a modern design */
+    border-radius: 15px;
+    /* Adds a soft shadow for a polished look */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.output,
+#search-form {
+    /* Centers content horizontally */
+    display: flex;
+    justify-content: center;
+}
+
+#search-form {
+    /* Allows wrapping of child elements if necessary */
+    flex-wrap: wrap;
+    /* Adds vertical spacing around the form */
+    margin: 10px 0;
+    /* Adds internal spacing within the form */
+    padding: 5px;
+    /* Rounds the top corners of the form */
+    border-radius: 8px 8px 0 0;
+    /* Adds spacing between child elements */
+    gap: 10px;
+}
+
+label {
+    /* Vertically centers the label */
+    align-self: center;
+}
+
+#search-input:focus-visible,
+#search-button:focus-visible {
+    /* Highlights focused elements with a bright outline */
+    outline: 3px solid #f5a623;
+}
+
+#search-input {
+    /* Sets a fixed height for the input field */
+    height: 40px;
+    /* Adds internal left padding for text spacing */
+    padding-left: 10px;
+    /* Sets a fixed width for the input field */
+    width: 200px;
+    /* Rounds the corners of the input field */
+    border-radius: 5px;
+    /* Applies a light background color for better visibility */
+    background-color: #f1f1f1;
+    /* Adds a border to define the input field */
+    border: 1px solid #f5f6f7;
+}
+
+#search-button {
+    /* Adds vertical and horizontal padding for the button */
+    padding: 14px 0;
+    /* Sets a fixed width for the button */
+    width: 100px;
+    /* Rounds the button into a pill shape */
+    border-radius: 25px;
+    /* Centers the button text */
+    text-align: center;
+    /* Applies a vibrant tomato red background */
+    background-color: #ff6347;
+    /* Sets the text color to white for contrast */
+    color: #f5f6f7;
+    /* Removes default border for a cleaner look */
+    border: none;
+    /* Makes the button text bold */
+    font-weight: bold;
+    /* Adds a smooth background-color transition effect */
+    transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+    /* Darkens the button background on hover */
+    background-color: #ff4c2b;
+}
+
+.output {
+    /* Adds vertical spacing around the output section */
+    margin: 10px 0;
+    /* Adds internal spacing for better layout */
+    padding: 5px;
+    /* Aligns child elements vertically */
+    flex-direction: column;
+    /* Centers child elements horizontally */
+    align-items: center;
+}
+
+.top-container,
+.bottom-container {
+    /* Stacks child elements vertically */
+    display: flex;
+    flex-direction: column;
+    /* Ensures the container takes full width */
+    width: 100%;
+    /* Sets a minimum height for consistent layout */
+    min-height: 325px;
+}
+
+.top-container {
+    /* Adds spacing below the top container */
+    margin-bottom: 10px;
+    /* Adds internal spacing for content alignment */
+    padding: 10px;
+    /* Applies a light background color for contrast */
+    background-color: #f0f1f7;
+}
+
+.name-and-id {
+    /* Sets a fixed height for layout consistency */
+    height: 28px;
+    /* Increases the font size slightly */
+    font-size: 1.1em;
+    /* Capitalizes the text for styling consistency */
+    text-transform: capitalize;
+    /* Adds spacing below the name and ID */
+    margin-bottom: 5px;
+    /* Makes the text bold for emphasis */
+    font-weight: bold;
+    /* Applies a bright yellow color for attention */
+    color: #ffeb3b;
+}
+
+.size {
+    /* Sets a fixed height for consistent layout */
+    height: 22px;
+    /* Reduces font size for secondary information */
+    font-size: 0.85rem;
+    /* Applies a light gray color for a subtle appearance */
+    color: #90a4ae;
+}
+
+.sprite-container {
+    /* Allows the container to grow and fill available space */
+    flex-grow: 2;
+    /* Centers the sprite both vertically and horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sprite {
+    /* Sets a fixed width for the sprite */
+    width: 180px;
+    /* Rounds the sprite edges for aesthetic purposes */
+    border-radius: 12px;
+    /* Adds a solid border around the sprite */
+    border: 4px solid #f5f6f7;
+}
+
+#types {
+    /* Sets a minimum height for the types section */
+    min-height: 30px;
+    /* Displays types in a flexible horizontal layout */
+    display: flex;
+    /* Allows type labels to wrap if needed */
+    flex-wrap: wrap;
+    /* Aligns type labels to the start of the container */
+    justify-content: flex-start;
+    /* Adds spacing between type labels */
+    gap: 5px;
+}
+
+.type {
+    /* Sets a fixed width for each type label */
+    width: 80px;
+    /* Adds padding inside each label */
+    padding: 5px;
+    /* Reduces font size for compactness */
+    font-size: 0.9rem;
+    /* Centers the text inside the label */
+    text-align: center;
+    /* Rounds the edges of the type labels */
+    border-radius: 5px;
+    /* Capitalizes all text for uniformity */
+    text-transform: uppercase;
+    /* Makes the text bold for emphasis */
+    font-weight: bold;
+    /* Sets the text color to white for readability */
+    color: #fff;
+}
+
+table {
+    /* Removes gaps between table borders */
+    border-collapse: collapse;
+    /* Prevents additional spacing between cells */
+    border-spacing: 0;
+    /* Makes the table take full width */
+    width: 100%;
+    /* Sets a standard font size for table text */
+    font-size: 1rem;
+    /* Colors the table text white for readability */
+    color: #fff;
+    /* Applies a rich purple background to the table */
+    background-color: #673ab7;
+}
+
+th:nth-child(even),
+td:nth-child(even) {
+    /* Adds a left border for every second column */
+    border-left: 5px solid #f5f6f7;
+}
+
+tr {
+    /* Adds a bottom border to each row */
+    border-bottom: 5px solid #f5f6f7;
+}
+
+td,
+th {
+    /* Centers the text inside table cells */
+    text-align: center;
+    /* Adds padding around table content */
+    padding: 8px;
+}
+
+/* Special styling for Pokémon types */
+
+.normal {
+    /* Sets a light gray background for the Normal type */
+    background-color: #b7b7aa;
+}
+
+.fire {
+    /* Sets a vibrant red-orange background for the Fire type */
+    background-color: #ff6f52;
+}
+
+.water {
+    /* Sets a bright blue background for the Water type */
+    background-color: #42a1ff;
+}
+
+.electric {
+    /* Sets a bright yellow background for the Electric type */
+    background-color: #fecc33;
+}
+
+.grass {
+    /* Sets a green background for the Grass type */
+    background-color: #78cc55;
+}
+
+.ice {
+    /* Sets a light blue background for the Ice type */
+    background-color: #66ccfe;
+}
+
+.fighting {
+    /* Sets a muted red background for the Fighting type */
+    background-color: #d3887e;
+}
+
+.poison {
+    /* Sets a light purple background for the Poison type */
+    background-color: #c68bb7;
+}
+
+.ground {
+    /* Sets a sandy brown background for the Ground type */
+    background-color: #dfba52;
+}
+
+.flying {
+    /* Sets a soft blue background for the Flying type */
+    background-color: #8899ff;
+}
+
+.psychic {
+    /* Sets a pink background for the Psychic type */
+    background-color: #ff66a3;
+}
+
+.bug {
+    /* Sets a greenish-yellow background for the Bug type */
+    background-color: #aabb23;
+}
+
+.rock {
+    /* Sets a light brown background for the Rock type */
+    background-color: #baaa66;
+}
+
+.ghost {
+    /* Sets a muted purple background for the Ghost type */
+    background-color: #9995d0;
+}
+
+.dragon {
+    /* Sets a rich purple background for the Dragon type */
+    background-color: #9e93f1;
+}
+
+.dark {
+    /* Sets a dark brown background for the Dark type */
+    background-color: #b59682;
+}
+
+.steel {
+    /* Sets a gray background for the Steel type */
+    background-color: #abaabb;
+}
+
+.fairy {
+    /* Sets a pinkish-purple background for the Fairy type */
+    background-color: #ed99ed;
+}
+
+@media screen and (min-width: 550px) {
+    h1 {
+        /* Increases heading size for larger screens */
+        font-size: 2.5em;
+    }
+
+    .container {
+        /* Expands container width on wider screens */
+        width: 450px;
+    }
+
+    #search-form,
+    .top-container,
+    .bottom-container {
+        /* Ensures these elements take up most of the available width */
+        width: 95%;
+    }
+
+    .type {
+        /* Increases width of type labels for better readability on large screens */
+        width: 85px;
+    }
+}

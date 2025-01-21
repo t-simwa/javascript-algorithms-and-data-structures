@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Specifies the document type and sets the language to English -->
+    <meta charset="UTF-8" />
+    <!-- Ensures proper rendering in older versions of Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Makes the app responsive by adjusting it to the device's viewport width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Sets the favicon for the webpage -->
+    <link rel="icon" type="image/png" href="https://cdn.freecodecamp.org/universal/favicons/favicon.ico" />
+    <!-- Sets the page title displayed on the browser tab -->
+    <title>Pokémon Search App</title>
+    <!-- Links the external CSS file for styling the page -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <main>
+        <!-- Displays the logo image at the top of the application -->
+        <img class="freecodecamp-logo" src="./pokemon.png" alt="freeCodeCamp Logo" />
+        <!-- Main heading of the application -->
+        <h1>Pokémon Search App</h1>
+        <div class="container">
+            <!-- Search form for Pokémon name or ID -->
+            <form role="search" id="search-form">
+                <label for="search-input">Search for Pokémon Name or ID:</label>
+                <!-- Input field to enter Pokémon name or ID -->
+                <input type="text" name="pokemon" id="search-input" required />
+                <!-- Button to trigger the search functionality -->
+                <button id="search-button">Search</button>
+            </form>
+            <!-- Section to display Pokémon details -->
+            <div class="output">
+                <div class="top-container">
+                    <!-- Displays the Pokémon's name and ID -->
+                    <div class="name-and-id">
+                        <span id="pokemon-name"></span>
+                        <span id="pokemon-id"></span>
+                    </div>
+                    <!-- Displays the Pokémon's weight and height -->
+                    <div class="size">
+                        <span id="weight"></span>
+                        <span id="height"></span>
+                    </div>
+                    <!-- Container to display the Pokémon's sprite (image) -->
+                    <div id="sprite-container" class="sprite-container"></div>
+                    <!-- Displays the Pokémon's types -->
+                    <div id="types"></div>
+                </div>
+                <div class="bottom-container">
+                    <!-- Table to display Pokémon's base stats -->
+                    <table>
+                        <tr>
+                            <th>Base</th>
+                            <th>Stats</th>
+                        </tr>
+                        <!-- Row for HP (Health Points) -->
+                        <tr>
+                            <td>HP:</td>
+                            <td id="hp"></td>
+                        </tr>
+                        <!-- Row for Attack stat -->
+                        <tr>
+                            <td>Attack:</td>
+                            <td id="attack"></td>
+                        </tr>
+                        <!-- Row for Defense stat -->
+                        <tr>
+                            <td>Defense:</td>
+                            <td id="defense"></td>
+                        </tr>
+                        <!-- Row for Special Attack stat -->
+                        <tr>
+                            <td>Sp. Attack:</td>
+                            <td id="special-attack"></td>
+                        </tr>
+                        <!-- Row for Special Defense stat -->
+                        <tr>
+                            <td>Sp. Defense:</td>
+                            <td id="special-defense"></td>
+                        </tr>
+                        <!-- Row for Speed stat -->
+                        <tr>
+                            <td>Speed:</td>
+                            <td id="speed" class="speed"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Links the external JavaScript file to add interactivity -->
+        <script src="./script.js"></script>
+    </main>
+</body>
+
+</html>
