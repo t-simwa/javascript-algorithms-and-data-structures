@@ -1,42 +1,67 @@
 // PYRAMID GENERATOR
 
-const character = "#"; // Declares a constant 'character' to represent the symbol used in the pattern.
-const count = 10; // Declares a constant 'count' to define the total number of rows for the pattern.
-const rows = []; // Initializes an empty array 'rows' to store each row of the pattern.
-let inverted = false; // Initializes a flag 'inverted' to determine the direction of row arrangement (false = normal, true = reversed).
+// Declares a constant 'character' to represent the symbol used in the pyramid pattern.
+const character = "#";
 
-// Function to create a padded row for the pattern
+// Declares a constant 'count' to define the total number of rows for the pyramid.
+const count = 10;
+
+// Initializes an empty array 'rows' to store each row of the pyramid pattern.
+const rows = [];
+
+// Initializes a flag 'inverted' to determine whether the pyramid rows should be arranged in reverse order (false = normal, true = reversed).
+let inverted = false;
+
+// Function to create a single padded row for the pyramid pattern
 function padRow(rowNumber, rowCount) {
     return (
-        " ".repeat(rowCount - rowNumber) + // Adds spaces to the left for alignment based on the current row number.
-        character.repeat(2 * rowNumber - 1) + // Creates the row's pattern with an increasing number of 'character' symbols.
-        " ".repeat(rowCount - rowNumber) // Adds spaces to the right for symmetry.
+        // Adds spaces to the left of the pattern for alignment based on the current row number.
+        " ".repeat(rowCount - rowNumber) +
+        // Creates the row's pyramid pattern by repeating the 'character' for the current row.
+        // The number of characters is calculated as 2 * rowNumber - 1 to create an odd number of symbols for each row.
+        character.repeat(2 * rowNumber - 1) +
+        // Adds spaces to the right of the pattern for symmetry.
+        " ".repeat(rowCount - rowNumber)
     );
 }
 
-// Loops through numbers from 1 to 'count' to build the pattern
+// Loops from 1 to 'count' to construct each row of the pyramid pattern.
 for (let i = 1; i <= count; i++) {
-    if (inverted) { // Checks if the rows should be inverted.
-        rows.unshift(padRow(i, count)); // Inserts the padded row at the beginning of the 'rows' array.
+    // Checks if the rows should be inverted (i.e., added in reverse order).
+    if (inverted) {
+        // If inverted is true, adds the current padded row at the beginning of the 'rows' array.
+        rows.unshift(padRow(i, count));
     } else {
-        rows.push(padRow(i, count)); // Appends the padded row at the end of the 'rows' array.
+        // If inverted is false, appends the current padded row to the end of the 'rows' array.
+        rows.push(padRow(i, count));
     }
 }
 
-/*while (rows.length < count) { 
+/*
+while (rows.length < count) { 
+    // Adds rows to the 'rows' array until its length matches the value of 'count'.
     rows.push(padRow(rows.length + 1, count)); 
-}*/
-// This commented-out code was intended to keep adding rows to the 'rows' array until its length matches 'count'.
+}
+*/
+// This commented-out code snippet is an alternative approach to ensure the 'rows' array has exactly 'count' rows by continuously adding new rows until the array reaches the desired length.
 
-/*for (let i = count; i > 0; i--) { 
+/*
+for (let i = count; i > 0; i--) { 
+    // Loops from 'count' to 1, creating rows in reverse order.
+    // Appends each row to the 'rows' array, resulting in a reversed pyramid.
     rows.push(padRow(i, count)); 
-}*/
-// This commented-out loop builds the pattern in reverse order, starting from 'count' and decreasing to 1.
+}
+*/
+// This commented-out code snippet generates the pyramid in reverse order, starting from the largest row and ending with the smallest.
 
-let result = "Ted's Pyramid Generator:" + '\n' + '\n'; // Initializes an empty string 'result' to store the final pattern.
+// Initializes a string 'result' to store the final pyramid pattern, starting with a title header.
+let result = "Ted's Pyramid Generator:" + '\n' + '\n';
 
-for (const row of rows) { // Iterates over each row in the 'rows' array.
-    result = result + row + '\n'; // Adds the current row to 'result' with a newline character for formatting.
+// Iterates over each row stored in the 'rows' array.
+for (const row of rows) {
+    // Adds the current row to the 'result' string, followed by a newline character for proper formatting.
+    result = result + row + '\n';
 }
 
-console.log(result); // Outputs the complete pattern to the console.
+// Outputs the complete pyramid pattern to the console.
+console.log(result);
