@@ -1,43 +1,103 @@
-function getAverage(scores) { // Defines a function to calculate the average score from an array of scores.
-    let sum = 0; // Initializes a variable 'sum' to hold the total of the scores.
+function getAverage(scores) {
+    // Defines a function named 'getAverage' that calculates the average score from an array of scores.
 
-    for (const score of scores) { // Loops through each score in the 'scores' array.
-        sum += score; // Adds the current score to the 'sum' variable.
+    let sum = 0;
+    // Initializes a variable 'sum' to store the cumulative total of all scores in the array.
+    // This variable will be updated as each score is processed in the loop.
+
+    for (const score of scores) {
+        // Begins a loop that iterates over each individual score in the 'scores' array.
+
+        sum += score;
+        // Adds the current score (represented by 'score') to the 'sum' variable.
+        // This line updates the total sum with the value of the current score during each iteration.
     }
 
-    return sum / scores.length; // Returns the average by dividing the total sum by the number of scores.
+    return sum / scores.length;
+    // Divides the total 'sum' of all scores by the number of elements in the 'scores' array.
+    // Returns the calculated average to the caller of the function.
 }
 
-function getGrade(score) { // Defines a function to return the grade based on the score.
-    if (score === 100) { // Checks if the score is 100.
-        return "A++"; // Returns "A++" for a perfect score.
-    } else if (score >= 90) { // Checks if the score is 90 or above.
-        return "A"; // Returns "A" for scores in the 90-99 range.
-    } else if (score >= 80) { // Checks if the score is 80 or above.
-        return "B"; // Returns "B" for scores in the 80-89 range.
-    } else if (score >= 70) { // Checks if the score is 70 or above.
-        return "C"; // Returns "C" for scores in the 70-79 range.
-    } else if (score >= 60) { // Checks if the score is 60 or above.
-        return "D"; // Returns "D" for scores in the 60-69 range.
+function getGrade(score) {
+    // Defines a function named 'getGrade' that determines the grade corresponding to a given score.
+
+    if (score === 100) {
+        // Checks if the given score is exactly 100.
+
+        return "A++";
+        // If the score is 100, returns the grade "A++", indicating a perfect score.
+    } else if (score >= 90) {
+        // Checks if the score is greater than or equal to 90 but less than 100.
+
+        return "A";
+        // If the condition is true, returns the grade "A".
+    } else if (score >= 80) {
+        // Checks if the score is greater than or equal to 80 but less than 90.
+
+        return "B";
+        // If the condition is true, returns the grade "B".
+    } else if (score >= 70) {
+        // Checks if the score is greater than or equal to 70 but less than 80.
+
+        return "C";
+        // If the condition is true, returns the grade "C".
+    } else if (score >= 60) {
+        // Checks if the score is greater than or equal to 60 but less than 70.
+
+        return "D";
+        // If the condition is true, returns the grade "D".
     } else {
-        return "F"; // Returns "F" for scores below 60.
+        // Executes this block if none of the previous conditions are met, meaning the score is below 60.
+
+        return "F";
+        // Returns the grade "F" for scores below 60.
     }
 }
 
-function hasPassingGrade(score) { // Defines a function to check if the score is passing.
-    return getGrade(score) !== "F"; // Returns true if the grade is not "F".
+function hasPassingGrade(score) {
+    // Defines a function named 'hasPassingGrade' to check if a given score corresponds to a passing grade.
+
+    return getGrade(score) !== "F";
+    // Calls the 'getGrade' function with the given score and checks if the returned grade is not "F".
+    // If the grade is not "F", the function returns true (indicating a passing grade).
+    // If the grade is "F", the function returns false (indicating a failing grade).
 }
 
-function studentMsg(totalScores, studentScore) { // Defines a function to generate a message based on the student's performance.
-    let classAverage = getAverage(totalScores); // Calculates the class average using 'getAverage'.
-    let studentGrade = getGrade(studentScore); // Determines the student's grade using 'getGrade'.
-    let passGrade = hasPassingGrade(studentScore); // Checks if the student has passed using 'hasPassingGrade'.
+function studentMsg(totalScores, studentScore) {
+    // Defines a function named 'studentMsg' that generates a personalized message about the student's performance.
+    // Takes two arguments: 'totalScores', an array of all student scores, and 'studentScore', the score of the specific student.
 
-    if (passGrade === true) { // If the student passed,
-        return "Class average: " + classAverage + ". Your grade: " + studentGrade + ". You passed the course."; // Returns a message indicating passing.
-    } else { // If the student failed,
-        return "Class average: " + classAverage + ". Your grade: " + studentGrade + ". You failed the course."; // Returns a message indicating failure.
+    let classAverage = getAverage(totalScores);
+    // Calls the 'getAverage' function with the 'totalScores' array to calculate the average score of the class.
+    // Stores the resulting average score in the variable 'classAverage'.
+
+    let studentGrade = getGrade(studentScore);
+    // Calls the 'getGrade' function with the student's score to determine their grade.
+    // Stores the resulting grade in the variable 'studentGrade'.
+
+    let passGrade = hasPassingGrade(studentScore);
+    // Calls the 'hasPassingGrade' function with the student's score to check if they passed.
+    // Stores the result (true or false) in the variable 'passGrade'.
+
+    if (passGrade === true) {
+        // Checks if 'passGrade' is true, meaning the student passed the course.
+
+        return "Class average: " + classAverage + ". Your grade: " + studentGrade + ". You passed the course.";
+        // If the student passed, constructs and returns a message containing:
+        // 1. The class average score.
+        // 2. The student's grade.
+        // 3. A statement indicating that the student passed the course.
+    } else {
+        // Executes this block if 'passGrade' is false, meaning the student failed the course.
+
+        return "Class average: " + classAverage + ". Your grade: " + studentGrade + ". You failed the course.";
+        // Constructs and returns a message containing:
+        // 1. The class average score.
+        // 2. The student's grade.
+        // 3. A statement indicating that the student failed the course.
     }
 }
 
-console.log(studentMsg([92, 88, 12, 77, 57, 100, 67, 38, 97, 89], 37)); // Logs the generated message for the student with score 37.
+console.log(studentMsg([92, 88, 12, 77, 57, 100, 67, 38, 97, 89], 37));
+// Calls the 'studentMsg' function with the class scores array and the specific student's score (37).
+// Logs the personalized message generated by the 'studentMsg' function to the console.
