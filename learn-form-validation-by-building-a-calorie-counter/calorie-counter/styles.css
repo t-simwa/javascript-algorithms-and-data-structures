@@ -1,83 +1,131 @@
+/* SECTION: CSS VARIABLES */
+/* CSS variables are defined within the :root pseudo-class, which represents the document's root element. 
+   - These variables can be reused throughout the stylesheet, allowing for consistent styling and easy updates. */
 :root {
     --light-grey: #f5f6f7;
-    /* Light grey color for general background and text */
+    /* Light grey color for general background and text.
+       - Provides a soft, neutral color for elements that require a light background or text color. */
+
     --dark-blue: #0a0a23;
-    /* Dark blue color for text and accents */
+    /* Dark blue color for text and accents.
+       - Used to create contrast and highlight important text or elements. */
+
     --fcc-blue: #1b1b32;
-    /* Custom blue color for the background */
+    /* Custom blue color for the background.
+       - Sets a unique color theme for the webpage, enhancing visual identity. */
+
     --light-yellow: #fecc4c;
-    /* Light yellow color for button backgrounds */
+    /* Light yellow color for button backgrounds.
+       - Provides a warm, inviting color for interactive elements like buttons. */
+
     --dark-yellow: #feac32;
-    /* Dark yellow color for button borders */
+    /* Dark yellow color for button borders.
+       - Complements the light yellow background, adding definition to buttons. */
+
     --light-pink: #ffadad;
-    /* Light pink color for surplus text */
+    /* Light pink color for surplus text.
+       - Used to indicate surplus values, providing a visual cue with a soft color. */
+
     --dark-red: #850000;
-    /* Dark red color (not currently used) */
+    /* Dark red color (not currently used).
+       - Reserved for potential use in future styling, possibly for error messages or alerts. */
+
     --light-green: #acd157;
-    /* Light green color for deficit text */
+    /* Light green color for deficit text.
+       - Used to indicate deficit values, providing a visual cue with a calming color. */
 }
 
+/* SECTION: GLOBAL STYLES */
+/* Global styles apply to the entire document, setting foundational styles for common elements. */
 body {
     font-family: "Lato", Helvetica, Arial, sans-serif;
-    /* Sets the font stack for the body */
+    /* Sets the font stack for the body.
+       - "Lato" is the primary font, with Helvetica and Arial as fallbacks for compatibility. */
+
     font-size: 18px;
-    /* Base font size for body text */
+    /* Base font size for body text.
+       - Provides a readable size for general content, ensuring accessibility. */
+
     background-color: var(--fcc-blue);
-    /* Sets the background color to the custom blue */
+    /* Sets the background color to the custom blue.
+       - Establishes a consistent theme across the webpage. */
+
     color: var(--light-grey);
-    /* Sets the text color to light grey for contrast */
+    /* Sets the text color to light grey for contrast.
+       - Ensures readability against the dark background. */
 }
 
 h1 {
     text-align: center;
-    /* Centers the heading text */
+    /* Centers the heading text.
+       - Creates a balanced, symmetrical layout for the main heading. */
 }
 
 .container {
     width: 90%;
-    /* Makes the container take 90% of the viewport width */
+    /* Makes the container take 90% of the viewport width.
+       - Provides a responsive layout that adapts to different screen sizes. */
+
     max-width: 680px;
-    /* Limits the container width to a maximum of 680px */
+    /* Limits the container width to a maximum of 680px.
+       - Prevents the content from becoming too wide on large screens, maintaining readability. */
 }
 
 h1,
 .container,
 .output {
     margin: 20px auto;
-    /* Adds vertical spacing and centers elements horizontally */
+    /* Adds vertical spacing and centers elements horizontally.
+       - Ensures consistent spacing and alignment for key elements. */
 }
 
 label,
 legend {
     font-weight: bold;
-    /* Makes labels and legends bold for emphasis */
+    /* Makes labels and legends bold for emphasis.
+       - Highlights important text, improving form usability. */
 }
 
+/* SECTION: FORM AND INPUT STYLES */
+/* Styles specific to form elements and inputs, enhancing user interaction and layout. */
 .input-container {
     display: flex;
-    /* Enables flexbox layout for input elements */
+    /* Enables flexbox layout for input elements.
+       - Allows for flexible, responsive arrangement of child elements. */
+
     flex-direction: column;
-    /* Stacks input elements vertically */
+    /* Stacks input elements vertically.
+       - Ensures a clear, organized layout for form inputs. */
 }
 
 button {
     cursor: pointer;
-    /* Changes the cursor to a pointer when hovering over buttons */
+    /* Changes the cursor to a pointer when hovering over buttons.
+       - Provides a visual cue that the element is interactive. */
+
     text-decoration: none;
-    /* Removes any underline from button text */
+    /* Removes any underline from button text.
+       - Ensures a clean, button-like appearance. */
+
     background-color: var(--light-yellow);
-    /* Sets the button background color to light yellow */
+    /* Sets the button background color to light yellow.
+       - Creates a warm, inviting appearance for interactive elements. */
+
     border: 2px solid var(--dark-yellow);
-    /* Adds a border with the dark yellow color */
+    /* Adds a border with the dark yellow color.
+       - Provides contrast and definition to the button's edges. */
 }
 
 button,
 input,
 select {
     min-height: 24px;
-    /* Ensures a consistent minimum height for buttons, inputs, and dropdowns */
+    /* Ensures a consistent minimum height for buttons, inputs, and dropdowns.
+       - Improves usability by providing a larger target area for interaction. */
+
     color: var(--dark-blue);
-    /* Sets the text color to dark blue for good readability */
+    /* Sets the text color to dark blue for good readability.
+       - Ensures text stands out against lighter backgrounds. */
 }
 
 fieldset,
@@ -86,36 +134,50 @@ button,
 input,
 select {
     margin-bottom: 10px;
-    /* Adds spacing below form elements for better layout */
+    /* Adds spacing below form elements for better layout.
+       - Prevents elements from appearing too close together, enhancing readability. */
 }
 
+/* SECTION: OUTPUT AND VISIBILITY STYLES */
+/* Styles for output elements and visibility control, ensuring clear presentation of results. */
 .output {
     border: 2px solid var(--light-grey);
-    /* Adds a border with the light grey color */
+    /* Adds a border with the light grey color.
+       - Defines the boundaries of the output area, making it distinct. */
+
     padding: 10px;
-    /* Adds padding inside the output box */
+    /* Adds padding inside the output box.
+       - Ensures content does not touch the edges, improving readability. */
+
     text-align: center;
-    /* Centers the text inside the output box */
+    /* Centers the text inside the output box.
+       - Provides a balanced, symmetrical presentation of results. */
 }
 
 .hide {
     display: none;
-    /* Hides elements with this class */
+    /* Hides elements with this class.
+       - Used to toggle visibility of elements, such as hiding output until needed. */
 }
 
 .output span {
     font-weight: bold;
-    /* Makes the text inside the output span bold */
+    /* Makes the text inside the output span bold.
+       - Emphasizes important information, such as calorie counts. */
+
     font-size: 1.2em;
-    /* Increases the font size of the output span for emphasis */
+    /* Increases the font size of the output span for emphasis.
+       - Draws attention to key results, making them stand out. */
 }
 
 .surplus {
     color: var(--light-pink);
-    /* Sets the text color for surplus values to light pink */
+    /* Sets the text color for surplus values to light pink.
+       - Provides a visual cue for surplus, using a soft, noticeable color. */
 }
 
 .deficit {
     color: var(--light-green);
-    /* Sets the text color for deficit values to light green */
+    /* Sets the text color for deficit values to light green.
+       - Provides a visual cue for deficit, using a calming, noticeable color. */
 }

@@ -1,103 +1,223 @@
 <!DOCTYPE html>
+<!-- Declaration of the document type as HTML5.
+     - Ensures the browser interprets the document as an HTML5 document. -->
+
 <html lang="en">
-<!-- Specifies the document type and language of the page as English -->
+<!-- Opening tag for the HTML document with the language attribute set to English.
+     - The `lang` attribute helps search engines and browsers determine the language of the content. -->
 
 <head>
+    <!-- Opening tag for the head section of the HTML document.
+         - Contains metadata and links to external resources like stylesheets. -->
+
     <meta charset="utf-8" />
-    <!-- Sets the character encoding to UTF-8 for proper text rendering -->
+    <!-- Meta tag to set the character encoding to UTF-8.
+         - Ensures that the document can handle a wide range of characters, including special symbols. -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Ensures the page is responsive by setting the viewport for mobile devices -->
+    <!-- Meta tag to set the viewport properties for responsive design.
+         - `width=device-width` sets the width of the page to follow the screen-width of the device.
+         - `initial-scale=1.0` sets the initial zoom level when the page is first loaded. -->
 
     <link rel="stylesheet" href="styles.css" />
-    <!-- Links the external CSS file for styling -->
+    <!-- Link tag to include an external CSS stylesheet.
+         - `rel="stylesheet"` specifies the relationship between the current document and the linked file.
+         - `href="styles.css"` provides the path to the CSS file that contains styling rules for the document. -->
 
     <title>Calorie Counter</title>
-    <!-- Sets the title of the webpage, displayed in the browser tab -->
+    <!-- Title tag to set the title of the webpage.
+         - The content inside the title tag is displayed on the browser tab and used by search engines. -->
 </head>
+<!-- Closing tag for the head section. -->
 
 <body>
+    <!-- Opening tag for the body section of the HTML document.
+         - Contains the main content of the webpage that is visible to users. -->
+
     <main>
-        <!-- The main content of the page -->
+        <!-- Opening tag for the main element.
+             - Represents the dominant content of the document, central to the document's purpose. -->
+
         <h1>Calorie Counter</h1>
-        <!-- Page heading -->
+        <!-- Heading tag for the main title of the page.
+             - `<h1>` is typically used for the most important heading on the page. -->
 
         <div class="container">
-            <!-- Container for the form and other related content -->
+            <!-- Opening tag for a div element with the class "container".
+                 - Acts as a wrapper for the form and related content, allowing for styling and layout control. -->
 
             <form id="calorie-counter">
-                <!-- Form for user input related to calorie tracking -->
+                <!-- Opening tag for a form element with the ID "calorie-counter".
+                     - Used to collect user input related to calorie tracking. -->
 
                 <label for="budget">Budget</label>
+                <!-- Label element associated with the input field for the daily calorie budget.
+                     - The `for` attribute links the label to the input field with the corresponding ID. -->
+
                 <input type="number" min="0" id="budget" placeholder="Daily calorie budget" required />
-                <!-- Input field for the daily calorie budget, requires a positive number -->
+                <!-- Input element for entering the daily calorie budget.
+                     - `type="number"` specifies that the input should be a numeric value.
+                     - `min="0"` ensures that only non-negative numbers can be entered.
+                     - `id="budget"` provides a unique identifier for the input field.
+                     - `placeholder="Daily calorie budget"` displays a hint to the user about the expected input.
+                     - `required` attribute makes the input field mandatory before form submission. -->
 
                 <fieldset id="breakfast">
+                    <!-- Opening tag for a fieldset element with the ID "breakfast".
+                         - Groups related elements within the form, specifically for logging breakfast items. -->
+
                     <legend>Breakfast</legend>
-                    <!-- Section for logging breakfast items -->
+                    <!-- Legend element providing a caption for the fieldset.
+                         - Describes the purpose of the grouped elements as related to breakfast. -->
+
                     <div class="input-container"></div>
-                    <!-- Placeholder for dynamically added input fields -->
+                    <!-- Div element with the class "input-container".
+                         - Acts as a placeholder for dynamically added input fields related to breakfast items. -->
                 </fieldset>
+                <!-- Closing tag for the breakfast fieldset. -->
 
                 <fieldset id="lunch">
+                    <!-- Opening tag for a fieldset element with the ID "lunch".
+                         - Groups related elements within the form, specifically for logging lunch items. -->
+
                     <legend>Lunch</legend>
-                    <!-- Section for logging lunch items -->
+                    <!-- Legend element providing a caption for the fieldset.
+                         - Describes the purpose of the grouped elements as related to lunch. -->
+
                     <div class="input-container"></div>
+                    <!-- Div element with the class "input-container".
+                         - Acts as a placeholder for dynamically added input fields related to lunch items. -->
                 </fieldset>
+                <!-- Closing tag for the lunch fieldset. -->
 
                 <fieldset id="dinner">
+                    <!-- Opening tag for a fieldset element with the ID "dinner".
+                         - Groups related elements within the form, specifically for logging dinner items. -->
+
                     <legend>Dinner</legend>
-                    <!-- Section for logging dinner items -->
+                    <!-- Legend element providing a caption for the fieldset.
+                         - Describes the purpose of the grouped elements as related to dinner. -->
+
                     <div class="input-container"></div>
+                    <!-- Div element with the class "input-container".
+                         - Acts as a placeholder for dynamically added input fields related to dinner items. -->
                 </fieldset>
+                <!-- Closing tag for the dinner fieldset. -->
 
                 <fieldset id="snacks">
+                    <!-- Opening tag for a fieldset element with the ID "snacks".
+                         - Groups related elements within the form, specifically for logging snack items. -->
+
                     <legend>Snacks</legend>
-                    <!-- Section for logging snack items -->
+                    <!-- Legend element providing a caption for the fieldset.
+                         - Describes the purpose of the grouped elements as related to snacks. -->
+
                     <div class="input-container"></div>
+                    <!-- Div element with the class "input-container".
+                         - Acts as a placeholder for dynamically added input fields related to snack items. -->
                 </fieldset>
+                <!-- Closing tag for the snacks fieldset. -->
 
                 <fieldset id="exercise">
+                    <!-- Opening tag for a fieldset element with the ID "exercise".
+                         - Groups related elements within the form, specifically for logging exercise activities. -->
+
                     <legend>Exercise</legend>
-                    <!-- Section for logging exercise activities -->
+                    <!-- Legend element providing a caption for the fieldset.
+                         - Describes the purpose of the grouped elements as related to exercise activities. -->
+
                     <div class="input-container"></div>
+                    <!-- Div element with the class "input-container".
+                         - Acts as a placeholder for dynamically added input fields related to exercise activities. -->
                 </fieldset>
+                <!-- Closing tag for the exercise fieldset. -->
 
                 <div class="controls">
-                    <!-- Container for controls related to adding entries -->
+                    <!-- Opening tag for a div element with the class "controls".
+                         - Contains controls related to adding entries to the form. -->
+
                     <span>
+                        <!-- Opening tag for a span element.
+                             - Used to group inline elements for styling purposes. -->
+
                         <label for="entry-dropdown">Add food or exercise:</label>
+                        <!-- Label element associated with the dropdown menu for selecting a category.
+                             - The `for` attribute links the label to the select element with the corresponding ID. -->
+
                         <select id="entry-dropdown" name="options">
-                            <!-- Dropdown menu for selecting a category -->
+                            <!-- Select element for choosing a category of entry (food or exercise).
+                                 - `id="entry-dropdown"` provides a unique identifier for the dropdown menu.
+                                 - `name="options"` assigns a name to the dropdown for form data submission. -->
+
                             <option value="breakfast" selected>Breakfast</option>
+                            <!-- Option element for selecting the breakfast category.
+                                 - `value="breakfast"` sets the value submitted with the form when this option is selected.
+                                 - `selected` attribute makes this option the default selection. -->
+
                             <option value="lunch">Lunch</option>
+                            <!-- Option element for selecting the lunch category.
+                                 - `value="lunch"` sets the value submitted with the form when this option is selected. -->
+
                             <option value="dinner">Dinner</option>
+                            <!-- Option element for selecting the dinner category.
+                                 - `value="dinner"` sets the value submitted with the form when this option is selected. -->
+
                             <option value="snacks">Snacks</option>
+                            <!-- Option element for selecting the snacks category.
+                                 - `value="snacks"` sets the value submitted with the form when this option is selected. -->
+
                             <option value="exercise">Exercise</option>
+                            <!-- Option element for selecting the exercise category.
+                                 - `value="exercise"` sets the value submitted with the form when this option is selected. -->
                         </select>
+                        <!-- Closing tag for the select element. -->
+
                         <button type="button" id="add-entry">Add Entry</button>
-                        <!-- Button to trigger adding a new entry dynamically -->
+                        <!-- Button element to trigger the addition of a new entry dynamically.
+                             - `type="button"` specifies that the button does not submit the form.
+                             - `id="add-entry"` provides a unique identifier for the button. -->
                     </span>
+                    <!-- Closing tag for the span element. -->
                 </div>
+                <!-- Closing tag for the controls div. -->
 
                 <div>
-                    <!-- Section for form submission and reset controls -->
+                    <!-- Opening tag for a div element.
+                         - Contains buttons for form submission and reset controls. -->
+
                     <button type="submit">
+                        <!-- Opening tag for a button element to submit the form.
+                             - `type="submit"` specifies that the button submits the form data. -->
+
                         Calculate Remaining Calories
+                        <!-- Text displayed on the submit button.
+                             - Instructs the user to calculate the remaining calories. -->
                     </button>
-                    <!-- Button to calculate the remaining calories -->
+                    <!-- Closing tag for the submit button. -->
+
                     <button type="button" id="clear">Clear</button>
-                    <!-- Button to clear all input fields -->
+                    <!-- Button element to clear all input fields in the form.
+                         - `type="button"` specifies that the button does not submit the form.
+                         - `id="clear"` provides a unique identifier for the button. -->
                 </div>
+                <!-- Closing tag for the div containing form controls. -->
             </form>
+            <!-- Closing tag for the form element. -->
 
             <div id="output" class="output hide"></div>
-            <!-- Placeholder for displaying calculated results or messages, initially hidden -->
+            <!-- Div element with the ID "output" and classes "output" and "hide".
+                 - Acts as a placeholder for displaying calculated results or messages.
+                 - Initially hidden due to the "hide" class. -->
         </div>
+        <!-- Closing tag for the container div. -->
     </main>
+    <!-- Closing tag for the main element. -->
 
     <script src="./script.js"></script>
-    <!-- Links the external JavaScript file for handling form behavior and interactions -->
+    <!-- Script tag to include an external JavaScript file.
+         - `src="./script.js"` specifies the path to the JavaScript file that handles form behavior and interactions. -->
 </body>
+<!-- Closing tag for the body section. -->
 
 </html>
+<!-- Closing tag for the HTML document. -->
