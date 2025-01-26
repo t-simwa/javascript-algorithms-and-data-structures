@@ -1,76 +1,145 @@
+/* SECTION: BODY STYLES */
+
 body {
-    /* Styles for the entire page body */
+    /* Styles for the entire page body.
+       - Applies to the <body> element, which contains all the content of the webpage. */
+
     background-color: #0a0a23;
-    /* Sets a dark navy blue background color */
+    /* Sets a dark navy blue background color for the body.
+       - Provides a consistent background color across the entire page. */
 }
+
+/* SECTION: TEXT STYLES */
 
 #text {
-    /* Styles for the element with ID 'text' */
+    /* Styles for the element with ID 'text'.
+       - Targets the <div> element that contains narrative text and instructions for the player. */
+
     background-color: #0a0a23;
-    /* Sets the background color to match the body */
+    /* Sets the background color to match the body.
+       - Ensures a seamless visual transition between the body and the text container. */
+
     color: #ffffff;
-    /* Sets the text color to white for contrast */
+    /* Sets the text color to white for contrast against the dark background.
+       - Enhances readability of the text content. */
+
     padding: 10px;
-    /* Adds padding inside the element for spacing */
+    /* Adds padding inside the element for spacing.
+       - Creates space between the text and the edges of the container, improving layout. */
 }
 
+/* SECTION: GAME CONTAINER STYLES */
+
 #game {
-    /* Styles for the element with ID 'game' */
+    /* Styles for the element with ID 'game'.
+       - Targets the main container for all game elements, including stats, controls, and text. */
+
     max-width: 500px;
-    /* Restricts the maximum width to 500 pixels */
+    /* Restricts the maximum width to 500 pixels.
+       - Ensures the game container does not exceed a certain width, maintaining a compact layout. */
+
     max-height: 400px;
-    /* Restricts the maximum height to 400 pixels */
+    /* Restricts the maximum height to 400 pixels.
+       - Ensures the game container does not exceed a certain height, maintaining a compact layout. */
+
     background-color: #ffffff;
-    /* Sets a white background color */
+    /* Sets a white background color for the game container.
+       - Provides a neutral background for the game elements, contrasting with the body. */
+
     color: #ffffff;
-    /* Sets the text color to white */
+    /* Sets the text color to white.
+       - Ensures consistency with the text color used in other elements. */
+
     margin: 30px auto 0px;
-    /* Adds 30px top margin, centers horizontally, no bottom margin */
+    /* Adds 30px top margin, centers horizontally, no bottom margin.
+       - Centers the game container on the page and adds space above it. */
+
     padding: 10px;
-    /* Adds padding inside the element for spacing */
+    /* Adds padding inside the element for spacing.
+       - Creates space between the content and the edges of the container, improving layout. */
 }
+
+/* SECTION: CONTROL AND STAT STYLES */
 
 #controls,
 #stats {
-    /* Styles for elements with IDs 'controls' and 'stats' */
+    /* Styles for elements with IDs 'controls' and 'stats'.
+       - Targets the containers for game controls and player statistics. */
+
     border: 1px solid #0a0a23;
-    /* Adds a 1px solid navy blue border */
+    /* Adds a 1px solid navy blue border around the elements.
+       - Provides a visual boundary for the controls and stats sections. */
+
     padding: 5px;
-    /* Adds 5px padding inside the elements */
+    /* Adds 5px padding inside the elements for spacing.
+       - Creates space between the content and the edges of the containers, improving layout. */
+
     color: #0a0a23;
-    /* Sets the text color to navy blue */
+    /* Sets the text color to navy blue.
+       - Provides contrast against the white background of the game container. */
 }
+
+/* SECTION: MONSTER STAT STYLES */
 
 #monsterStats {
-    /* Styles for the element with ID 'monsterStats' */
+    /* Styles for the element with ID 'monsterStats'.
+       - Targets the container for displaying the monster's statistics. */
+
     display: none;
-    /* Initially hides the element */
+    /* Initially hides the element.
+       - Keeps the monster stats hidden until they are needed in the game. */
+
     border: 1px solid #0a0a23;
-    /* Adds a 1px solid navy blue border */
+    /* Adds a 1px solid navy blue border around the element.
+       - Provides a visual boundary for the monster stats section. */
+
     padding: 5px;
-    /* Adds 5px padding inside the element */
+    /* Adds 5px padding inside the element for spacing.
+       - Creates space between the content and the edges of the container, improving layout. */
+
     color: #ffffff;
-    /* Sets the text color to white */
+    /* Sets the text color to white.
+       - Ensures readability against the red background. */
+
     background-color: #c70d0d;
-    /* Sets a red background color */
+    /* Sets a red background color for the monster stats container.
+       - Provides a distinct visual cue for the monster stats section. */
 }
+
+/* SECTION: STAT CLASS STYLES */
 
 .stat {
-    /* Styles for elements with the class 'stat' */
+    /* Styles for elements with the class 'stat'.
+       - Targets individual stat elements within the stats and monsterStats containers. */
+
     padding-right: 10px;
-    /* Adds 10px of padding to the right of the element */
+    /* Adds 10px of padding to the right of the element.
+       - Creates space between adjacent stat elements, improving layout. */
 }
 
+/* SECTION: BUTTON STYLES */
+
 button {
-    /* Styles for all button elements */
+    /* Styles for all button elements.
+       - Targets interactive buttons used for game actions. */
+
     cursor: pointer;
-    /* Changes the cursor to a pointer when hovering over the button */
+    /* Changes the cursor to a pointer when hovering over the button.
+       - Provides a visual cue that the element is interactive. */
+
     color: #0a0a23;
-    /* Sets the text color to navy blue */
+    /* Sets the text color to navy blue.
+       - Provides contrast against the button's background color. */
+
     background-color: #feac32;
-    /* Sets the base background color to orange */
+    /* Sets the base background color to orange.
+       - Provides a warm, inviting appearance for interactive elements. */
+
     background-image: linear-gradient(#fecc4c, #ffac33);
-    /* Adds a gradient to the button background */
+    /* Adds a gradient to the button background.
+       - Enhances the visual appeal of the buttons with a subtle color transition. */
+
     border: 3px solid #feac32;
-    /* Adds a 3px solid orange border */
+    /* Adds a 3px solid orange border around the button.
+       - Provides definition to the button's edges, enhancing its appearance. */
 }

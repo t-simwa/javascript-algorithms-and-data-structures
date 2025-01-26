@@ -1,37 +1,106 @@
 <!DOCTYPE html>
+<!-- Declaration of the document type as HTML5.
+     - Ensures the browser interprets the document as an HTML5 document. -->
+
 <html lang="en">
+<!-- Opening tag for the HTML document with the language attribute set to English.
+     - The `lang` attribute helps search engines and browsers determine the language of the content. -->
 
 <head>
-    <meta charset="utf-8"> <!-- Specifies the character encoding for the document as UTF-8 -->
-    <link rel="stylesheet" href="./styles.css"> <!-- Links the external CSS file for styling -->
-    <title>RPG - Dragon Repeller</title> <!-- Sets the title of the webpage -->
+    <!-- Opening tag for the head section of the HTML document.
+         - Contains metadata and links to external resources like stylesheets. -->
+
+    <meta charset="utf-8">
+    <!-- Meta tag to set the character encoding to UTF-8.
+         - Ensures that the document can handle a wide range of characters, including special symbols. -->
+
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Link tag to include an external CSS stylesheet.
+         - `rel="stylesheet"` specifies the relationship between the current document and the linked file.
+         - `href="./styles.css"` provides the path to the CSS file that contains styling rules for the document. -->
+
+    <title>RPG - Dragon Repeller</title>
+    <!-- Title tag to set the title of the webpage.
+         - The content inside the title tag is displayed on the browser tab and used by search engines. -->
 </head>
+<!-- Closing tag for the head section. -->
 
 <body>
-    <div id="game"> <!-- Main container for the game elements -->
-        <div id="stats"> <!-- Section displaying player's current stats -->
+    <!-- Opening tag for the body section of the HTML document.
+         - Contains the main content of the webpage that is visible to users. -->
+
+    <div id="game">
+        <!-- Opening tag for a div element with the ID "game".
+             - Acts as the main container for all game elements, allowing for styling and layout control. -->
+
+        <div id="stats">
+            <!-- Opening tag for a div element with the ID "stats".
+                 - Contains elements displaying the player's current statistics in the game. -->
+
             <span class="stat">XP: <strong><span id="xpText">0</span></strong></span>
-            <!-- Player's experience points -->
-            <span class="stat">Health: <strong><span id="healthText">100</span></strong></span> <!-- Player's health -->
-            <span class="stat">Gold: <strong><span id="goldText">50</span></strong></span> <!-- Player's gold -->
+            <!-- Span element with the class "stat" to display the player's experience points (XP).
+                 - Contains a nested strong element for bold text and a span with ID "xpText" initialized to 0. -->
+
+            <span class="stat">Health: <strong><span id="healthText">100</span></strong></span>
+            <!-- Span element with the class "stat" to display the player's health.
+                 - Contains a nested strong element for bold text and a span with ID "healthText" initialized to 100. -->
+
+            <span class="stat">Gold: <strong><span id="goldText">50</span></strong></span>
+            <!-- Span element with the class "stat" to display the player's gold.
+                 - Contains a nested strong element for bold text and a span with ID "goldText" initialized to 50. -->
         </div>
-        <div id="controls"> <!-- Section containing interactive buttons for game actions -->
-            <button id="button1">Go to store</button> <!-- Button to navigate to the store -->
-            <button id="button2">Go to cave</button> <!-- Button to navigate to the cave -->
-            <button id="button3">Fight dragon</button> <!-- Button to initiate a fight with the dragon -->
+        <!-- Closing tag for the stats div. -->
+
+        <div id="controls">
+            <!-- Opening tag for a div element with the ID "controls".
+                 - Contains interactive buttons for game actions, allowing the player to make choices. -->
+
+            <button id="button1">Go to store</button>
+            <!-- Button element with the ID "button1" to navigate to the store.
+                 - Displays the text "Go to store" for the player to interact with. -->
+
+            <button id="button2">Go to cave</button>
+            <!-- Button element with the ID "button2" to navigate to the cave.
+                 - Displays the text "Go to cave" for the player to interact with. -->
+
+            <button id="button3">Fight dragon</button>
+            <!-- Button element with the ID "button3" to initiate a fight with the dragon.
+                 - Displays the text "Fight dragon" for the player to interact with. -->
         </div>
-        <div id="monsterStats"> <!-- Section displaying monster's stats -->
+        <!-- Closing tag for the controls div. -->
+
+        <div id="monsterStats">
+            <!-- Opening tag for a div element with the ID "monsterStats".
+                 - Contains elements displaying the monster's current statistics in the game. -->
+
             <span class="stat">Monster Name: <strong><span id="monsterName"></span></strong></span>
-            <!-- Monster's name -->
+            <!-- Span element with the class "stat" to display the monster's name.
+                 - Contains a nested strong element for bold text and a span with ID "monsterName" for dynamic content. -->
+
             <span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span>
-            <!-- Monster's health -->
+            <!-- Span element with the class "stat" to display the monster's health.
+                 - Contains a nested strong element for bold text and a span with ID "monsterHealth" for dynamic content. -->
         </div>
-        <div id="text"> <!-- Section for narrative text and instructions -->
+        <!-- Closing tag for the monsterStats div. -->
+
+        <div id="text">
+            <!-- Opening tag for a div element with the ID "text".
+                 - Contains narrative text and instructions for the player, providing context and guidance. -->
+
             Welcome to Dragon Repeller. You must defeat the dragon that is preventing people from leaving the town.
             You are in the town square. Where do you want to go? Use the buttons above.
+            <!-- Static text providing a welcome message and initial instructions to the player.
+                 - Sets the scene and objective for the game, inviting the player to make a choice. -->
         </div>
+        <!-- Closing tag for the text div. -->
     </div>
-    <script src="./script.js"></script> <!-- Links the external JavaScript file for game logic -->
+    <!-- Closing tag for the game div. -->
+
+    <script src="./script.js"></script>
+    <!-- Script tag to include an external JavaScript file.
+         - `src="./script.js"` specifies the path to the JavaScript file that contains the game logic. -->
 </body>
+<!-- Closing tag for the body section. -->
 
 </html>
+<!-- Closing tag for the HTML document. -->
