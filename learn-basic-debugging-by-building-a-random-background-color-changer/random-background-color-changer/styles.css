@@ -1,67 +1,73 @@
 *,
 *::before,
 *::after {
-    /* Applies styles to all elements, their pseudo-elements ::before and ::after */
+    /* SECTION: UNIVERSAL STYLES
+    Applies styles to all elements and their pseudo-elements ::before and ::after to ensure consistent styling across the document. */
     margin: 0;
-    /* Removes default margin for all elements */
+    /* Removes default margin for all elements to eliminate unwanted spacing. */
     padding: 0;
-    /* Removes default padding for all elements */
+    /* Removes default padding for all elements to ensure a clean layout. */
     box-sizing: border-box;
-    /* Includes padding and border in the element's total width and height */
+    /* Includes padding and border in the element's total width and height, making layout calculations easier. */
 }
 
 :root {
-    /* Defines custom CSS variables (root-level variables) for consistent color usage */
+    /* SECTION: CSS VARIABLES
+    Defines custom CSS variables (root-level variables) for consistent color usage throughout the document. */
     --yellow: #f1be32;
-    /* A soft yellow color */
+    /* A soft yellow color stored in a variable for easy reuse. */
     --golden-yellow: #feac32;
-    /* A vibrant golden yellow color */
+    /* A vibrant golden yellow color stored in a variable for easy reuse. */
     --dark-purple: #110815;
-    /* A deep dark purple color */
+    /* A deep dark purple color stored in a variable for easy reuse. */
     --light-grey: #efefef;
-    /* A light grey color */
+    /* A light grey color stored in a variable for easy reuse. */
 }
 
 body {
-    /* Styles for the main body of the document */
+    /* SECTION: BODY STYLES
+    Styles for the main body of the document to set the overall appearance. */
     background-color: var(--dark-purple);
-    /* Sets the background color to dark purple */
+    /* Sets the background color of the body to dark purple using the CSS variable. */
     color: var(--light-grey);
-    /* Sets the text color to light grey */
+    /* Sets the text color to light grey using the CSS variable for contrast against the dark background. */
     text-align: center;
-    /* Centers the text horizontally */
+    /* Centers the text horizontally within the body for a balanced layout. */
 }
 
 .bg-information-container {
-    /* Styles for the section displaying background color information */
+    /* SECTION: BACKGROUND INFORMATION STYLES
+    Styles for the section displaying background color information to enhance visibility and readability. */
     margin: 15px 0 25px;
-    /* Adds 15px margin at the top and 25px at the bottom */
+    /* Adds 15px margin at the top and 25px at the bottom to separate sit from other elements. */
     font-size: 1.2rem;
-    /* Sets a slightly larger font size for emphasis */
+    /* Sets a slightly larger font size for emphasis and readability. */
 }
 
 .btn {
-    /* Styles for the button */
+    /* SECTION: BUTTON STYLES
+    Styles for the button to make it visually appealing and interactive. */
     cursor: pointer;
-    /* Changes the cursor to a pointer when hovering over the button */
+    /* Changes the cursor to a pointer when hovering over the button to indicate it's clickable. */
     padding: 10px;
-    /* Adds padding inside the button for spacing */
+    /* Adds padding inside the button for spacing and comfort. */
     margin: 10px;
-    /* Adds 10px margin around the button */
+    /* Adds 10px margin around the button to separate it from other elements. */
     color: var(--dark-purple);
-    /* Sets the text color to dark purple */
+    /* Sets the text color to dark purple using the CSS variable for contrast against the button background. */
     background-color: var(--golden-yellow);
-    /* Sets the base background color to golden yellow */
+    /* Sets the base background color to golden yellow using the CSS variable. */
     background-image: linear-gradient(#fecc4c, #ffac33);
-    /* Adds a gradient effect to the button background */
+    /* Adds a gradient effect to the button background for a more dynamic appearance. */
     border-color: var(--golden-yellow);
-    /* Sets the border color to golden yellow */
+    /* Sets the border color to golden yellow using the CSS variable for consistency. */
     border-width: 3px;
-    /* Defines the border thickness as 3px */
+    /* Defines the border thickness as 3px to make it noticeable. */
 }
 
 .btn:hover {
-    /* Styles for the button when hovered over */
+    /* SECTION: BUTTON HOVER STYLES
+    Styles for the button when hovered over to provide visual feedback. */
     background-image: linear-gradient(#ffcc4c, #f89808);
-    /* Changes the gradient for a brighter hover effect */
+    /* Changes the gradient for a brighter hover effect, enhancing interactivity. */
 }

@@ -1,29 +1,65 @@
-<!DOCTYPE html> <!-- Specifies the document type as HTML5 -->
-<html lang="en"> <!-- Defines the language of the document as English -->
+<!DOCTYPE html>
+<!-- SECTION: DOCUMENT TYPE DECLARATION
+Specifies the document type as HTML5, which is the latest version of HTML. This declaration helps the browser understand how to interpret the document. -->
 
-<head> <!-- Contains metadata and resources for the document -->
-    <meta charset="UTF-8" /> <!-- Specifies the character encoding as UTF-8 -->
+<html lang="en">
+<!-- SECTION: HTML ELEMENT
+Defines the root element of the HTML document. The 'lang' attribute specifies the language of the document as English, which can help search engines and browsers provide better accessibility. -->
+
+<head>
+    <!-- SECTION: HEAD ELEMENT
+Contains metadata and resources for the document, such as links to stylesheets and scripts, and meta tags for character encoding and viewport settings. -->
+
+    <meta charset="UTF-8" />
+    <!-- SECTION: CHARACTER ENCODING
+Specifies the character encoding for the HTML document as UTF-8, which supports a wide range of characters from different languages and is the most commonly used encoding. -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Ensures proper rendering and touch zooming on mobile devices -->
+    <!-- SECTION: VIEWPORT SETTINGS
+Ensures proper rendering and touch zooming on mobile devices by setting the viewport width to the device's width and the initial zoom level to 1.0. This helps create a responsive design. -->
+
     <title>Build a random background color changer</title>
-    <!-- Sets the title of the web page displayed on the browser tab -->
-    <link rel="stylesheet" href="./styles.css" /> <!-- Links the external CSS file for styling -->
+    <!-- SECTION: TITLE ELEMENT
+Sets the title of the web page, which is displayed on the browser tab. This title is also used by search engines to index the page. -->
+
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- SECTION: LINK TO STYLESHEET
+Links the external CSS file for styling the HTML document. The 'href' attribute specifies the path to the CSS file, which is located in the same directory as the HTML file. -->
+
 </head>
 
-<body> <!-- Main content of the web page -->
-    <h1>Random Background Color changer</h1> <!-- Displays the main heading of the web page -->
+<body>
+    <!-- SECTION: BODY ELEMENT
+Contains the main content of the web page that is visible to users. This includes headings, paragraphs, images, links, and other elements. -->
 
-    <main> <!-- Main container for the primary content -->
-        <section class="bg-information-container"> <!-- Section to display background color information -->
+    <h1>Random Background Color changer</h1>
+    <!-- SECTION: MAIN HEADING
+Displays the main heading of the web page. The <h1> tag is used for the most important heading, and it helps with SEO by indicating the primary topic of the page. -->
+
+    <main>
+        <!-- SECTION: MAIN ELEMENT
+Serves as the main container for the primary content of the document. The <main> tag is used to improve the document's structure and accessibility. -->
+
+        <section class="bg-information-container">
+            <!-- SECTION: BACKGROUND INFORMATION CONTAINER
+Defines a section to display background color information. The 'class' attribute is used to apply CSS styles to this section. -->
+
             <p>Hex Code: <span id="bg-hex-code">#110815</span></p>
-            <!-- Displays the current background color hex code -->
+            <!-- SECTION: HEX CODE DISPLAY
+Displays the current background color hex code. The <span> element with the 'id' attribute allows JavaScript to dynamically update the hex code displayed to the user. -->
+
         </section>
 
         <button class="btn" id="btn">Change Background Color</button>
-        <!-- Button to trigger the background color change -->
+        <!-- SECTION: BUTTON ELEMENT
+Creates a button that users can click to trigger the background color change. The 'class' attribute is used for styling, and the 'id' attribute is used to identify the button in JavaScript. -->
+
     </main>
 
-    <script src="./script.js"></script> <!-- Links the external JavaScript file for interactivity -->
+    <script src="./script.js"></script>
+    <!-- SECTION: SCRIPT ELEMENT
+Links the external JavaScript file that provides interactivity to the web page. The 'src' attribute specifies the path to the JavaScript file, which is located in the same directory as the HTML file. -->
+
 </body>
 
 </html>
