@@ -1,313 +1,334 @@
 :root {
-    /* Custom properties (CSS variables) for consistent design */
+    /* SECTION: CSS VARIABLES */
+    /* Declaration of CSS custom properties (variables) for consistent design throughout the application */
     --primary-color: #dfdfe2;
-    /* Light shade used for primary text */
+    /* Light shade used for primary text color across the application */
     --secondary-color: #ffffff;
-    /* White for secondary text or backgrounds */
+    /* White color used for secondary text or background elements */
     --app-background-color: #4d4d62;
-    /* Dark background for the app */
+    /* Dark background color applied to the main app container */
     --background-color: #1b1b32;
-    /* Deep background for specific sections */
+    /* Deep background color for specific sections within the app */
     --foreground-color: #3b3b4f;
-    /* Foreground elements like bars or panels */
+    /* Foreground color used for elements like bars or panels */
     --highlight-color: #f1be32;
-    /* Bright yellow for accents and highlights */
+    /* Bright yellow color used for accents and highlights to draw attention */
 
     /* Define base font size and scale typography consistently */
     --root-font-size: 16px;
-    /* Base font size for rem calculations */
+    /* Base font size for rem calculations, ensuring consistent typography scaling */
     font-size: var(--root-font-size);
-    /* Apply the base size to the document */
+    /* Apply the base font size to the document for consistent text sizing */
 
     /* Font families for specific elements */
     --font-headline: "Roboto Mono", monospace;
-    /* Font for titles or headlines */
+    /* Font family for titles or headlines, using a monospace font for distinct appearance */
     --font-family: "Lato", sans-serif;
-    /* Default font for general text */
+    /* Default font family for general text, using a sans-serif font for readability */
 }
 
 *,
 *::after,
 *::before {
-    /* Set box-sizing to include padding and borders in element size */
+    /* SECTION: GLOBAL STYLES */
+    /* Apply box-sizing to all elements and their pseudo-elements */
     box-sizing: border-box;
+    /* Include padding and borders in the element's total width and height */
 }
 
 body {
+    /* SECTION: BODY STYLES */
     /* Apply global styling for the document body */
     background-color: var(--app-background-color);
-    /* App's primary background */
+    /* Set the app's primary background color */
     color: var(--primary-color);
-    /* Default text color */
+    /* Set the default text color */
     font-family: var(--font-family);
-    /* Use defined sans-serif font */
+    /* Use the defined sans-serif font for body text */
 }
 
 h1 {
+    /* SECTION: HEADING STYLES */
     /* Main heading styles */
     font-size: 1.125rem;
-    /* Slightly larger than the root size */
+    /* Set font size slightly larger than the root size for prominence */
     line-height: 1.6;
-    /* Enhance readability with line spacing */
+    /* Enhance readability with increased line spacing */
 }
 
 h2 {
     /* Secondary heading styles */
     font-size: var(--root-font-size);
-    /* Matches root font size */
+    /* Set font size to match the root font size for consistency */
 }
 
 ul {
+    /* SECTION: LIST STYLES */
     /* Remove default margin for unordered lists */
     margin: 0;
+    /* Eliminate default margin to align lists with other elements */
 }
 
 .container {
+    /* SECTION: CONTAINER STYLES */
     /* Flex container for aligning content centrally */
     margin-top: 10px;
-    /* Space above the container */
+    /* Add space above the container */
     display: flex;
-    /* Flexbox for layout */
+    /* Use flexbox for layout to align children */
     flex-direction: column;
-    /* Stack children vertically */
+    /* Stack children vertically within the container */
     justify-content: center;
-    /* Center content vertically */
+    /* Center content vertically within the container */
     align-items: center;
-    /* Center content horizontally */
+    /* Center content horizontally within the container */
     row-gap: 5px;
-    /* Spacing between rows */
+    /* Add spacing between rows of content */
 }
 
 .player,
 .playlist {
+    /* SECTION: PLAYER AND PLAYLIST STYLES */
     /* Common styles for player and playlist components */
     width: 450px;
-    /* Fixed width */
+    /* Set a fixed width for consistency */
     background-color: var(--background-color);
-    /* Panel background color */
+    /* Apply panel background color */
     border: 3px solid var(--foreground-color);
-    /* Highlighted border */
+    /* Add a highlighted border around the components */
 }
 
 .player {
     /* Specific layout and appearance for the player section */
     height: 260px;
-    /* Fixed height for the player */
+    /* Set a fixed height for the player */
     padding: 10px;
-    /* Inner padding around content */
+    /* Add inner padding around content */
     display: flex;
-    /* Use flexbox for layout */
+    /* Use flexbox for layout within the player */
     flex-direction: column;
-    /* Stack items vertically */
+    /* Stack items vertically within the player */
     align-items: center;
-    /* Center content horizontally */
+    /* Center content horizontally within the player */
     row-gap: 10px;
-    /* Vertical spacing between child elements */
+    /* Add vertical spacing between child elements */
 }
 
 .player-bar,
 .playlist-bar {
+    /* SECTION: CONTROL BAR STYLES */
     /* Shared layout for control bars in player/playlist */
     display: flex;
-    /* Flex layout */
+    /* Use flex layout for alignment */
     justify-content: space-between;
-    /* Space between elements */
+    /* Space elements evenly across the bar */
     align-items: center;
-    /* Align content vertically */
+    /* Align content vertically within the bar */
     padding: 0 5px;
-    /* Horizontal padding */
+    /* Add horizontal padding within the bar */
     width: 100%;
-    /* Full width */
+    /* Set full width for the bars */
     height: 30px;
-    /* Fixed height for the bars */
+    /* Set a fixed height for the bars */
     background-color: var(--foreground-color);
-    /* Background for bars */
+    /* Apply background color to the bars */
 }
 
 .parallel-lines {
+    /* SECTION: DECORATIVE LINES */
     /* Layout for decorative lines */
     display: flex;
-    /* Use flexbox */
+    /* Use flexbox for layout */
     flex-wrap: wrap;
-    /* Allow wrapping to the next row */
+    /* Allow lines to wrap to the next row */
     row-gap: 6px;
-    /* Vertical spacing between rows */
+    /* Add vertical spacing between rows of lines */
     padding: 0 5px;
-    /* Horizontal padding inside the container */
+    /* Add horizontal padding inside the container */
 }
 
 .parallel-lines>div {
     /* Styles for each decorative line */
     height: 2px;
-    /* Thin line height */
+    /* Set thin line height */
     width: 100%;
-    /* Full width of the container */
+    /* Set full width of the container */
     min-width: 75px;
-    /* Ensure a minimum width */
+    /* Ensure a minimum width for each line */
     background-color: var(--highlight-color);
-    /* Highlight color for lines */
+    /* Apply highlight color to the lines */
 }
 
 .fcc-title,
 .playlist-title {
+    /* SECTION: TITLE STYLES */
     /* Titles within the player or playlist sections */
     color: var(--secondary-color);
-    /* Text color for visibility */
+    /* Set text color for visibility */
     margin: 0 10px;
-    /* Horizontal spacing */
+    /* Add horizontal spacing around titles */
     font-family: var(--font-headline);
-    /* Monospace font for a distinct look */
+    /* Use monospace font for a distinct look */
 }
 
 .player-content {
+    /* SECTION: PLAYER CONTENT STYLES */
     /* Inner layout for player-specific content */
     display: flex;
-    /* Flex layout for alignment */
+    /* Use flex layout for alignment */
     background-color: var(--foreground-color);
-    /* Background for the section */
+    /* Apply background color to the section */
     width: 430px;
-    /* Slightly narrower than the player */
+    /* Set width slightly narrower than the player */
     height: 200px;
-    /* Fixed height */
+    /* Set a fixed height for the content area */
     column-gap: 13px;
-    /* Horizontal spacing between elements */
+    /* Add horizontal spacing between elements */
     align-items: center;
-    /* Center items vertically */
+    /* Center items vertically within the content area */
     justify-content: center;
-    /* Center items horizontally */
+    /* Center items horizontally within the content area */
 }
 
 #player-album-art {
+    /* SECTION: ALBUM ART STYLES */
     /* Styling for album art container */
     background-color: var(--secondary-color);
-    /* Background for the album art */
+    /* Set background color for the album art */
     border: 6px solid var(--background-color);
-    /* Border around album art */
+    /* Add a border around the album art */
 }
 
 #player-album-art img {
     /* Specific styling for the album art image */
     width: 150px;
-    /* Fixed width for the image */
+    /* Set a fixed width for the image */
     display: block;
-    /* Block display to prevent inline spacing */
+    /* Use block display to prevent inline spacing */
 }
 
 .player-display {
+    /* SECTION: PLAYER DISPLAY STYLES */
     /* Layout for the player display section */
     display: flex;
-    /* Flexbox for layout */
+    /* Use flexbox for layout */
     flex-direction: column;
-    /* Stack elements vertically */
+    /* Stack elements vertically within the display */
     row-gap: 20px;
-    /* Vertical spacing between children */
+    /* Add vertical spacing between children */
     padding: 14px;
-    /* Padding inside the display */
+    /* Add padding inside the display */
     background-color: var(--background-color);
-    /* Section background */
+    /* Apply background color to the section */
     height: 153px;
-    /* Fixed height */
+    /* Set a fixed height for the display */
     width: 226px;
-    /* Fixed width */
+    /* Set a fixed width for the display */
 }
 
 .player-display-song-artist {
+    /* SECTION: SONG AND ARTIST DETAILS */
     /* Section for song and artist details */
     height: 80px;
-    /* Fixed height for consistent layout */
+    /* Set a fixed height for consistent layout */
 }
 
 .player-buttons svg {
+    /* SECTION: PLAYER BUTTON STYLES */
     /* Styling for SVG icons in player buttons */
     fill: var(--primary-color);
-    /* Default color for icons */
+    /* Set default color for icons */
 }
 
 .playing>svg {
     /* Active state for playing icon */
     fill: var(--highlight-color);
-    /* Highlight color to indicate activity */
+    /* Use highlight color to indicate activity */
 }
 
 .player-buttons {
     /* Layout for control buttons in the player */
     display: flex;
-    /* Flexbox for layout */
+    /* Use flexbox for layout */
     justify-content: space-around;
-    /* Even spacing between buttons */
+    /* Space buttons evenly within the player */
 }
 
 button {
+    /* SECTION: BUTTON STYLES */
     /* Global button styling */
     background: transparent;
-    /* Transparent background for buttons */
+    /* Set transparent background for buttons */
     border: none;
     /* Remove default button border */
     color: var(--primary-color);
-    /* Button text color */
+    /* Set button text color */
     cursor: pointer;
-    /* Pointer cursor on hover */
+    /* Use pointer cursor on hover */
     font-size: var(--root-font-size);
-    /* Base font size for text */
+    /* Set base font size for button text */
     outline-color: var(--highlight-color);
-    /* Highlight outline on focus */
+    /* Set highlight outline color on focus */
     text-align: center;
-    /* Center-align text */
+    /* Center-align text within buttons */
 }
 
 .playlist-song {
+    /* SECTION: PLAYLIST SONG STYLES */
     /* Outline styling for playlist songs */
     outline-color: var(--highlight-color);
-    /* Highlight color for outlines */
+    /* Set highlight color for outlines */
 }
 
 .playlist li:not(:last-child) {
     /* Border styling for playlist items */
     border-bottom: 1px solid var(--background-color);
-    /* Separator between items */
+    /* Add separator between items */
 }
 
 button:focus,
 .playlist-song:focus {
     /* Focus styling for buttons and playlist songs */
     outline-style: dashed;
-    /* Dashed outline for focused elements */
+    /* Use dashed outline for focused elements */
     outline-width: 2px;
-    /* Thickness of the outline */
+    /* Set thickness of the outline */
 }
 
 .playlist {
+    /* SECTION: PLAYLIST STYLES */
     /* Layout for the playlist section */
     height: auto;
-    /* Flexible height */
+    /* Set flexible height */
     padding: 10px;
-    /* Inner spacing */
+    /* Add inner spacing */
     display: flex;
-    /* Flex layout */
+    /* Use flex layout */
     flex-direction: column;
-    /* Stack items vertically */
+    /* Stack items vertically within the playlist */
     align-items: center;
-    /* Center items horizontally */
+    /* Center items horizontally within the playlist */
     row-gap: 10px;
-    /* Spacing between rows */
+    /* Add spacing between rows of items */
 }
 
 #playlist-songs {
+    /* SECTION: PLAYLIST SONGS CONTAINER */
     /* Container for playlist songs */
     width: 430px;
-    /* Fixed width */
+    /* Set fixed width */
     height: 100%;
-    /* Flexible height */
+    /* Set flexible height */
     background-color: var(--foreground-color);
-    /* Background color */
+    /* Apply background color */
     display: flex;
-    /* Flexbox layout */
+    /* Use flexbox layout */
     flex-direction: column;
-    /* Stack songs vertically */
+    /* Stack songs vertically within the container */
     row-gap: 8px;
-    /* Spacing between songs */
+    /* Add spacing between songs */
     padding: 8px 9px;
-    /* Padding inside the container */
+    /* Add padding inside the container */
     visibility: visible;
     /* Ensure visibility */
     justify-content: start;
@@ -321,33 +342,33 @@ button:focus,
     display: flex;
     /* Flex layout for alignment */
     height: 55px;
-    /* Fixed height for consistent appearance */
+    /* Set fixed height for consistent appearance */
     justify-content: space-between;
     /* Space between elements */
     align-items: center;
     /* Center items vertically */
     padding: 5px;
-    /* Inner spacing */
+    /* Add inner spacing */
 }
 
 [aria-current="true"] {
     /* Active state for the currently playing song */
     background-color: var(--background-color);
-    /* Background for the active item */
+    /* Set background for the active item */
 }
 
 [aria-current="true"] p {
     /* Styling for text in the currently playing song */
     color: var(--highlight-color);
-    /* Highlight color for active text */
+    /* Set highlight color for active text */
 }
 
 .playlist-song-info {
     /* Layout for song information in the playlist */
     height: 100%;
-    /* Full height */
+    /* Set full height */
     display: flex;
-    /* Flexbox layout */
+    /* Use flexbox layout */
     flex-direction: row;
     /* Align elements in a row */
     align-items: center;
@@ -355,11 +376,11 @@ button:focus,
     justify-content: space-around;
     /* Space around elements */
     column-gap: 7px;
-    /* Spacing between elements */
+    /* Add spacing between elements */
     padding: 5px 0;
-    /* Vertical padding */
+    /* Add vertical padding */
     font-family: var(--font-family);
-    /* Default font */
+    /* Use default font */
 }
 
 #player-song-title,
@@ -371,23 +392,23 @@ button:focus,
 #player-song-artist {
     /* Specific styling for the artist name */
     color: var(--highlight-color);
-    /* Highlighted text color */
+    /* Set highlighted text color */
     font-size: 0.75rem;
-    /* Smaller font size */
+    /* Use smaller font size */
 }
 
 #player-song-title {
     /* Styling for the song title */
     font-size: 1.125rem;
-    /* Slightly larger font size */
+    /* Use slightly larger font size */
 }
 
 .playlist-song-title {
     /* Styling for song titles in the playlist */
     font-size: 0.85rem;
-    /* Smaller font size */
+    /* Use smaller font size */
     width: 241px;
-    /* Fixed width for consistent alignment */
+    /* Set fixed width for consistent alignment */
     text-align: left;
     /* Align text to the left */
 }
@@ -395,21 +416,21 @@ button:focus,
 .playlist-song-artist {
     /* Styling for artist names in the playlist */
     font-size: 0.725rem;
-    /* Smaller font size */
+    /* Use smaller font size */
     width: 80px;
-    /* Fixed width */
+    /* Set fixed width */
 }
 
 .playlist-song-duration {
     /* Styling for song duration */
     font-size: 0.725rem;
-    /* Smaller font size */
+    /* Use smaller font size */
     margin: auto;
     /* Center align */
     font-family: var(--font-headline);
-    /* Monospace font */
+    /* Use monospace font */
     width: 30px;
-    /* Fixed width */
+    /* Set fixed width */
 }
 
 .playlist-song-delete {
@@ -417,27 +438,28 @@ button:focus,
     padding: 0;
     /* Remove default padding */
     width: 20px;
-    /* Small size for the button */
+    /* Set small size for the button */
     height: 20px;
-    /* Matching height */
+    /* Set matching height */
 }
 
 .playlist-song-delete,
 .playlist-song-delete {
     /* Styling for delete icons */
     fill: var(--foreground-color);
-    /* Default icon color */
+    /* Set default icon color */
 }
 
 .playlist-song-delete:hover circle,
 .playlist-song-delete:focus circle {
     /* Hover and focus state for delete icon */
     fill: #ff0000;
-    /* Red color to indicate delete action */
+    /* Use red color to indicate delete action */
 }
 
 @media (max-width: 700px) {
 
+    /* SECTION: RESPONSIVE STYLES */
     /* Responsive styling for small screens */
     .player,
     .playlist {
@@ -462,32 +484,32 @@ button:focus,
         scrollbar-color: var(--background-color) var(--secondary-color);
         /* Custom scrollbar colors */
         scrollbar-width: thin;
-        /* Thin scrollbar */
+        /* Use thin scrollbar */
     }
 
     #playlist-songs::-webkit-scrollbar {
         width: 5px;
-        /* Narrow scrollbar width */
+        /* Set narrow scrollbar width */
     }
 
     #playlist-songs::-webkit-scrollbar-track {
         background: var(--background-color);
-        /* Track color */
+        /* Set track color */
     }
 
     #playlist-songs::-webkit-scrollbar-thumb {
         background: var(--secondary-color);
-        /* Thumb color */
+        /* Set thumb color */
     }
 
     h1 {
         font-size: 0.813rem;
-        /* Smaller font size for headings */
+        /* Use smaller font size for headings */
     }
 
     h2 {
         font-size: 0.75rem;
-        /* Smaller font size for subheadings */
+        /* Use smaller font size for subheadings */
     }
 
     .player-bar,
@@ -520,13 +542,13 @@ button:focus,
 
     .player-content {
         display: inline;
-        /* Inline layout for content */
+        /* Use inline layout for content */
         position: relative;
-        /* Relative positioning */
+        /* Use relative positioning */
         justify-items: center;
         /* Center items */
         height: 100%;
-        /* Flexible height */
+        /* Set flexible height */
     }
 
     #player-album-art {
@@ -537,14 +559,14 @@ button:focus,
         box-shadow: none;
         /* Remove shadow */
         background: #000;
-        /* Black background */
+        /* Set black background */
     }
 
     #player-album-art img {
         width: 100%;
-        /* Full width */
+        /* Set full width */
         opacity: 0.6;
-        /* Slight transparency */
+        /* Use slight transparency */
     }
 
     .player-display-song-artist {
@@ -559,13 +581,13 @@ button:focus,
 
     .player-display {
         position: absolute;
-        /* Absolute positioning */
+        /* Use absolute positioning */
         width: 100%;
-        /* Full width */
+        /* Set full width */
         z-index: 1000;
         /* Bring to front */
         background-color: transparent;
-        /* Transparent background */
+        /* Set transparent background */
         top: 0;
         /* Position at the top */
         height: 280px;

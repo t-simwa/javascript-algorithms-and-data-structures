@@ -1,114 +1,253 @@
 <!DOCTYPE html>
+<!-- Declaration of the document type as HTML5, which helps the browser understand how to interpret the document -->
+
 <html lang="en">
+<!-- Opening tag for the HTML document with a language attribute set to English -->
 
 <head>
+    <!-- Opening tag for the head section, which contains metadata and links to resources -->
+
     <!-- Specifies the character encoding for the document -->
     <meta charset="UTF-8" />
+    <!-- Meta tag that defines the character encoding as UTF-8, supporting a wide range of characters -->
+
     <!-- Ensures the webpage is responsive and displays properly on different devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta tag that sets the viewport to control the page's dimensions and scaling on different devices -->
+
     <!-- Link to Google Fonts for styling text with custom fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
+    <!-- Link element that imports the 'Roboto Mono' font from Google Fonts for use in the document -->
+
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono&display=swap" rel="stylesheet" />
+    <!-- Another link element importing both 'Lato' and 'Roboto Mono' fonts from Google Fonts -->
+
     <!-- Links the external stylesheet for styling the page -->
     <link rel="stylesheet" href="styles.css" />
+    <!-- Link element that connects an external CSS file named 'styles.css' for styling the HTML document -->
+
     <!-- Sets the title of the page, displayed on the browser tab -->
     <title>
         Learn Basic String and Array Methods by Building a Music Player App
     </title>
+    <!-- Title element that sets the text displayed on the browser tab as the page title -->
 </head>
+<!-- Closing tag for the head section -->
 
 <body>
+    <!-- Opening tag for the body section, which contains the content of the HTML document -->
+
     <div class="container">
-        <!-- Main player component -->
+        <!-- Opening tag for a div element with a class 'container', used as a wrapper for the content -->
+
+        <!-- SECTION: MAIN PLAYER COMPONENT -->
         <div class="player">
+            <!-- Opening tag for a div element with a class 'player', representing the main music player component -->
+
             <div class="player-bar">
+                <!-- Opening tag for a div element with a class 'player-bar', used for the player header -->
+
                 <!-- Decorative parallel lines for visual aesthetics -->
                 <div class="parallel-lines">
+                    <!-- Opening tag for a div element with a class 'parallel-lines', used for decorative purposes -->
+
                     <div></div>
+                    <!-- Empty div element used as part of the decorative parallel lines -->
+
                     <div></div>
+                    <!-- Another empty div element used as part of the decorative parallel lines -->
                 </div>
+                <!-- Closing tag for the 'parallel-lines' div -->
+
                 <!-- Title displayed in the player header -->
                 <h1 class="fcc-title">freeCodeCamp</h1>
+                <!-- h1 element with a class 'fcc-title', displaying the title 'freeCodeCamp' in the player header -->
+
                 <div class="parallel-lines">
+                    <!-- Repeated decorative parallel lines for symmetry in the player header -->
+
                     <div></div>
+                    <!-- Empty div element used as part of the decorative parallel lines -->
+
                     <div></div>
+                    <!-- Another empty div element used as part of the decorative parallel lines -->
                 </div>
+                <!-- Closing tag for the 'parallel-lines' div -->
             </div>
+            <!-- Closing tag for the 'player-bar' div -->
+
             <div class="player-content">
+                <!-- Opening tag for a div element with a class 'player-content', containing the main player content -->
+
                 <!-- Section for displaying the album art -->
                 <div id="player-album-art">
+                    <!-- Opening tag for a div element with an id 'player-album-art', used to display album art -->
+
                     <img src="https://cdn.freecodecamp.org/curriculum/js-music-player/quincy-larson-album-art.jpg"
                         alt="song cover art" />
+                    <!-- img element with a source URL pointing to the album art image and an alt text for accessibility -->
                 </div>
+                <!-- Closing tag for the 'player-album-art' div -->
+
                 <div class="player-display">
+                    <!-- Opening tag for a div element with a class 'player-display', used to display song information -->
+
                     <!-- Displays the song title and artist dynamically -->
                     <div class="player-display-song-artist">
+                        <!-- Opening tag for a div element with a class 'player-display-song-artist', for song info -->
+
                         <p id="player-song-title"></p>
+                        <!-- p element with an id 'player-song-title', intended to display the song title dynamically -->
+
                         <p id="player-song-artist"></p>
+                        <!-- p element with an id 'player-song-artist', intended to display the artist name dynamically -->
                     </div>
+                    <!-- Closing tag for the 'player-display-song-artist' div -->
+
+                    <!-- SECTION: MUSIC CONTROL BUTTONS -->
                     <!-- Buttons for music control (Previous, Play, Pause, Next, Shuffle) -->
                     <div class="player-buttons">
+                        <!-- Opening tag for a div element with a class 'player-buttons', containing control buttons -->
+
                         <button id="previous" class="previous" aria-label="Previous">
+                            <!-- Button element with an id 'previous' and class 'previous', labeled for accessibility -->
+
                             <!-- SVG for the "Previous" button icon -->
                             <svg width="24" height="19" viewBox="0 0 24 19" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
+                                <!-- SVG element defining the icon for the "Previous" button -->
+
                                 <path d="M23.2248 0L7.03964 9.5L23.2248 19L23.2248 0Z" />
+                                <!-- Path element defining the shape of the "Previous" button icon -->
+
                                 <rect width="4.63633" height="18.5453" transform="matrix(-1 0 0 1 4.63633 0)" />
+                                <!-- Rect element defining a rectangle as part of the "Previous" button icon -->
                             </svg>
+                            <!-- Closing tag for the SVG element -->
                         </button>
+                        <!-- Closing tag for the "Previous" button -->
+
                         <!-- SVG icons for play, pause, next, and shuffle buttons follow a similar pattern -->
                         <button id="play" class="play" aria-label="Play">
+                            <!-- Button element with an id 'play' and class 'play', labeled for accessibility -->
+
                             <svg width="17" height="19" viewBox="0 0 17 19" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
+                                <!-- SVG element defining the icon for the "Play" button -->
+
                                 <path d="M0 0L16.1852 9.5L1.88952e-07 19L0 0Z" />
+                                <!-- Path element defining the shape of the "Play" button icon -->
                             </svg>
+                            <!-- Closing tag for the SVG element -->
                         </button>
+                        <!-- Closing tag for the "Play" button -->
+
                         <button id="pause" class="pause" aria-label="Pause">
+                            <!-- Button element with an id 'pause' and class 'pause', labeled for accessibility -->
+
                             <svg width="17" height="19" viewBox="0 0 17 19" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
+                                <!-- SVG element defining the icon for the "Pause" button -->
+
                                 <path d="M0 6.54013e-07H4.75V19H0V6.54013e-07Z" />
+                                <!-- Path element defining the first bar of the "Pause" button icon -->
+
                                 <path d="M11.4 0H16.15V19H11.4V0Z" />
+                                <!-- Path element defining the second bar of the "Pause" button icon -->
                             </svg>
+                            <!-- Closing tag for the SVG element -->
                         </button>
+                        <!-- Closing tag for the "Pause" button -->
+
                         <button id="next" class="next" aria-label="Next">
+                            <!-- Button element with an id 'next' and class 'next', labeled for accessibility -->
+
                             <svg width="24" height="19" viewBox="0 0 24 19" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
+                                <!-- SVG element defining the icon for the "Next" button -->
+
                                 <path d="M0 0L16.1852 9.5L1.88952e-07 19L0 0Z" />
+                                <!-- Path element defining the shape of the "Next" button icon -->
+
                                 <rect x="18.5885" width="4.63633" height="18.5453" />
+                                <!-- Rect element defining a rectangle as part of the "Next" button icon -->
                             </svg>
+                            <!-- Closing tag for the SVG element -->
                         </button>
+                        <!-- Closing tag for the "Next" button -->
+
                         <button id="shuffle" class="shuffle" aria-label="Shuffle">
+                            <!-- Button element with an id 'shuffle' and class 'shuffle', labeled for accessibility -->
+
                             <svg width="17" height="14" viewBox="0 0 17 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
+                                <!-- SVG element defining the icon for the "Shuffle" button -->
+
                                 <!-- Path for shuffle icon -->
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M12.2127 0L17 2.9219L12.0759 5.60686L12.1321 3.30594C11.9081 3.30997 11.7043 3.3165 11.528 3.326C11.3777 3.3341 11.2523 3.34411 11.1542 3.35578C11.1053 3.3616 11.0661 3.36749 11.036 3.37309C11.0211 3.37587 11.0095 3.37835 11.001 3.38041C10.9967 3.38143 10.9936 3.38227 10.9913 3.38289C10.989 3.38352 10.988 3.38385 10.9881 3.38382C10.9266 3.40381 10.7572 3.5014 10.4637 3.73265C10.1895 3.94866 9.85452 4.24234 9.47614 4.59282C8.81462 5.20556 8.03912 5.97461 7.25609 6.76752C8.03912 7.56043 8.81462 8.32948 9.47614 8.94223C9.85452 9.29271 10.1895 9.58639 10.4637 9.80239C10.7572 10.0336 10.9266 10.1312 10.9881 10.1512C10.988 10.1512 10.989 10.1515 10.9913 10.1522C10.9936 10.1528 10.9967 10.1536 11.001 10.1546C11.0095 10.1567 11.0211 10.1592 11.036 10.162C11.0661 10.1676 11.1053 10.1734 11.1542 10.1793C11.2523 10.1909 11.3777 10.2009 11.528 10.209C11.7043 10.2185 11.9081 10.2251 12.1321 10.2291L12.0759 7.92819L17 10.6131L12.2127 13.535L12.1558 11.2011Z" />
+                                <!-- Path element defining the complex shape of the "Shuffle" button icon -->
                             </svg>
+                            <!-- Closing tag for the SVG element -->
                         </button>
+                        <!-- Closing tag for the "Shuffle" button -->
                     </div>
+                    <!-- Closing tag for the 'player-buttons' div -->
                 </div>
+                <!-- Closing tag for the 'player-display' div -->
             </div>
+            <!-- Closing tag for the 'player-content' div -->
         </div>
+        <!-- Closing tag for the 'player' div -->
+
+        <!-- SECTION: PLAYLIST COMPONENT -->
         <!-- Playlist section displaying songs -->
         <div class="playlist">
+            <!-- Opening tag for a div element with a class 'playlist', representing the playlist section -->
+
             <div class="playlist-bar">
+                <!-- Opening tag for a div element with a class 'playlist-bar', used for the playlist header -->
+
                 <div class="parallel-lines">
+                    <!-- Repeated decorative parallel lines for symmetry in the playlist header -->
+
                     <div></div>
+                    <!-- Empty div element used as part of the decorative parallel lines -->
+
                     <div></div>
+                    <!-- Another empty div element used as part of the decorative parallel lines -->
                 </div>
+                <!-- Closing tag for the 'parallel-lines' div -->
+
                 <h2 class="playlist-title" id="playlist">Playlist</h2>
+                <!-- h2 element with a class 'playlist-title' and id 'playlist', displaying the title 'Playlist' -->
+
                 <div class="parallel-lines">
+                    <!-- Repeated decorative parallel lines for symmetry in the playlist header -->
+
                     <div></div>
+                    <!-- Empty div element used as part of the decorative parallel lines -->
+
                     <div></div>
+                    <!-- Another empty div element used as part of the decorative parallel lines -->
                 </div>
+                <!-- Closing tag for the 'parallel-lines' div -->
             </div>
+            <!-- Closing tag for the 'playlist-bar' div -->
+
             <!-- Empty unordered list to be dynamically populated with songs -->
             <ul id="playlist-songs"></ul>
+            <!-- ul element with an id 'playlist-songs', intended to be populated with song items dynamically -->
         </div>
+        <!-- Closing tag for the 'playlist' div -->
     </div>
+    <!-- Closing tag for the 'container' div -->
+
     <!-- External JavaScript file for interactivity -->
     <script src="script.js"></script>
+    <!-- Script element linking to an external JavaScript file named 'script.js' for adding interactivity -->
 </body>
+<!-- Closing tag for the body section -->
 
 </html>
-```
+<!-- Closing tag for the HTML document -->
