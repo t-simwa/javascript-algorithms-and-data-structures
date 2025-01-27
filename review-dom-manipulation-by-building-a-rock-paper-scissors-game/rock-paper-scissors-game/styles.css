@@ -1,128 +1,137 @@
+/* SECTION: GLOBAL STYLES */
 *,
 *::before,
 *::after {
     margin: 0;
-    /* Removes default margin from all elements, pseudo-elements included */
+    /* Removes default margin from all elements, including pseudo-elements, to ensure consistent spacing across browsers */
     padding: 0;
-    /* Removes default padding from all elements, pseudo-elements included */
+    /* Removes default padding from all elements, including pseudo-elements, to ensure consistent spacing across browsers */
     box-sizing: border-box;
-    /* Ensures padding and border are included in an element's total width and height */
+    /* Sets the box-sizing property to border-box for all elements, including pseudo-elements, so that padding and border are included in the element's total width and height */
 }
 
+/* SECTION: CSS VARIABLES */
 :root {
     --very-dark-blue: #0a0a23;
-    /* Defines a custom CSS variable for a dark blue color */
+    /* Defines a custom CSS variable for a very dark blue color, which can be reused throughout the stylesheet */
     --white: #ffffff;
-    /* Defines a custom CSS variable for white color */
+    /* Defines a custom CSS variable for white color, which can be reused throughout the stylesheet */
     --yellow: #f1be32;
-    /* Defines a custom CSS variable for yellow color */
+    /* Defines a custom CSS variable for yellow color, which can be reused throughout the stylesheet */
     --golden-yellow: #feac32;
-    /* Defines a custom CSS variable for golden yellow color */
+    /* Defines a custom CSS variable for golden yellow color, which can be reused throughout the stylesheet */
 }
 
+/* SECTION: BODY STYLES */
 body {
     background-color: var(--very-dark-blue);
-    /* Sets the background color of the body to dark blue */
+    /* Sets the background color of the body to the very dark blue defined in the CSS variable */
     text-align: center;
-    /* Centers text horizontally */
+    /* Centers text horizontally within the body */
     color: var(--white);
-    /* Sets the text color to white */
+    /* Sets the text color to white, using the CSS variable */
 }
 
+/* SECTION: HEADING STYLES */
 h1 {
     margin: 15px 0 20px;
-    /* Adds vertical spacing: 15px at the top, 20px at the bottom, and none on the sides */
+    /* Adds vertical spacing to the heading: 15px at the top, 20px at the bottom, and none on the sides */
 }
 
+/* SECTION: BUTTON STYLES */
 .btn {
     cursor: pointer;
-    /* Changes the cursor to a pointer when hovering over the button */
+    /* Changes the cursor to a pointer when hovering over the button, indicating it's clickable */
     width: 100px;
     /* Sets the width of the button to 100 pixels */
     margin: 10px;
     /* Adds 10px of spacing around the button */
     color: var(--very-dark-blue);
-    /* Sets the text color to dark blue */
+    /* Sets the text color of the button to very dark blue, using the CSS variable */
     background-color: var(--golden-yellow);
-    /* Sets the background color to golden yellow */
+    /* Sets the background color of the button to golden yellow, using the CSS variable */
     background-image: linear-gradient(#fecc4c, #ffac33);
-    /* Applies a gradient background from a lighter to darker yellow */
+    /* Applies a gradient background to the button, transitioning from a lighter to a darker yellow */
     border-color: var(--golden-yellow);
-    /* Sets the border color to golden yellow */
+    /* Sets the border color of the button to golden yellow, using the CSS variable */
     border-width: 3px;
-    /* Sets the border width to 3 pixels */
+    /* Sets the border width of the button to 3 pixels */
 }
 
 .btn:hover {
     background-image: linear-gradient(#ffcc4c, #f89808);
-    /* Changes the gradient to a different yellow shade when hovered */
+    /* Changes the gradient background of the button to a different yellow shade when hovered over */
 }
 
+/* SECTION: RULES CONTAINER STYLES */
 .rules-container {
     padding: 10px 0;
-    /* Adds vertical padding of 10px, no horizontal padding */
+    /* Adds vertical padding of 10px to the top and bottom of the rules container, with no horizontal padding */
     margin: auto;
-    /* Centers the container horizontally */
+    /* Centers the rules container horizontally within its parent */
     border-radius: 15px;
-    /* Rounds the corners with a radius of 15px */
+    /* Rounds the corners of the rules container with a radius of 15px */
     border: 5px solid var(--yellow);
-    /* Sets a 5px solid border using the yellow color */
+    /* Sets a 5px solid border around the rules container using the yellow color defined in the CSS variable */
     background-color: var(--white);
-    /* Sets the background color to white */
+    /* Sets the background color of the rules container to white, using the CSS variable */
     color: var(--very-dark-blue);
-    /* Sets the text color to dark blue */
+    /* Sets the text color within the rules container to very dark blue, using the CSS variable */
 }
 
 .rules-container ul {
     list-style-type: none;
-    /* Removes the default bullet points from the unordered list */
+    /* Removes the default bullet points from the unordered list within the rules container */
 }
 
 .rules-container p {
     margin: 10px 0;
-    /* Adds vertical spacing: 10px above and below, none on the sides */
+    /* Adds vertical spacing to paragraphs within the rules container: 10px above and below, with no horizontal margin */
 }
 
+/* SECTION: MEDIA QUERIES */
 @media (min-width: 760px) {
 
-    /* Styles applied when the screen width is at least 760px */
+    /* Applies styles when the screen width is at least 760 pixels */
     .rules-container {
         width: 60%;
-        /* Sets the width of the container to 60% of the viewport width */
+        /* Sets the width of the rules container to 60% of the viewport width, making it responsive */
     }
 }
 
+/* SECTION: SCORE CONTAINER STYLES */
 .score-container {
     display: flex;
-    /* Aligns children in a flexible row layout */
+    /* Uses flexbox to align children of the score container in a flexible row layout */
     justify-content: space-around;
-    /* Distributes children evenly with space between them */
+    /* Distributes children of the score container evenly with space between them */
     margin: 30px 0;
-    /* Adds vertical spacing: 30px above and below */
+    /* Adds vertical spacing to the score container: 30px above and below */
     font-size: 1.2rem;
-    /* Sets the font size to 1.2 times the root font size */
+    /* Sets the font size within the score container to 1.2 times the root font size */
 }
 
 .score {
     font-weight: 500;
-    /* Sets the font weight to medium */
+    /* Sets the font weight of score elements to medium */
 }
 
+/* SECTION: RESULTS CONTAINER STYLES */
 .results-container {
     font-size: 1.3rem;
-    /* Sets the font size to 1.3 times the root font size */
+    /* Sets the font size within the results container to 1.3 times the root font size */
     margin: 15px 0;
-    /* Adds vertical spacing: 15px above and below */
+    /* Adds vertical spacing to the results container: 15px above and below */
 }
 
 #winner-msg {
     margin-top: 25px;
-    /* Adds 25px spacing above the winner message */
+    /* Adds 25px of spacing above the winner message element */
 }
 
 #reset-game-btn {
     display: none;
-    /* Hides the reset game button by default */
+    /* Hides the reset game button by default, making it invisible until needed */
     margin: 20px auto;
-    /* Adds 20px vertical margin and centers the button horizontally */
+    /* Adds 20px of vertical margin to the reset game button and centers it horizontally */
 }

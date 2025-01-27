@@ -1,70 +1,89 @@
 <!DOCTYPE html>
+<!-- Declares the document type as HTML5, ensuring the browser interprets the document as an HTML5 document. -->
+
 <html lang="en">
-<!-- Defines the document type and sets the language to English -->
+<!-- Opens the HTML element and sets the language attribute to English, which helps search engines and browsers understand the language of the content. -->
 
-<head>
-    <!-- Sets character encoding to UTF-8 for proper text rendering -->
+<!-- SECTION: HEAD ELEMENTS -->
+
+<head> <!-- Opens the head section of the HTML document, which contains metadata and links to external resources. -->
     <meta charset="UTF-8" />
-    <!-- Ensures proper display on mobile devices by setting the viewport -->
+    <!-- Sets the character encoding for the document to UTF-8, ensuring that the text is rendered correctly with a wide range of characters. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Title of the webpage, displayed on the browser tab -->
+    <!-- Configures the viewport for responsive web design, setting the width to the device's width and the initial zoom level to 1.0. -->
     <title>Rock, Paper, Scissors game</title>
-    <!-- Links an external stylesheet for styling the webpage -->
+    <!-- Sets the title of the webpage, which appears on the browser tab and is used by search engines. -->
     <link rel="stylesheet" href="./styles.css" />
-</head>
+    <!-- Links an external CSS stylesheet for styling the webpage, specifying the path to the stylesheet file. -->
+</head> <!-- Closes the head section. -->
 
-<body>
-    <!-- Main heading of the webpage -->
+<!-- SECTION: BODY ELEMENTS -->
+
+<body> <!-- Opens the body section of the HTML document, which contains the content visible to users. -->
     <h1>Let's play Rock, Paper, Scissors!</h1>
-    <main>
-        <!-- A collapsible section explaining the game rules -->
+    <!-- Main heading of the webpage, displayed prominently to introduce the game to users. -->
+    <main> <!-- Opens the main content area of the webpage, semantically indicating the primary content. -->
+
+        <!-- SECTION: GAME RULES -->
         <details class="rules-container">
+            <!-- Creates a collapsible section for displaying the game rules, using the 'details' element for interactivity. -->
             <summary>Rules to the game</summary>
-            <!-- Instructions for how the game works -->
+            <!-- Provides a summary or title for the collapsible section, which is always visible and can be clicked to toggle the visibility of the content. -->
             <p>You will be playing against the computer.</p>
+            <!-- Paragraph explaining that the player will compete against the computer. -->
             <p>You can choose between Rock, Paper, and Scissors.</p>
-            <p>The first one to three points wins.</p>
-            <!-- Explanation of scoring rules -->
+            <!-- Paragraph listing the options available to the player. -->
+            <p>The first one to three points wins.</p> <!-- Paragraph explaining the winning condition of the game. -->
             <p>Here are the rules to getting a point in the game:</p>
-            <ul>
-                <li>Rock beats Scissors</li>
-                <li>Scissors beats Paper</li>
-                <li>Paper beats Rock</li>
-            </ul>
-            <!-- Clarifies what happens during a tie -->
-            <p>
-                If the player and computer choose the same option (Ex. Paper and
-                Paper), then no one gets the point.
-            </p>
-        </details>
+            <!-- Paragraph introducing the rules for scoring points. -->
+            <ul> <!-- Opens an unordered list to detail the rules for scoring points. -->
+                <li>Rock beats Scissors</li> <!-- List item explaining that Rock wins against Scissors. -->
+                <li>Scissors beats Paper</li> <!-- List item explaining that Scissors wins against Paper. -->
+                <li>Paper beats Rock</li> <!-- List item explaining that Paper wins against Rock. -->
+            </ul> <!-- Closes the unordered list. -->
+            <p>If the player and computer choose the same option (Ex. Paper and Paper), then no one gets the point.</p>
+            <!-- Paragraph explaining the outcome of a tie, where no points are awarded. -->
+        </details> <!-- Closes the collapsible section for game rules. -->
 
-        <!-- Displays the scores for the player and computer -->
+        <!-- SECTION: SCORE DISPLAY -->
         <div class="score-container">
+            <!-- Opens a div element to contain and style the score display for both the player and the computer. -->
             <strong>Player Score: <span class="score" id="player-score">0</span></strong>
-            <strong>Computer Score:
-                <span class="score" id="computer-score">0</span></strong>
-        </div>
+            <!-- Displays the player's score, initially set to 0, using a span element with an ID for dynamic updates. -->
+            <strong>Computer Score: <span class="score" id="computer-score">0</span></strong>
+            <!-- Displays the computer's score, initially set to 0, using a span element with an ID for dynamic updates. -->
+        </div> <!-- Closes the score container div. -->
 
-        <!-- Section for player to choose between Rock, Paper, and Scissors -->
+        <!-- SECTION: PLAYER OPTIONS -->
         <section class="options-container">
-            <h2>Choose an option:</h2>
+            <!-- Opens a section element to contain the player's options for choosing Rock, Paper, or Scissors. -->
+            <h2>Choose an option:</h2> <!-- Subheading prompting the player to make a choice. -->
             <div class="btn-container">
-                <!-- Buttons for the player to make a choice -->
+                <!-- Opens a div element to contain and style the buttons for player choices. -->
                 <button id="rock-btn" class="btn">Rock</button>
+                <!-- Button for the player to choose Rock, with an ID for event handling and a class for styling. -->
                 <button id="paper-btn" class="btn">Paper</button>
+                <!-- Button for the player to choose Paper, with an ID for event handling and a class for styling. -->
                 <button id="scissors-btn" class="btn">Scissors</button>
-            </div>
-        </section>
+                <!-- Button for the player to choose Scissors, with an ID for event handling and a class for styling. -->
+            </div> <!-- Closes the button container div. -->
+        </section> <!-- Closes the options container section. -->
 
-        <!-- Displays game results and a button to reset the game -->
+        <!-- SECTION: GAME RESULTS -->
         <div class="results-container">
-            <p id="results-msg"></p> <!-- Displays round results -->
-            <p id="winner-msg"></p> <!-- Displays the winner of the game -->
+            <!-- Opens a div element to contain and style the display of game results and the reset button. -->
+            <p id="results-msg"></p>
+            <!-- Paragraph element with an ID for displaying the results of each round, initially empty. -->
+            <p id="winner-msg"></p>
+            <!-- Paragraph element with an ID for displaying the winner of the game, initially empty. -->
             <button class="btn" id="reset-game-btn">Play again?</button>
-        </div>
-    </main>
-    <!-- Links the external JavaScript file for game functionality -->
-    <script src="./script.js"></script>
-</body>
+            <!-- Button to reset the game and play again, with an ID for event handling and a class for styling. -->
+        </div> <!-- Closes the results container div. -->
+    </main> <!-- Closes the main content area. -->
 
-</html>
+    <!-- SECTION: SCRIPT INCLUSION -->
+    <script src="./script.js"></script>
+    <!-- Links an external JavaScript file for adding interactivity and game functionality, specifying the path to the script file. -->
+</body> <!-- Closes the body section. -->
+
+</html> <!-- Closes the HTML document. -->
