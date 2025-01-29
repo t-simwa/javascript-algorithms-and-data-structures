@@ -1,158 +1,320 @@
+/* SECTION: RESET STYLES AND UNIVERSAL SELECTOR */
 *,
 *::before,
 *::after {
+    /* 
+       Targets all elements and their pseudo-elements, applying these rules universally.
+       Helps enforce a consistent baseline across browsers.
+    */
     margin: 0;
-    /* Removes all default margin for all elements and their pseudo-elements */
+    /* 
+       Eliminates default margin on all elements, creating a clean slate for layout.
+    */
     padding: 0;
-    /* Removes all default padding for all elements and their pseudo-elements */
+    /* 
+       Removes default padding, also contributing to a consistent and predictable layout.
+    */
     box-sizing: border-box;
-    /* Ensures padding and border are included in the element's total width and height */
+    /* 
+       Includes padding and borders within the total element width and height.
+       Prevents unexpected size shifts when adding borders or padding.
+    */
 }
 
+/* SECTION: ROOT SELECTOR FOR CSS VARIABLES */
 :root {
+    /* 
+       Defines custom properties (variables) directly on the root element.
+       These can be reused throughout the stylesheet for consistent design.
+    */
     --dark-grey: #0a0a23;
-    /* Defines a custom CSS variable for a dark grey color */
+    /* 
+       A very dark shade of grey, used for background or text color.
+       Stored in a variable for easy reference.
+    */
     --white: #ffffff;
-    /* Defines a custom CSS variable for white color */
+    /* 
+       The default white color, useful in contrast to dark backgrounds.
+    */
     --yellow: #f1be32;
-    /* Defines a custom CSS variable for yellow color */
+    /* 
+       A bright yellow, potentially for highlights or accent sections.
+    */
 }
 
+/* SECTION: BODY STYLES */
 body {
+    /* 
+       Targets the <body> element of the page, setting global styles.
+    */
     color: var(--white);
-    /* Sets the text color to the white variable */
+    /* 
+       Applies the white color variable to text, ensuring high contrast on darker backgrounds.
+    */
     background-color: var(--dark-grey);
-    /* Sets the background color to the dark grey variable */
+    /* 
+       Fills the background with the defined dark grey color for a modern, bold appearance.
+    */
 }
 
+/* SECTION: TITLE-CONTAINER CLASS */
 .title-container {
+    /* 
+       A container class for titles, often used to group or style heading elements.
+    */
     margin: 10px 0;
-    /* Adds vertical spacing above and below the container */
+    /* 
+       Adds vertical space before and after the container, separating it from surrounding elements.
+    */
     display: flex;
-    /* Enables flexbox layout for aligning child elements */
+    /* 
+       Uses flexbox to align child elements horizontally or vertically.
+    */
     align-items: center;
-    /* Vertically aligns items in the center of the container */
+    /* 
+       Centers child elements vertically along the container's cross-axis.
+    */
     justify-content: center;
-    /* Horizontally centers items in the container */
+    /* 
+       Centers child elements horizontally.
+    */
     gap: 8px;
-    /* Sets a spacing of 8px between child elements */
+    /* 
+       Creates an 8px gap between child elements, improving visual separation.
+    */
 }
 
+/* SECTION: TITLE CLASS */
 .title {
+    /* 
+       Styles for elements, typically headings, given the 'title' class.
+    */
     font-size: 2.5rem;
-    /* Sets the font size of the title text to 2.5 times the root font size */
+    /* 
+       Sets a large font size for emphasis, often used for page or section headings.
+    */
 }
 
+/* SECTION: DATE-SVG CLASS */
 .date-svg {
+    /* 
+       Targets an SVG element used to represent a date or calendar icon.
+    */
     width: 30px;
-    /* Sets the width of the SVG to 30px */
+    /* 
+       Restricts the icon's width to 30px, keeping it uniform in layouts.
+    */
     height: 30px;
-    /* Sets the height of the SVG to 30px */
+    /* 
+       Matches the icon's height to its width, preserving aspect ratio.
+    */
 }
 
+/* SECTION: DIVIDER CLASS */
 .divider {
+    /* 
+       Represents a visual horizontal separator on the page.
+    */
     margin: auto;
-    /* Centers the divider horizontally */
+    /* 
+       Centers the divider, both horizontally and vertically within its container if possible.
+    */
     width: 150px;
-    /* Sets the divider's width to 150px */
+    /* 
+       Sets a fixed width for the divider, making it stand out as a line rather than a box.
+    */
     height: 10px;
-    /* Sets the divider's height to 10px */
+    /* 
+       The vertical thickness of the divider. A value of 10px is bold and easily noticed.
+    */
     background-color: var(--yellow);
-    /* Sets the divider's background color to the yellow variable */
+    /* 
+       Uses the bright yellow color variable to make the divider visually stand apart.
+    */
 }
 
+/* SECTION: DROPDOWN-CONTAINER CLASS */
 .dropdown-container {
+    /* 
+       A container for dropdown elements, providing a layout context and positioning.
+    */
     width: 50%;
-    /* Sets the width of the container to 50% of its parent */
+    /* 
+       Reserves half the available width for the dropdown, typically centered for balance.
+    */
     margin: 40px auto;
-    /* Centers the container horizontally and adds 40px of vertical spacing at the top and bottom */
+    /* 
+       Centers the container horizontally, adding 40px vertical spacing on top and bottom.
+    */
     position: relative;
-    /* Establishes a positioning context for absolutely positioned child elements */
+    /* 
+       Establishes a positioning context, so absolutely positioned child elements can be placed within.
+    */
 }
 
+/* SECTION: SELECT ELEMENT */
 select {
+    /* 
+       Styles the dropdown <select> element, ensuring consistent look and feel across browsers.
+    */
     display: block;
-    /* Makes the dropdown a block-level element */
+    /* 
+       Makes the element a block-level item, spanning the full width as specified.
+    */
     margin: 20px auto 0;
-    /* Centers the dropdown horizontally with 20px of top margin and no bottom margin */
+    /* 
+       Centers the dropdown horizontally with 20px of top margin, no bottom margin.
+    */
     width: 100%;
-    /* Sets the dropdown's width to 100% of its parent */
+    /* 
+       Occupies the entire width of its container, making it more user-friendly.
+    */
     height: 50px;
-    /* Sets the height of the dropdown to 50px */
+    /* 
+       Provides enough vertical space for text and clickable area, improving usability.
+    */
     font-size: 100%;
-    /* Ensures the font size scales relative to the root font size */
+    /* 
+       Ensures the font scales based on the root size, preserving accessibility.
+    */
     font-weight: bold;
-    /* Makes the dropdown's text bold */
+    /* 
+       Emphasizes the dropdown text, making it easier to read or notice.
+    */
     cursor: pointer;
-    /* Changes the cursor to a pointer when hovering over the dropdown */
+    /* 
+       Indicates that this element is interactive and clickable.
+    */
     background-color: var(--white);
-    /* Sets the dropdown's background color to white */
+    /* 
+       Aligns the background with white for contrast against the dark container.
+    */
     border: none;
-    /* Removes the border from the dropdown */
+    /* 
+       Removes the default border, giving a cleaner, sleeker appearance.
+    */
     color: var(--dark-grey);
-    /* Sets the dropdown's text color to dark grey */
+    /* 
+       Makes the text color dark grey, aligning with the site's color theme.
+    */
     appearance: none;
-    /* Removes the default styling of the dropdown */
+    /* 
+       Disables default browser styling on the dropdown for a consistent design.
+    */
     padding: 10px;
-    /* Adds padding inside the dropdown */
+    /* 
+       Adds comfortable spacing around the text within the dropdown.
+    */
     padding-right: 38px;
-    /* Adds additional padding on the right to make room for the dropdown icon */
+    /* 
+       Creates room on the right side for a custom dropdown arrow or icon.
+    */
     -webkit-appearance: none;
-    /* Removes default styling in WebKit browsers */
     -moz-appearance: none;
-    /* Removes default styling in Mozilla browsers */
+    /* 
+       Vendor-prefixed properties to suppress default styles in specific browsers.
+    */
     transition: color 0.3s ease, background-color 0.3s ease, border-bottom-color 0.3s ease;
-    /* Smoothly animates changes in text color, background color, and border color over 0.3 seconds */
+    /* 
+       Provides a smooth animation effect for color and border changes, enhancing interactivity.
+    */
 }
 
+/* SECTION: SELECT-ICON CLASS */
 .select-icon {
+    /* 
+       Styles for a visual indicator (icon) placed near the dropdown.
+       Often used as a down-arrow or custom graphic.
+    */
     position: absolute;
-    /* Positions the icon relative to its parent (the container) */
+    /* 
+       Absolutely positions the icon inside the .dropdown-container, allowing overlap or layering.
+    */
     top: 4px;
-    /* Places the icon 4px from the top of the container */
+    /* 
+       Shifts the icon 4px from the top, aligning it visually with the dropdown text.
+    */
     right: 4px;
-    /* Places the icon 4px from the right edge of the container */
+    /* 
+       Positions the icon 4px from the right edge of the container.
+    */
     width: 30px;
-    /* Sets the width of the icon to 30px */
+    /* 
+       Restricts the icon's width to 30px, matching typical small icon sizes.
+    */
     height: 36px;
-    /* Sets the height of the icon to 36px */
+    /* 
+       Sets the icon's height slightly larger to accommodate designs that are taller than wide.
+    */
     pointer-events: none;
-    /* Disables pointer events on the icon to ensure clicks go to the dropdown */
+    /* 
+       Prevents the icon from capturing clicks, keeping interaction focused on the select element.
+    */
     padding-left: 5px;
-    /* Adds padding on the left for better alignment */
+    /* 
+       Adds a small padding on the left, refining the icon's spacing relative to the dropdown edge.
+    */
     transition: background-color 0.3s ease, border-color 0.3s ease;
-    /* Smoothly animates changes in the icon's background color and border color */
+    /* 
+       Smoothly animates changes to background and border colors for subtle interactive feedback.
+    */
 }
 
+/* SECTION: SELECT-ICON SVG STYLING */
 .select-icon svg.icon {
+    /* 
+       Targets an inline SVG within the icon, allowing styling such as fill color changes.
+    */
     transition: fill 0.3s ease;
-    /* Smoothly animates changes in the fill color over 0.3 seconds */
+    /* 
+       Smoothly transitions the fill color, making state changes or hover effects more appealing.
+    */
     fill: var(--dark-grey);
-    /* Sets the fill color of the SVG icon to dark grey */
+    /* 
+       Sets the default fill color of the SVG icon to the theme's dark grey.
+    */
 }
 
+/* SECTION: CURRENT-DATE ID */
 #current-date {
+    /* 
+       A unique element identified for displaying or formatting the current date.
+    */
     font-size: 2rem;
-    /* Sets the font size of the displayed date to 2 times the root font size */
+    /* 
+       Provides a larger font size, emphasizing the displayed date.
+    */
     text-align: center;
-    /* Centers the text horizontally */
+    /* 
+       Centers the date text within this element.
+    */
 }
 
+/* SECTION: MEDIA QUERY FOR MOBILE VIEWPORTS */
 @media (max-width: 375px) {
-    /* Applies styles for devices with a maximum width of 375px */
 
+    /* 
+       Applies styles specifically for screens with maximum width of 375px (common small mobile devices).
+    */
     .title {
         font-size: 2rem;
-        /* Reduces the font size of the title for smaller screens */
+        /* 
+           Decreases the title size slightly, ensuring readability without overwhelming limited screen space.
+        */
     }
 
     .dropdown-container {
         width: 80%;
-        /* Increases the width of the dropdown container to 80% for better usability */
+        /* 
+           Widens the dropdown container on small devices, making it more accessible for touch inputs.
+        */
     }
 
     .date-svg {
         display: none;
-        /* Hides the SVG calendar icon on small screens to save space */
+        /* 
+           Hides the SVG icon to conserve space on narrow viewports.
+           This simplification can improve layout on small screens.
+        */
     }
 }

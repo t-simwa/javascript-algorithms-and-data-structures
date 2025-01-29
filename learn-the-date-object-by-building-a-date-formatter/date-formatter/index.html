@@ -1,91 +1,191 @@
 <!DOCTYPE html>
+<!-- 
+  Declaration of the document type as HTML5. 
+  This indicates that the file should be parsed as an HTML5 document by the browser.
+-->
+
 <html lang="en">
-<!-- Declares the document type as HTML5 and sets the language to English -->
+<!-- 
+  The root element of the HTML document; the lang attribute indicates the document is in English, 
+  aiding in proper linguistic handling by browsers and assistive technologies.
+-->
 
 <head>
+    <!-- 
+      The head section includes metadata and references to resources like stylesheets or scripts. 
+      This information isn't displayed directly in the browser.
+    -->
+
     <meta charset="UTF-8" />
-    <!-- Specifies the character encoding for the document -->
+    <!-- 
+      Defines the character encoding as UTF-8, which supports many characters and symbols 
+      across different languages.
+    -->
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Ensures compatibility with Internet Explorer and uses the latest rendering mode -->
+    <!-- 
+      Instructs Internet Explorer to use the most up-to-date engine for rendering, 
+      helping maintain consistent behavior across IE versions.
+    -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Configures the viewport for responsive design, scaling the layout to the device's width -->
+    <!-- 
+      Sets the viewport to match the device's width and initial scale, 
+      vital for creating responsive web pages on mobile devices.
+    -->
 
     <title>Learn the Date Object by Building a Date Formatter</title>
-    <!-- Sets the title of the web page -->
+    <!-- 
+      The title displayed in the browser tab or window. Also used by search engines 
+      and when bookmarking/favoriting this page.
+    -->
 
     <link rel="stylesheet" href="./styles.css" />
-    <!-- Links to an external CSS file for styling -->
+    <!-- 
+      Includes an external CSS file for styling. The href attribute points 
+      to the relative path of the styles.
+    -->
 </head>
+<!-- 
+  End of the head section. The browser has processed all metadata and resource declarations above.
+-->
 
 <body>
+    <!-- 
+      The body element contains all the visible content and user-interactive parts of the page.
+    -->
+
     <main>
-        <!-- Main content container of the page -->
+        <!-- 
+          The main element represents the primary content area of the document. 
+          This is where the page's core functionality or information appears.
+        -->
 
         <div class="title-container">
-            <!-- Container for the page's title and its accompanying SVG graphic -->
+            <!-- 
+              A container for the page's title and decorative elements, 
+              structured for styling purposes in CSS.
+            -->
 
             <h1 class="title">Today's Date</h1>
-            <!-- Displays the primary title of the page -->
+            <!-- 
+              An h1 heading for the page. The class "title" can be used to style it, 
+              such as adjusting font size or color.
+            -->
 
             <svg class="date-svg" xmlns="http://www.w3.org/2000/svg" version="1.0" width="512.000000pt"
                 height="512.000000pt" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
-                <!-- SVG graphic for decorative purposes, illustrating a calendar icon -->
+                <!-- 
+                  An inline SVG image for decorative purposes, showing a calendar icon. 
+                  The attributes control its size and aspect ratio.
+                -->
 
                 <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#fff" stroke="none">
-                    <!-- SVG group element that defines the scale and fill of the calendar graphic -->
+                    <!-- 
+                      The transform attribute repositions and scales elements within the SVG.
+                      fill="#fff" sets the fill color to white, while stroke="none" removes outlines.
+                    -->
 
                     <path d="M1145 4777 ..." />
-                    <!-- Various paths that make up the calendar SVG design -->
+                    <!-- 
+                      A path element that defines the shape of the calendar icon. 
+                      The d attribute contains drawing instructions for the path.
+                    -->
                 </g>
             </svg>
         </div>
+        <!-- 
+          End of the title-container section, which holds the primary heading and the calendar SVG icon.
+        -->
 
         <div class="divider"></div>
-        <!-- A horizontal divider for visual separation of content -->
+        <!-- 
+          A simple horizontal divider to visually separate sections of the page's content.
+        -->
 
         <div class="dropdown-container">
-            <!-- Container for the dropdown menu and its accompanying icon -->
+            <!-- 
+              A container that houses the dropdown menu for selecting date formats 
+              and its accompanying icon.
+            -->
 
             <select name="date-options" id="date-options">
-                <!-- Dropdown menu for selecting a date format -->
+                <!-- 
+                  A select element offering multiple formatting choices for the date. 
+                  The id attribute allows scripts to refer to this component for interactivity.
+                -->
 
                 <option value="dd-mm-yyyy">Day, Month, Year</option>
-                <!-- Dropdown option: Day-Month-Year format -->
+                <!-- 
+                  One of the format options. The value attribute sets the actual format text 
+                  that can be used by the script.
+                -->
 
                 <option value="yyyy-mm-dd">Year, Month, Day</option>
-                <!-- Dropdown option: Year-Month-Day format -->
+                <!-- 
+                  An alternative format for displaying the date starting with the year.
+                -->
 
                 <option value="mm-dd-yyyy-h-mm">
                     Month, Day, Year, Hours, Minutes
                 </option>
-                <!-- Dropdown option: Month-Day-Year with time -->
+                <!-- 
+                  A more detailed option that includes both date and partial time components.
+                -->
             </select>
 
             <div class="select-icon">
-                <!-- Container for the dropdown's decorative icon -->
+                <!-- 
+                  A wrapper for the dropdown arrow icon, used purely for aesthetic or indicative purposes.
+                -->
 
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="25" height="35" viewBox="0 0 24 24">
-                    <!-- SVG icon resembling a dropdown arrow -->
+                    <!-- 
+                      An inline SVG containing a down-facing arrow, signifying this element is a dropdown menu.
+                    -->
 
                     <rect x="0" fill="none" width="24" height="24" />
-                    <!-- Invisible rectangle to define the SVG view area -->
+                    <!-- 
+                      An invisible rectangle shaping the SVG area, ensuring the icon lines up correctly 
+                      within its view box.
+                    -->
 
                     <g>
                         <path d="M7 10l5 5 5-5" />
-                        <!-- Path defining the arrow shape for the dropdown -->
+                        <!-- 
+                          A path defining the arrow shape. 
+                          The coordinates and commands create the triangular arrow graphic.
+                        -->
                     </g>
                 </svg>
             </div>
         </div>
+        <!-- 
+          End of the dropdown-container which encapsulates date format selection for the user.
+        -->
 
         <p id="current-date"></p>
-        <!-- Placeholder paragraph where the formatted current date will be displayed -->
+        <!-- 
+          A paragraph element where the dynamically formatted date will be displayed 
+          once it's generated by the JavaScript.
+        -->
     </main>
+    <!-- 
+      End of the main section. All primary content and interactive elements are contained here.
+    -->
 
     <script src="./script.js"></script>
-    <!-- Links to an external JavaScript file that provides interactivity -->
+    <!-- 
+      Reference to an external JavaScript file that controls date formatting behavior 
+      and other interactive features on this page.
+    -->
 </body>
+<!-- 
+  Closing the body tag, indicating there are no additional visible elements below 
+  except for potential scripts or analytics.
+-->
 
 </html>
+<!-- 
+  End of the complete HTML document. The browser stops interpreting any additional HTML.
+-->
