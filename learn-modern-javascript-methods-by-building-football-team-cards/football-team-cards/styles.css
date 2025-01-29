@@ -1,111 +1,246 @@
-/* Apply global box-sizing and reset margin and padding for all elements */
+/* 
+    SECTION: GLOBAL RESET STYLES
+
+    This section applies a global reset for all elements on the page, 
+    removing default margins, paddings, and ensuring box-sizing applies 
+    padding and border within the set width and height.
+*/
 *,
-/* Selects all elements */
 *::before,
-/* Selects the ::before pseudo-elements */
 *::after {
-    /* Selects the ::after pseudo-elements */
+    /* 
+       'box-sizing: border-box;' ensures padding and borders are included 
+       in the total width and height of an element. 
+       This standardizes element sizing across different browsers.
+    */
     box-sizing: border-box;
-    /* Ensures padding and border are included in the element's total width and height */
+
+    /* 
+       'margin: 0;' resets any default outer spacing 
+       so that all elements start aligned at the edges. 
+    */
     margin: 0;
-    /* Removes default margin */
+
+    /* 
+       'padding: 0;' removes default inner spacing, 
+       ensuring a consistent baseline for all elements.
+    */
     padding: 0;
-    /* Removes default padding */
 }
 
-/* Define CSS custom properties (variables) for consistent styling */
+/* 
+    SECTION: DEFINE CSS CUSTOM PROPERTIES
+    The :root selector allows us to define variables 
+    (often called CSS custom properties) that can be reused throughout the stylesheet. 
+    This promotes consistent styling and easier maintenance.
+*/
 :root {
+    /* 
+       '--dark-grey': used as a primary background color 
+       for the entire page, providing a dark theme.
+    */
     --dark-grey: #0a0a23;
-    /* Dark grey color used for the background */
+
+    /* 
+       '--light-grey': used as the background color for cards 
+       to provide contrast against the dark page background.
+    */
     --light-grey: #f5f6f7;
-    /* Light grey color used for card backgrounds */
+
+    /* 
+       '--white': commonly used for text color on dark backgrounds 
+       or other elements requiring high contrast.
+    */
     --white: #ffffff;
-    /* White color for text and other elements */
+
+    /* 
+       '--black': a fallback color (currently unused), 
+       but defined here for easy reference if needed later.
+    */
     --black: #000;
-    /* Black color, not currently used */
 }
 
-/* Style the body element */
+/* 
+    SECTION: BODY STYLES
+    Sets global page defaults for background, text alignment, and padding.
+*/
 body {
+    /* 
+       Applies the dark grey background to keep the overall theme consistent. 
+       Uses the custom property defined above.
+    */
     background-color: var(--dark-grey);
-    /* Sets the background color using the dark-grey variable */
+
+    /* 
+       Centers all direct text content within the body horizontally.
+    */
     text-align: center;
-    /* Centers text horizontally */
+
+    /* 
+       Adds some spacing around the entire page 
+       so content isn't flush against the browser edges.
+    */
     padding: 10px;
-    /* Adds padding around the body */
 }
 
-/* Style elements with specific classes collectively */
+/* 
+    SECTION: MULTIPLE SELECTORS
+    .title, .options-label, .team-stats, footer
+
+    These elements share the same text color. 
+    Grouping them together keeps the code concise 
+    and enforces a consistent look across these elements.
+*/
 .title,
-/* Styles the main title of the page */
 .options-label,
-/* Styles the label for the dropdown */
 .team-stats,
-/* Styles the container for team stats */
 footer {
-    /* Styles the footer section */
+    /* 
+       Uses the white color variable for strong contrast 
+       against the dark background.
+    */
     color: var(--white);
-    /* Sets the text color to white */
 }
 
-/* Style the title of the page */
+/* 
+    SECTION: PAGE TITLE
+    Styles for the main heading of the page (the .title element).
+*/
 .title {
+    /* 
+       Adds vertical spacing before and after 
+       so the title stands out from surrounding elements.
+    */
     margin: 1.3rem 0;
-    /* Adds vertical margin to the title */
 }
 
-/* Style the team-stats container */
+/* 
+    SECTION: TEAM STATS CONTAINER
+    Builds a flexible container to display team statistics 
+    in a row or wrapped as needed across different screen sizes.
+*/
 .team-stats {
+    /* 
+       Declares a flex container, which allows for custom 
+       alignment and wrapping behaviors of child elements.
+    */
     display: flex;
-    /* Enables flexbox for layout */
+
+    /* 
+       Distributes space evenly between items, 
+       leaving space around them for a balanced layout.
+    */
     justify-content: space-around;
-    /* Distributes items evenly with space around them */
+
+    /* 
+       Allows child elements to wrap to new lines 
+       if there isn’t enough space on a single row.
+    */
     flex-wrap: wrap;
-    /* Allows items to wrap to the next line if necessary */
+
+    /* 
+       Slightly increases the font size so the stats 
+       are more readable and noticeable on the screen.
+    */
     font-size: 1.3rem;
-    /* Sets the font size for team stats */
+
+    /* 
+       Adds vertical margin for breathing room 
+       around the team statistics section.
+    */
     margin: 1.2rem 0;
-    /* Adds vertical margin around the team stats */
 }
 
-/* Style the label for the dropdown menu */
+/* 
+    SECTION: OPTIONS LABEL
+    Styles the label that accompanies a dropdown or select element, 
+    typically used for filtering or other selection options.
+*/
 .options-label {
+    /* 
+       Defines the size of the label text 
+       for clear readability and a cohesive hierarchy.
+    */
     font-size: 1.2rem;
-    /* Sets the font size for the label text */
 }
 
-/* Style the container for player cards */
+/* 
+    SECTION: CARDS WRAPPER
+    This container holds multiple player cards, 
+    arranging them in a flex layout to be responsive.
+*/
 .cards {
+    /* 
+       Declares a flex container for the cards, 
+       providing both vertical and horizontal alignment control.
+    */
     display: flex;
-    /* Enables flexbox for layout */
+
+    /* 
+       Allows cards to move onto a new line 
+       if they exceed the available row width.
+    */
     flex-wrap: wrap;
-    /* Allows cards to wrap to the next line if necessary */
+
+    /* 
+       Centers the cards horizontally within the container.
+    */
     justify-content: center;
-    /* Centers the cards horizontally */
+
+    /* 
+       Centers the cards vertically within the container 
+       if they happen to grow in height or if there is extra space.
+    */
     align-items: center;
-    /* Centers the cards vertically */
 }
 
-/* Style individual player cards */
+/* 
+    SECTION: PLAYER CARD
+    Defines the layout and appearance of each individual player card.
+*/
 .player-card {
+    /* 
+       Applies a light grey background color, 
+       providing contrast against the darker page background.
+    */
     background-color: var(--light-grey);
-    /* Sets the background color using the light-grey variable */
+
+    /* 
+       Adds internal spacing, creating some distance 
+       between the card border and its content.
+    */
     padding: 1.3rem;
-    /* Adds padding inside the card */
+
+    /* 
+       Adds external spacing around each card 
+       so they don’t collide with each other visually.
+    */
     margin: 1.2rem;
-    /* Adds margin outside the card */
+
+    /* 
+       Fixes the width of each card, 
+       helping maintain a consistent appearance across all player cards.
+    */
     width: 300px;
-    /* Sets a fixed width for the cards */
+
+    /* 
+       Rounds the corners of the card edges 
+       to soften the boxy look and add a modern, polished appearance.
+    */
     border-radius: 15px;
-    /* Rounds the corners of the card */
 }
 
-/* Add responsive design for smaller screens */
+/* 
+    SECTION: RESPONSIVE DESIGN
+    A media query to adjust layout when the screen width is 768px or less, 
+    typically for tablets or smaller devices.
+*/
 @media (max-width: 768px) {
-
-    /* Applies styles when the screen width is 768px or less */
     .team-stats {
+        /* 
+           Switches to a column layout on smaller screens, 
+           ensuring text and stats are readable without horizontal scrolling.
+        */
         flex-direction: column;
-        /* Stacks items vertically for smaller screens */
     }
 }
