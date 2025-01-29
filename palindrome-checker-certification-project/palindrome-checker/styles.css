@@ -1,202 +1,570 @@
+/* SECTION: RESET STYLES */
 * {
+    /* 
+       Asterisk (*) is called the universal selector.
+       It targets every element on the page, applying the same rules to all elements.
+       The curly brace '{' starts the block of rules that apply to this selector.
+    */
     margin: 0;
-    /* Resets the default margin for all elements */
+    /* 
+       Sets the margin of all elements to 0.
+       Margin is the outer space around an element.
+       This helps reset default browser margins so everything starts from a consistent baseline.
+    */
     padding: 0;
-    /* Resets the default padding for all elements */
+    /* 
+       Sets the padding of all elements to 0.
+       Padding is the inner space between an element's content and its border.
+       Also part of resetting default browser styles.
+    */
     box-sizing: border-box;
-    /* Ensures padding and border are included in element's total width and height */
+    /* 
+       Changes the box-sizing property so that the width/height of an element
+       includes its padding and border within the calculated size.
+       This helps avoid unexpected element sizes when adding padding or borders.
+    */
+    /* 
+       The curly brace '}' ends the rules for the universal selector,
+       meaning all the above styles now apply universally to every element on the page.
+    */
 }
 
+/* SECTION: BODY STYLES */
 body {
+    /* 
+       Targets the <body> element of the page.
+       The curly brace '{' opens the style block for the body.
+    */
     font-family: 'Arial', sans-serif;
-    /* Sets the font for the entire page to Arial or a generic sans-serif if Arial is unavailable */
+    /* 
+       Sets the font family to Arial, and if that's not available, falls back to a generic sans-serif typeface.
+       This ensures consistent typography across the entire document.
+    */
     background-color: #11142d;
-    /* Sets a dark blueish background color for the body */
+    /* 
+       Applies a dark, slightly bluish color to the body background.
+       This will serve as the main backdrop for the page.
+    */
     color: #f0f0f0;
-    /* Sets a light text color for better contrast against the dark background */
+    /* 
+       Sets the text color to a very light gray.
+       This creates a higher contrast against the dark background, making text easier to read.
+    */
+    /* 
+       The curly brace '}' ends the ruleset for the body selector,
+       meaning no further rules in this block apply to the body element.
+    */
 }
 
+/* SECTION: CONTAINER CLASS */
 .container {
+    /* 
+       Targets elements with the class "container".
+       The curly brace '{' starts the block of rules for this class.
+    */
     width: 100%;
-    /* Makes the container span the full width of the viewport */
+    /* 
+       Makes the container span the full width of its parent or the viewport if it's at the top level.
+    */
     min-height: 100vh;
-    /* Ensures the container is at least as tall as the viewport */
+    /* 
+       Ensures the container is at least as tall as the entire viewport height.
+       'vh' stands for "viewport height," so 100vh makes it match the height of the browser window.
+    */
     position: relative;
-    /* Allows for positioning of child elements relative to this container */
+    /* 
+       Sets the positioning context to "relative," meaning child elements positioned absolutely
+       can be placed in relation to this container.
+    */
     display: flex;
-    /* Enables a flexbox layout for child elements */
+    /* 
+       Turns this container into a flex container,
+       allowing the child elements to be aligned and distributed using flexbox properties.
+    */
     align-items: center;
-    /* Vertically centers child elements */
+    /* 
+       Vertically centers items along the cross axis in a flex container (in this case, top to bottom).
+    */
     justify-content: center;
-    /* Horizontally centers child elements */
+    /* 
+       Horizontally centers items along the main axis in a flex container (left to right).
+    */
     flex-direction: column;
-    /* Stacks child elements vertically */
+    /* 
+       Stacks child elements vertically (from top to bottom)
+       instead of the default row layout when using flexbox.
+    */
+    /* 
+       The curly brace '}' ends the style block for the .container class.
+    */
 }
 
+/* SECTION: LOGO IMAGE CLASS */
 .freecodecamp-logo {
+    /* 
+       Targets elements with the class "freecodecamp-logo".
+       The curly brace '{' starts the style block for this class.
+    */
     height: 35px;
-    /* Sets the height of the logo image */
+    /* 
+       Sets the height of the image to 35 pixels.
+       This helps maintain a consistent and predictable logo size.
+    */
     margin-bottom: 25px;
-    /* Adds space below the logo */
+    /* 
+       Adds 25 pixels of space below the image,
+       creating visual separation from elements beneath it.
+    */
+    /* 
+       The curly brace '}' ends the style block for the .freecodecamp-logo class.
+    */
 }
 
+/* SECTION: TITLE CLASS */
 .title {
+    /* 
+       Targets elements with the class "title".
+       The curly brace '{' opens the style rules for this class.
+    */
     text-align: center;
-    /* Centers the text horizontally */
+    /* 
+       Centers the text horizontally within its container or parent element.
+    */
     padding: 15px 0;
-    /* Adds vertical padding to the title */
+    /* 
+       Adds 15 pixels of vertical padding (top and bottom) and 0 horizontally.
+       This gives the title some breathing room above and below the text.
+    */
     font-size: 3rem;
-    /* Sets a large font size for the title */
+    /* 
+       Sets the font size to 3 "rem" units.
+       1rem is equal to the font size of the HTML root element.
+       This typically results in a large, prominent title.
+    */
     margin-bottom: 25px;
-    /* Adds space below the title */
+    /* 
+       Adds 25 pixels of space below the title, separating it from elements beneath it.
+    */
     color: #d4d4f2;
-    /* Gives the title a soft purple color */
+    /* 
+       Applies a soft purple color to the text,
+       providing a gentle contrast against the darker background.
+    */
+    /* 
+       The curly brace '}' ends the style block for the .title class.
+    */
 }
 
+/* SECTION: PALINDROME DIV CLASS */
 .palindrome-div {
+    /* 
+       Targets elements with the class "palindrome-div".
+       The curly brace '{' opens the style block for this class.
+    */
     width: min(100vw, 500px);
-    /* Sets the width to either the full viewport width or 500px, whichever is smaller */
+    /* 
+       Sets the width to the smaller value between 100% of the viewport width (100vw) or 500px.
+       Ensures the element fits smaller screens while capping the maximum width at 500px.
+    */
     min-height: 120px;
-    /* Ensures a minimum height of 120px */
+    /* 
+       Ensures that this element has at least 120 pixels in height.
+       This helps maintain a minimum visual block even if the content is short.
+    */
     border-radius: 25px;
-    /* Rounds the corners of the div */
+    /* 
+       Rounds the corners of the element's outer border by 25 pixels,
+       giving a softer, pill-shaped look to the box.
+    */
     display: flex;
-    /* Enables flexbox layout for this section */
+    /* 
+       Declares this element as a flex container,
+       allowing its child elements to be arranged using flexbox rules.
+    */
     align-items: center;
-    /* Vertically centers child elements */
+    /* 
+       Vertically centers any child elements within this container.
+    */
     justify-content: center;
-    /* Horizontally centers child elements */
+    /* 
+       Horizontally centers child elements within this container.
+    */
     flex-wrap: wrap;
-    /* Allows child elements to wrap onto new lines if necessary */
+    /* 
+       Allows child elements to wrap onto new lines if they run out of horizontal space.
+    */
     padding: 25px;
-    /* Adds padding inside the div */
+    /* 
+       Creates 25 pixels of padding on all sides inside this element.
+       This provides space between the content and the element's boundary.
+    */
     margin: 15px 0;
-    /* Adds vertical margin above and below the div */
+    /* 
+       Adds 15 pixels of margin above and below this element,
+       creating space between it and elements adjacent to it vertically.
+    */
     background-color: #e9e9e9;
-    /* Sets a light gray background color */
+    /* 
+       Fills the background of the element with a light gray color.
+       This contrasts with the darker page background, drawing attention to this section.
+    */
     box-shadow: 0 8px 8px rgba(0, 46, 173, 0.4);
-    /* Adds a shadow for a lifted appearance */
+    /* 
+       Adds a shadow below the element.
+       0 is the horizontal offset, 8px is the vertical offset, 8px is the blur radius,
+       and rgba(0, 46, 173, 0.4) is a semi-transparent blue color for the shadow.
+       This visually "lifts" the element from the background.
+    */
+    /* 
+       The curly brace '}' ends the style block for the .palindrome-div class.
+    */
 }
 
+/* SECTION: LABEL ELEMENT */
 label {
+    /* 
+       Targets the <label> HTML element, used for form labeling or descriptive text.
+       The curly brace '{' opens the style block for label.
+    */
     color: #11142d;
-    /* Sets the text color to dark blue */
+    /* 
+       Sets the text color to a dark shade of blue, making labels stand out
+       against the lighter backgrounds within the container.
+    */
     margin-bottom: 25px;
-    /* Adds space below the label */
+    /* 
+       Adds 25 pixels of margin below the label text,
+       creating clear separation between the label and subsequent elements.
+    */
+    /* 
+       The curly brace '}' ends the style block for label elements.
+    */
 }
 
+/* SECTION: PALINDROME BUTTON CLASS */
 .palindrome-btn {
+    /* 
+       Targets elements with the class "palindrome-btn".
+       The curly brace '{' opens the style block for this class.
+    */
     width: 110px;
-    /* Sets a fixed width for the button */
+    /* 
+       Sets the button’s width to 110 pixels.
+       This ensures a consistent size, preventing it from resizing based on text length.
+    */
     border: none;
-    /* Removes the default border */
+    /* 
+       Removes the default border from the button, giving a cleaner look.
+    */
     padding: 12px;
-    /* Adds internal spacing around the button text */
+    /* 
+       Creates 12 pixels of inner space (padding) around the button’s text.
+       This makes the button larger and more comfortable to click.
+    */
     border-radius: 18px;
-    /* Rounds the corners of the button */
+    /* 
+       Rounds the corners of the button by 18 pixels,
+       giving a more friendly and modern look.
+    */
     background-color: #8b00d2;
-    /* Sets the button's background to a purple shade */
+    /* 
+       Sets the button’s background to a bright purple color.
+       This helps the button stand out.
+    */
     color: #fff;
-    /* Sets the button text color to white */
+    /* 
+       Makes the button text white, producing a strong contrast
+       against the purple background for readability.
+    */
     cursor: pointer;
-    /* Changes the cursor to a pointer on hover */
+    /* 
+       Changes the cursor to a pointer (hand icon) when hovering over the button,
+       indicating it’s clickable.
+    */
     transition: background-color 0.3s ease;
-    /* Smoothly transitions background color changes */
+    /* 
+       Applies a smooth transition effect on the background color property over 0.3 seconds,
+       making hover changes less abrupt.
+    */
+    /* 
+       The curly brace '}' ends the style block for the .palindrome-btn class.
+    */
 }
 
+/* SECTION: PALINDROME BUTTON HOVER STATE */
 .palindrome-btn:hover {
+    /* 
+       Targets the hover state of elements with the class "palindrome-btn".
+       The curly brace '{' opens the style rules that apply when the user hovers over the button.
+    */
     background-color: #a400e6;
-    /* Changes the background color when the button is hovered */
+    /* 
+       Changes the background color to a lighter purple when hovered,
+       providing visual feedback to the user.
+    */
+    /* 
+       The curly brace '}' ends the hover state style block for the .palindrome-btn class.
+    */
 }
 
+/* SECTION: PALINDROME INPUT CLASS */
 .palindrome-input {
+    /* 
+    The selector ".palindrome-input" targets any HTML element with the class "palindrome-input".
+    The opening curly brace '{' starts the block of CSS declarations for this class.
+  */
     height: 35px;
-    /* Sets the height of the input field */
+    /* 
+        Sets the element's height to 35 pixels.
+        This determines the vertical size of the input field, ensuring enough room for text.
+      */
     width: 270px;
-    /* Sets a fixed width for the input field */
+    /* 
+        Sets a fixed width of 270 pixels.
+        This constrains the input field's horizontal size to make it consistent across the page.
+      */
     text-align: center;
-    /* Centers the text within the input field */
+    /* 
+        Centers any text typed into the input field horizontally.
+        This means the user's input starts in the middle of the field.
+      */
     font-size: 1.3rem;
-    /* Sets a slightly larger font size */
+    /* 
+        Sets the font size to 1.3 'rem' units.
+        1 'rem' is typically the root font size (often 16px), so 1.3rem is slightly larger than normal text.
+      */
     margin: 12px;
-    /* Adds margin around the input field */
+    /* 
+        Adds 12 pixels of margin on all sides of the element.
+        Margin is the space outside the element's border.
+      */
     border: none;
-    /* Removes the default border */
+    /* 
+        Removes any default border from the input field.
+        This provides a cleaner, more modern look.
+      */
     border-bottom: 3px solid #8b00d2;
-    /* Adds a purple bottom border for styling */
+    /* 
+        Adds a bottom border of 3 pixels in thickness.
+        The color used here is "#8b00d2," a shade of purple.
+        This provides a visual underline style for the input.
+      */
     transition: border-bottom 0.3s ease;
-    /* Smoothly transitions changes to the bottom border */
+    /* 
+        Applies a 0.3-second transition to changes in the border-bottom property.
+        The "ease" timing function makes the transition start and end smoothly.
+      */
 }
 
+/* 
+    The closing curly brace '}' ends the block of CSS declarations for the ".palindrome-input" class.
+  */
+
+/* SECTION: PALINDROME INPUT FOCUS STATE */
 .palindrome-input:focus {
+    /* 
+    The selector ".palindrome-input:focus" styles the input when it is focused (clicked or tabbed into).
+    The opening curly brace '{' starts this block of CSS declarations.
+  */
     border-bottom: 4px solid #8b00d2;
-    /* Increases the border thickness when the input is focused */
+    /* 
+        Increases the thickness of the bottom border to 4 pixels upon focus.
+        This provides visual feedback to the user, indicating the input is active.
+      */
 }
 
+/* 
+    The closing curly brace '}' ends the block of CSS declarations for ".palindrome-input:focus".
+  */
+
+/* SECTION: PALINDROME INPUT PLACEHOLDER */
 .palindrome-input::placeholder {
+    /* 
+    The selector ".palindrome-input::placeholder" targets the placeholder text of the input.
+    The opening curly brace '{' starts this block of CSS declarations for the placeholder.
+  */
     text-align: center;
-    /* Centers the placeholder text */
+    /* 
+        Centers the placeholder text within the input.
+        Matches the alignment of the actual input text.
+      */
     color: #8b00d2;
-    /* Sets the placeholder text color to purple */
+    /* 
+        Sets the color of the placeholder text to the same purple (#8b00d2).
+        Aligns with the visual theme and hints that the input relates to palindromes.
+      */
 }
 
+/* 
+    The closing curly brace '}' ends the block of CSS declarations for ".palindrome-input::placeholder".
+  */
+
+/* SECTION: USER INPUT CLASS */
 .user-input {
+    /* 
+    The selector ".user-input" targets elements intended to display user-submitted text or data.
+    The opening curly brace '{' starts this block of CSS declarations.
+  */
     font-size: 1.6rem;
-    /* Sets a larger font size for user input display */
+    /* 
+        Sets a relatively large font size (1.6 rem units) for emphasis on displayed text.
+      */
     margin-top: 12px;
-    /* Adds space above the element */
+    /* 
+        Adds 12 pixels of space above the element, providing visual separation from preceding elements.
+      */
     text-align: center;
-    /* Centers the text */
+    /* 
+        Centers the text horizontally.
+        Useful for symmetrical or highlight-focused designs.
+      */
     color: #000;
-    /* Sets the text color to black */
+    /* 
+        Sets the text color to black (#000), providing strong contrast on lighter backgrounds.
+      */
 }
 
+/* 
+    The closing curly brace '}' ends the block of CSS declarations for ".user-input".
+  */
+
+/* SECTION: RESULTS DIV CLASS */
 .results-div {
+    /* 
+    The selector ".results-div" targets a container where results or output might be displayed.
+    The opening curly brace '{' begins this block of CSS declarations.
+  */
     overflow-y: auto;
-    /* Allows vertical scrolling if content exceeds the height */
+    /* 
+        Enables a vertical scrollbar if the content exceeds the element's height constraints.
+        Helps ensure results remain visible without shifting the page layout.
+      */
     word-wrap: break-word;
-    /* Breaks words to prevent overflow */
+    /* 
+        Allows words to break onto a new line if they exceed the container width.
+        Prevents long words or strings from overflowing outside the container.
+      */
     min-height: 60px;
-    /* Ensures a minimum height of 60px */
+    /* 
+        Ensures the container is at least 60 pixels tall.
+        Prevents the container from collapsing if there's little or no content.
+      */
     color: #333;
-    /* Sets a dark text color */
+    /* 
+        Sets the text color to a dark gray.
+        Provides a good reading contrast while being slightly softer than pure black.
+      */
     font-weight: bold;
-    /* Makes the text bold */
+    /* 
+        Makes the text bold, helping important information or results stand out visually.
+      */
 }
 
+/* 
+    The closing curly brace '}' ends the block of CSS declarations for ".results-div".
+  */
+
+/* SECTION: HIDDEN CLASS */
 .hidden {
+    /* 
+    The selector ".hidden" typically toggles invisibility or non-display state for elements.
+    The opening curly brace '{' starts this block of CSS declarations.
+  */
     display: none;
-    /* Hides elements by removing them from the layout */
+    /* 
+        Fully hides the element, removing it from the layout flow.
+        The element is still in the DOM, just not visible or taking up space.
+      */
 }
 
+/* 
+    The closing curly brace '}' ends the block of CSS declarations for ".hidden".
+  */
+
+/* SECTION: PALINDROME DEFINITION DIV */
 .palindrome-definition-div {
+    /* 
+    The selector ".palindrome-definition-div" targets a container that might explain or define palindromes.
+    The opening curly brace '{' starts this block of CSS declarations.
+  */
     width: min(100vw, 500px);
-    /* Sets the width to the smaller of 100% of the viewport or 500px */
+    /* 
+        Sets the width to the smaller of two values: 100% of the viewport width or 500px.
+        Helps maintain responsive design, especially on smaller devices.
+      */
     font-size: 1.4rem;
-    /* Sets a medium font size */
+    /* 
+        Sets a moderate font size for the definition text, striking a balance between readability and layout constraints.
+      */
     min-height: 160px;
-    /* Ensures a minimum height of 160px */
+    /* 
+        Ensures a vertical space of at least 160 pixels,
+        preventing the container from collapsing if the content is short.
+      */
     background-color: #006400;
-    /* Sets a green background color */
+    /* 
+        Applies a dark green background color (#006400).
+        Could symbolize growth or nature, or simply ensure contrast for text within.
+      */
     margin-top: 25px;
-    /* Adds space above the div */
+    /* 
+        Adds 25 pixels of space above this div,
+        visually separating it from preceding elements (like input fields or titles).
+      */
     padding: 25px;
-    /* Adds internal spacing */
+    /* 
+        Provides 25 pixels of space inside the element on all sides,
+        giving content room to breathe away from the container’s edges.
+      */
     border-radius: 25px;
-    /* Rounds the corners of the div */
+    /* 
+        Rounds the corners of the container by 25 pixels
+        for a softer, more modern appearance.
+      */
     display: flex;
-    /* Enables flexbox layout */
+    /* 
+        Declares this container as a flex container,
+        offering advanced alignment and positional properties for child elements.
+      */
     align-items: center;
-    /* Vertically centers child elements */
+    /* 
+        Vertically centers items within this container in a flex context.
+        Useful when combining text and images or icons.
+      */
     justify-content: center;
-    /* Horizontally centers child elements */
+    /* 
+        Centers items horizontally within this container in a flex context.
+        Ensures a balanced, centered layout.
+      */
 }
 
+/* 
+    The closing curly brace '}' ends the block of CSS declarations for ".palindrome-definition-div".
+  */
+
+/* SECTION: PALINDROME DEFINITION CLASS */
 .palindrome-definition {
+    /* 
+    The selector ".palindrome-definition" targets the actual text that provides a definition or explanation.
+    The opening curly brace '{' starts this set of rules.
+  */
     vertical-align: middle;
-    /* Aligns the text vertically to the middle */
+    /* 
+        Aligns the inline or table-cell content vertically to the middle of its line or cell.
+        Helps maintain a visually balanced layout.
+      */
     text-align: center;
-    /* Centers the text horizontally */
+    /* 
+        Centers the text horizontally,
+        making the definition or explanation more cohesive within the container.
+      */
     color: #f4f4f4;
-    /* Sets the text color to a light gray */
+    /* 
+        Sets the text color to a very light gray (#f4f4f4),
+        which contrasts well against the dark green background for readability.
+      */
 }
+
+/* 
+    The closing curly brace '}' ends the block of CSS declarations for ".palindrome-definition".
+  */

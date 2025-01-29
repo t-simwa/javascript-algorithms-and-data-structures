@@ -1,66 +1,183 @@
 <!DOCTYPE html>
+<!-- 
+  Declaration of the document type as HTML5. 
+  This tells the browser that the document adheres to the HTML5 specification, 
+  ensuring modern rendering behavior.
+-->
+
 <html lang="en">
+<!-- 
+  This is the root element of the HTML document. The lang attribute indicates 
+  that the language of this document is English, helping browsers and 
+  assistive technologies interpret the text properly.
+-->
 
 <head>
-    <!-- Declares the document type as HTML5 and sets the language to English -->
+    <!-- 
+  The head section of the HTML document. It provides metadata and references 
+  to external resources, but does not render content directly in the browser window.
+-->
+
     <meta charset="UTF-8" />
-    <!-- Sets the character encoding to UTF-8 to support various characters -->
+    <!-- 
+      Sets the character encoding of the document to UTF-8, ensuring the webpage 
+      can display a wide range of characters from various languages properly.
+    -->
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Ensures compatibility with older versions of Internet Explorer -->
+    <!-- 
+      Instructs Internet Explorer to use the latest available engine to render this page, 
+      helping maintain consistency across different versions of IE.
+    -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Ensures proper scaling and responsiveness on mobile devices -->
+    <!-- 
+      Configures scaling and dimension for mobile devices. "width=device-width" sets 
+      the page width to the screen width of the device, and "initial-scale=1.0" ensures 
+      a 1:1 scale when the page first loads.
+    -->
 
-    <!-- Adds a favicon to the browser tab for branding -->
     <link rel="icon" type="image/png" href="https://cdn.freecodecamp.org/universal/favicons/favicon.ico" />
-    <title>Palindrome Checker</title>
-    <!-- Sets the title of the webpage to "Palindrome Checker" -->
+    <!-- 
+      Loads a favicon (icon displayed in the browser tab). type="image/png" 
+      identifies the icon format, and href points to the icon's URL.
+    -->
 
-    <!-- Links to an external CSS file for styling the page -->
+    <title>Palindrome Checker</title>
+    <!-- 
+      Defines the text that appears in the browser tab or window title bar. 
+      This title is also used by search engines and bookmarking systems to identify the page.
+    -->
+
     <link rel="stylesheet" href="styles.css" />
+    <!-- 
+      Includes an external stylesheet named "styles.css". This link tag references 
+      where the browser can find the CSS file, which holds the page's design and layout rules.
+    -->
+
 </head>
+<!-- 
+  Closing tag of the head section, ending the metadata configuration for this page.
+-->
 
 <body>
-    <main class="container">
-        <!-- Serves as the main content container, applying styles defined by the "container" class -->
+    <!-- 
+  The body contains all the visible content displayed to the user in the browser window.
+-->
 
-        <!-- Displays the freeCodeCamp logo at the top of the page -->
+    <main class="container">
+        <!-- 
+      The main tag indicates the main content area of the page. The class "container" 
+      is used by styles.css to apply layout or styling rules that organize or center content.
+    -->
+
         <img class="freecodecamp-logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg"
             alt="freeCodeCamp Logo" />
+        <!-- 
+          An image element that references the freeCodeCamp logo. class="freecodecamp-logo" 
+          helps style the image, src provides the logo URL, and alt provides text for accessibility tools.
+        -->
 
-        <!-- Page title inviting users to check for palindromes -->
         <h1 class="title">Check If Your Text Is a Palindrome!</h1>
+        <!-- 
+          An h1 heading that prominently displays the main title of the page. 
+          The class "title" can be used to apply styling, such as text size or color.
+        -->
 
         <div class="palindrome-div">
-            <!-- Container for the main palindrome input and verification logic -->
+            <!-- 
+          A div container for the palindrome input and verification logic. The class "palindrome-div" 
+          groups elements that work together, allowing targeted styling and script manipulation.
+        -->
 
-            <!-- Label associated with the text input field, provides context for users -->
             <label for="text-input">Type a word or sentence to verify if it's a palindrome:</label>
+            <!-- 
+              A label element connected to the input element via the for attribute matching its id. 
+              Improves accessibility by clarifying the purpose of the input field.
+            -->
 
-            <!-- Input field for users to enter text -->
             <input class="palindrome-input" id="text-input" value="" type="text" />
+            <!-- 
+              The input field where a user enters text to be checked for palindrome status. 
+              class="palindrome-input" is used by styles.css for custom styling. 
+              id="text-input" must match the label's for attribute.
+            -->
 
-            <!-- Button to trigger palindrome verification -->
             <button class="palindrome-btn" id="check-btn">Verify</button>
+            <!-- 
+              A button labeled "Verify" that triggers the palindrome checking process when clicked. 
+              class="palindrome-btn" allows CSS customization, and id="check-btn" uniquely identifies this button 
+              for scripts to attach event listeners or manipulate its behavior.
+            -->
 
-            <!-- Placeholder for displaying the result of the palindrome check -->
             <div class="results-div hidden" id="result"></div>
+            <!-- 
+              A div that initially remains hidden. Once the palindrome check is performed, 
+              this element can display the result. class="results-div" styles it, and "hidden" 
+              can be toggled off by JavaScript to reveal the result.
+            -->
+
         </div>
+        <!-- 
+          Closing tag for the palindrome-div container that encloses all elements 
+          related to the palindrome checking functionality.
+        -->
 
         <div class="palindrome-definition-div">
-            <!-- Section explaining the concept of a palindrome -->
+            <!-- 
+          A separate div to hold the explanation of palindromes. class="palindrome-definition-div" 
+          enables targeted styling for the instructional content.
+        -->
 
             <p class="palindrome-definition">
-                <!-- Provides a definition of what a palindrome is -->
+                <!-- 
+              A paragraph that provides the definition of a palindrome. class="palindrome-definition" 
+              can adjust its styling, such as text color, spacing, or typography.
+            -->
+
                 <span role="img" aria-label="light-bulb">&#128161;</span>
+                <!-- 
+                  A span hosting a light-bulb emoji (Unicode character &#128161;). 
+                  The role="img" indicates it should be treated as an image for assistive technologies, 
+                  and aria-label="light-bulb" provides a textual description.
+                -->
+
                 A <dfn>palindrome</dfn> is any word, phrase, or number that reads the same forward and backward when
                 spaces, punctuation, and capitalization are disregarded.
-            </p>
-        </div>
-    </main>
-    <!-- Main content area ends -->
+                <!-- 
+                  Defines what a palindrome is. The <dfn> tag is used for the term being defined. 
+                  The text clarifies that certain factors like spaces and punctuation are ignored 
+                  in determining whether text is a palindrome.
+                -->
 
-    <!-- Links the JavaScript file that handles functionality -->
+            </p>
+            <!-- 
+              Closing tag of the paragraph containing the palindrome definition. 
+            -->
+
+        </div>
+        <!-- 
+          Closing tag for the palindrome-definition-div that groups the definition content. 
+        -->
+
+    </main>
+    <!-- 
+      Closing tag of the main element, which contains the primary features 
+      of the page (input form, verification logic, and definition).
+    -->
+
     <script src="script.js"></script>
+    <!-- 
+      Loading an external JavaScript file named "script.js". This file likely contains 
+      the palindrome-checking logic and DOM manipulation for the "Verify" button and result div.
+    -->
+
 </body>
+<!-- 
+  Closes the body section that contains all visible elements and the script references. 
+-->
 
 </html>
+<!-- 
+  End of the entire HTML document, signifying no more content will be interpreted by the browser. 
+-->
