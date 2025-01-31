@@ -1,82 +1,286 @@
 <!DOCTYPE html>
+<!-- 
+  Declaration of the document type as HTML5. 
+  This tells the browser that the document follows the modern HTML5 standard,
+  ensuring consistent rendering across modern browsers.
+-->
+
 <html lang="en">
-<!-- Declares the document type and sets the language to English -->
+<!-- 
+  The root element of the HTML document. The lang attribute indicates 
+  the language of this page is English, aiding screen readers and
+  other accessibility tools.
+-->
 
 <head>
+  <!-- 
+    The head section contains metadata and references external resources. 
+    It doesn't directly produce visible content on the page.
+  -->
+
   <meta charset="UTF-8" />
-  <!-- Specifies the character encoding as UTF-8 -->
+  <!-- 
+    Sets the character encoding of the document to UTF-8, enabling the display 
+    of a wide range of characters from various languages.
+  -->
+
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Ensures compatibility with Internet Explorer -->
+  <!-- 
+    Tells Internet Explorer to use the most up-to-date engine available, which 
+    helps maintain consistent rendering behavior in older versions of IE.
+  -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Makes the site responsive to different screen sizes -->
+  <!-- 
+    Ensures the page is mobile-friendly by setting the viewport to match the 
+    device's width, and starting the scale at a 1:1 ratio.
+  -->
+
   <title>Learn localStorage by Building a Todo App</title>
-  <!-- Sets the title of the webpage -->
+  <!-- 
+    Defines the text shown in the browser tab or window title bar, and is also 
+    what many search engines use as the page title.
+  -->
+
   <link rel="stylesheet" href="styles.css" />
-  <!-- Links an external CSS file for styling -->
+  <!-- 
+    Links an external CSS file "styles.css" for styling this page, separating 
+    design from structure and functionality.
+  -->
+
 </head>
+<!-- 
+  End of the head section. 
+-->
 
 <body>
+  <!-- 
+    The body element holds all the visible content on the webpage, 
+    including headings, buttons, forms, and scripts.
+  -->
+
   <main>
+    <!-- 
+      The main element represents the main content of the page, 
+      typically where the core function of this document is presented.
+    -->
+
     <h1>Todo App</h1>
-    <!-- Main heading for the application -->
+    <!-- 
+      A top-level heading for the page, describing the application's purpose.
+    -->
+
     <div class="todo-app">
-      <!-- Wrapper for the entire todo app -->
+      <!-- 
+        A wrapper div with a class "todo-app" to group the entire
+        functionality and styling of the todo application.
+      -->
+
       <button id="open-task-form-btn" class="btn large-btn">
         Add New Task
       </button>
-      <!-- Button to open the task form -->
+      <!-- 
+        A button that opens the task creation form, allowing users 
+        to add new tasks to the list.
+      -->
+
       <form class="task-form hidden" id="task-form">
-        <!-- Task form starts here; initially hidden -->
+        <!-- 
+          A form to capture user input for new tasks, initially hidden. 
+          The id "task-form" will be used for JavaScript manipulation.
+        -->
+
         <div class="task-form-header">
+          <!-- 
+            This div wraps header elements of the task form, 
+            such as the close button or form title.
+          -->
+
           <button id="close-task-form-btn" class="close-task-form-btn" type="button" aria-label="close">
-            <!-- Close button for the task form with an accessible label -->
+            <!-- 
+              A button to close the form without submitting, using aria-label 
+              to help screen readers identify it. The type "button" prevents 
+              it from submitting the form.
+            -->
+
             <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
-              <!-- SVG icon for the close button -->
+              <!-- 
+                An inline SVG icon styled as a close button. The viewBox ensures 
+                the icon scales properly, and width/height define its size.
+              -->
+
               <path fill="#F44336" d="M21.5 4.5H26.501V43.5H21.5z" transform="rotate(45.001 24 24)" />
+              <!-- 
+                The first part of the icon, forming half of the close "X" shape. 
+                The transform attribute rotates it for the diagonal line.
+              -->
+
               <path fill="#F44336" d="M21.5 4.5H26.5V43.501H21.5z" transform="rotate(135.008 24 24)" />
+              <!-- 
+                The second path completes the diagonal cross, creating the close icon. 
+                It's also rotated to properly intersect with the first line.
+              -->
             </svg>
+            <!-- 
+              Closing tag for the SVG element. 
+            -->
           </button>
+          <!-- 
+            Closing tag for the close button. 
+          -->
         </div>
+        <!-- 
+          Closes the task form header section. 
+        -->
+
         <div class="task-form-body">
-          <!-- Form body containing input fields for task details -->
+          <!-- 
+            A container for the form controls: inputs and labels 
+            for gathering user task data.
+          -->
+
           <label class="task-form-label" for="title-input">Title</label>
+          <!-- 
+            Provides a caption for the title input field and ensures 
+            accessibility by linking this label to the input via the for attribute.
+          -->
+
           <input required type="text" class="form-control" id="title-input" value="" />
-          <!-- Input for the task title -->
+          <!-- 
+            The text input where users enter the title of their task. 
+            "required" ensures the form isn't submitted empty.
+          -->
+
           <label class="task-form-label" for="date-input">Date</label>
+          <!-- 
+            This label describes the date input field for screen readers 
+            and user clarity.
+          -->
+
           <input type="date" class="form-control" id="date-input" value="" />
-          <!-- Input for the task date -->
+          <!-- 
+            A date input for specifying due dates or any relevant date 
+            associated with the task.
+          -->
+
           <label class="task-form-label" for="description-input">Description</label>
+          <!-- 
+            The label for the textarea, describing what users should input 
+            in that field.
+          -->
+
           <textarea class="form-control" id="description-input" cols="30" rows="5"></textarea>
-          <!-- Textarea for the task description -->
+          <!-- 
+            A multiline text area for detailed task descriptions. 
+            cols and rows define its default size.
+          -->
         </div>
+        <!-- 
+          End of the form body for user inputs. 
+        -->
+
         <div class="task-form-footer">
-          <!-- Footer of the form containing the submit button -->
+          <!-- 
+            A container for the form's footer elements, commonly holding
+            submit or cancel buttons.
+          -->
+
           <button id="add-or-update-task-btn" class="btn large-btn" type="submit">
             Add Task
           </button>
+          <!-- 
+            The primary button to submit the form, triggering the addition 
+            or update of a task in the todo list.
+          -->
         </div>
+        <!-- 
+          Closes the footer container of the form. 
+        -->
       </form>
+      <!-- 
+        Closing tag for the form that creates or updates tasks. 
+      -->
+
       <dialog id="confirm-close-dialog">
-        <!-- Modal dialog to confirm discarding unsaved changes -->
+        <!-- 
+          A dialog element to confirm discarding unsaved changes 
+          when the user tries to close the form inconveniently.
+        -->
+
         <form method="dialog">
+          <!-- 
+            A form that is submitted via dialog actions, enabling the usage 
+            of built-in dialog-related methods like cancel/close.
+          -->
+
           <p class="discard-message-text">Discard unsaved changes?</p>
+          <!-- 
+            A confirmation message asking users to confirm discarding 
+            any data they typed but haven't saved.
+          -->
+
           <div class="confirm-close-dialog-btn-container">
-            <!-- Buttons to either cancel or confirm discarding changes -->
+            <!-- 
+              This container holds buttons that either cancel or confirm 
+              discarding unsaved work.
+            -->
+
             <button id="cancel-btn" class="btn">
               Cancel
             </button>
+            <!-- 
+              A button to cancel the discard operation, returning the user 
+              to the form so they can continue editing.
+            -->
+
             <button id="discard-btn" class="btn">
               Discard
             </button>
+            <!-- 
+              A button to proceed with discarding unsaved changes, closing 
+              the dialog without retaining the user's input.
+            -->
           </div>
+          <!-- 
+            End of the dialog button container. 
+          -->
         </form>
+        <!-- 
+          Closes the dialog's inner form. 
+        -->
       </dialog>
+      <!-- 
+        End of the confirm-close-dialog element. 
+      -->
+
       <div id="tasks-container"></div>
-      <!-- Container to display the list of tasks -->
+      <!-- 
+        A container that dynamically displays all tasks the user creates, 
+        typically populated via JavaScript.
+      -->
     </div>
+    <!-- 
+      Closes the main todo app wrapper div. 
+    -->
   </main>
+  <!-- 
+    End of the main element, which contains the core content 
+    of this application.
+  -->
+
   <script src="script.js"></script>
-  <!-- Links the JavaScript file to add interactivity -->
+  <!-- 
+    Loads external JavaScript to power interactivity, such as 
+    opening the form, adding tasks, and handling the localStorage logic.
+  -->
+
 </body>
+<!-- 
+  End of the body section, which includes all visible page elements 
+  and scripts for the application.
+-->
 
 </html>
+<!-- 
+  Closes the entire HTML document, signaling no more content. 
+-->

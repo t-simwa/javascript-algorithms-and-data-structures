@@ -1,274 +1,660 @@
+/* SECTION: ROOT CSS VARIABLES */
 :root {
+    /* 
+       The :root pseudo-class refers to the root element of the document, typically <html>.
+       It allows defining variables accessible throughout the stylesheet.
+    */
     --white: #fff;
-    /* Defines a CSS variable for white color */
+    /* 
+       Declares a CSS variable for a pure white color.
+       These variables can be used anywhere in the stylesheet with var(--white).
+    */
     --light-grey: #f5f6f7;
-    /* CSS variable for a light grey shade */
+    /* 
+       Stores a light grey shade.
+       Provides a subtle contrast against pure white backgrounds.
+    */
     --dark-grey: #0a0a23;
-    /* CSS variable for a dark grey shade */
+    /* 
+       Holds a dark grey (almost navy) color.
+       Often used for backgrounds or text for high contrast.
+    */
     --yellow: #f1be32;
-    /* CSS variable for yellow */
+    /* 
+       Declares a variable for a bright yellow hue.
+       Useful for borders or accents that need emphasis.
+    */
     --golden-yellow: #feac32;
-    /* CSS variable for a golden yellow shade */
+    /* 
+       Another warm yellow tone, slightly different from --yellow.
+       Handy for gradient effects or highlighting important elements.
+    */
+    /* 
+       The curly brace '}' ends the block of CSS variable definitions in the :root section.
+    */
 }
 
+/* SECTION: GLOBAL RESET */
 *,
 *::before,
 *::after {
+    /* 
+       Targets every element, as well as their ::before and ::after pseudo-elements.
+       This type of reset helps ensure consistent styling.
+    */
     margin: 0;
-    /* Removes default margins for all elements and pseudo-elements */
+    /* 
+       Resets all margins to 0.
+       Helps avoid default browser spacing.
+    */
     padding: 0;
-    /* Removes default padding for all elements and pseudo-elements */
+    /* 
+       Resets padding to 0, ensuring a clean slate for layout spacing.
+    */
     box-sizing: border-box;
-    /* Ensures padding and borders are included in element dimensions */
+    /* 
+       Ensures the width and height of elements include borders and padding,
+       preventing unexpected size calculations.
+    */
+    /* 
+       The curly brace '}' ends the universal selector block.
+    */
 }
 
+/* SECTION: BODY STYLES */
 body {
+    /* 
+       Targets the <body> element, setting general page-wide styles.
+    */
     background-color: var(--dark-grey);
-    /* Sets the background color of the body using a custom variable */
+    /* 
+       Applies a dark grey background.
+       Creates strong contrast for light text or white boxes.
+    */
+    /* 
+       The curly brace '}' ends the body styling block.
+    */
 }
 
+/* SECTION: MAIN ELEMENT STYLES */
 main {
+    /* 
+       Targets the <main> element, often used to wrap primary content.
+    */
     display: flex;
-    /* Enables flexbox layout */
+    /* 
+       Turns the main container into a flex container, allowing advanced alignment control.
+    */
     flex-direction: column;
-    /* Arranges children in a column */
+    /* 
+       Arranges child elements in a vertical column.
+    */
     justify-content: center;
-    /* Centers children vertically */
+    /* 
+       Vertically centers content within the container.
+    */
     align-items: center;
-    /* Centers children horizontally */
+    /* 
+       Horizontally centers child elements.
+    */
+    /* 
+       The curly brace '}' ends the styles for <main>.
+    */
 }
 
+/* SECTION: HEADING 1 STYLES */
 h1 {
+    /* 
+       Styles the top-level heading.
+    */
     color: var(--light-grey);
-    /* Sets the text color of the heading using a custom variable */
+    /* 
+       Gives the heading a light grey color for contrast against the dark background.
+    */
     margin: 20px 0 40px 0;
-    /* Adds vertical spacing: 20px top, 40px bottom */
+    /* 
+       Adds vertical spacing: 20px on top, 40px on the bottom, and 0 on the sides.
+       Helps separate the heading from other content.
+    */
+    /* 
+       The curly brace '}' ends the h1 style block.
+    */
 }
 
+/* SECTION: TODO-APP CONTAINER */
 .todo-app {
+    /* 
+       Targets an element with the "todo-app" class, which contains the main to-do interface.
+    */
     background-color: var(--white);
-    /* Sets background color to white */
+    /* 
+       Gives the container a white background,
+       contrasting nicely with the dark body background.
+    */
     width: 300px;
-    /* Sets the width of the todo app container */
+    /* 
+       Sets a fixed width of 300px for the container,
+       ensuring a compact layout.
+    */
     height: 350px;
-    /* Sets the height of the todo app container */
+    /* 
+       Fixes a height of 350px, helping maintain a consistent design.
+    */
     border: 5px solid var(--yellow);
-    /* Adds a yellow border */
+    /* 
+       Places a 5px-thick solid border around the container in bright yellow,
+       drawing attention to the to-do area.
+    */
     border-radius: 8px;
-    /* Rounds the corners */
+    /* 
+       Rounds the corners of the container slightly.
+    */
     padding: 15px;
-    /* Adds padding inside the container */
+    /* 
+       Adds 15px of inner spacing,
+       ensuring content inside isn't pressed against the edges.
+    */
     position: relative;
-    /* Positions it relative for child positioning */
+    /* 
+       Sets the element as position: relative,
+       which allows absolutely positioned child elements to be positioned within it.
+    */
     display: flex;
-    /* Enables flexbox layout */
+    /* 
+       Defines this container as a flex container,
+       enabling flexible arrangement for child elements.
+    */
     flex-direction: column;
-    /* Arranges children in a column */
+    /* 
+       Places children in a vertical stack.
+    */
     gap: 10px;
-    /* Adds spacing between children */
+    /* 
+       Leaves a 10px gap between flex items,
+       so elements don't stick together.
+    */
+    /* 
+       The curly brace '}' ends the .todo-app style block.
+    */
 }
 
+/* SECTION: BUTTON CLASS (.btn) */
 .btn {
+    /* 
+       Targets any element with the class "btn."
+       Typically used for clickable buttons throughout the interface.
+    */
     cursor: pointer;
-    /* Changes cursor to a pointer on hover */
+    /* 
+       Shows a pointer cursor on hover, indicating clickability.
+    */
     width: 100px;
-    /* Sets the button width */
+    /* 
+       Ensures a consistent 100px width for these buttons.
+    */
     margin: 10px;
-    /* Adds margin around the button */
+    /* 
+       Adds spacing outside the button for better layout flow.
+    */
     color: var(--dark-grey);
-    /* Sets text color */
+    /* 
+       Applies dark grey text color,
+       standing out against bright backgrounds.
+    */
     background-color: var(--golden-yellow);
-    /* Sets background color */
+    /* 
+       Sets the default background color to a warm golden yellow.
+    */
     background-image: linear-gradient(#fecc4c, #ffac33);
-    /* Adds gradient background */
+    /* 
+       Creates a smooth gradient from a lighter to a slightly darker shade,
+       adding depth.
+    */
     border-color: var(--golden-yellow);
-    /* Sets border color */
+    /* 
+       Matches the button border with the background color,
+       giving a cohesive appearance.
+    */
     border-width: 3px;
-    /* Sets border thickness */
+    /* 
+       Provides a thicker, more prominent border for emphasis.
+    */
+    /* 
+       The curly brace '}' ends the .btn style block.
+    */
 }
 
+/* SECTION: BUTTON HOVER STATE */
 .btn:hover {
+    /* 
+       Defines styles when the user hovers over elements with the .btn class.
+    */
     background-image: linear-gradient(#ffcc4c, #f89808);
-    /* Changes background gradient on hover */
+    /* 
+       Adjusts the gradient to a different color range on hover,
+       creating an interactive visual effect.
+    */
+    /* 
+       The curly brace '}' ends the hover state rules.
+    */
 }
 
+/* SECTION: LARGE BUTTON CLASS (.large-btn) */
 .large-btn {
+    /* 
+       A variant of the .btn class meant for emphasis or larger call-to-action.
+    */
     width: 80%;
-    /* Sets button width to 80% of the parent */
+    /* 
+       Occupies 80% of the parent container's width,
+       making the button more prominent.
+    */
     font-size: 1.2rem;
-    /* Increases font size */
+    /* 
+       Increases font size slightly for better visibility.
+    */
     align-self: center;
-    /* Aligns the button to the center horizontally */
+    /* 
+       Places the button in the center horizontally if the parent is a flex container.
+    */
     justify-self: center;
-    /* Centers the button within the grid if used in a grid container */
+    /* 
+       Centers the button if used in a grid layout,
+       ensuring consistent placement in various display contexts.
+    */
+    /* 
+       The curly brace '}' ends the .large-btn rules.
+    */
 }
 
+/* SECTION: CLOSE TASK FORM BUTTON (.close-task-form-btn) */
 .close-task-form-btn {
+    /* 
+       A specialized button, often used to close or dismiss a form or popup.
+    */
     background: none;
-    /* Removes background styling */
+    /* 
+       Removes default background styling from the button.
+    */
     border: none;
-    /* Removes border styling */
+    /* 
+       Removes any border styling, giving it a text or icon-only look.
+    */
     cursor: pointer;
-    /* Changes cursor to pointer on hover */
+    /* 
+       Displays a pointer cursor, indicating it's clickable.
+    */
+    /* 
+       The curly brace '}' ends the .close-task-form-btn style block.
+    */
 }
 
+/* SECTION: CLOSE ICON CLASS (.close-icon) */
 .close-icon {
+    /* 
+       May be an image or SVG used as a close icon.
+    */
     width: 20px;
-    /* Sets the width of the close icon */
+    /* 
+       Fixes the icon's width to 20px for consistency.
+    */
     height: 20px;
-    /* Sets the height of the close icon */
+    /* 
+       Sets the icon's height to 20px,
+       matching its width for a square aspect ratio.
+    */
+    /* 
+       The curly brace '}' ends the .close-icon style block.
+    */
 }
 
+/* SECTION: TASK-FORM CLASS */
 .task-form {
+    /* 
+       A container for creating or editing tasks.
+       Positioned absolutely within the .todo-app container.
+    */
     display: flex;
-    /* Enables flexbox layout */
+    /* 
+       Uses flexbox for flexible arrangement of form elements.
+    */
     position: absolute;
-    /* Positions the form absolutely within its container */
+    /* 
+       Allows the form to be placed precisely at specific coordinates within its parent.
+    */
     top: 50%;
-    /* Moves the form 50% from the top */
+    /* 
+       Moves the element 50% from the top of the parent container.
+    */
     left: 50%;
-    /* Moves the form 50% from the left */
+    /* 
+       Positions the element 50% from the left edge of the parent container.
+    */
     transform: translate(-50%, -50%);
-    /* Centers the form */
+    /* 
+       Centers the container horizontally and vertically by shifting it back half of its own width and height.
+    */
     background-color: var(--white);
-    /* Sets background color to white */
+    /* 
+       Gives the form a different background, standing out from the main interface.
+    */
     border-radius: 5px;
-    /* Rounds the corners */
+    /* 
+       Slightly rounds the edges of the form container.
+    */
     padding: 15px;
-    /* Adds padding inside the form */
+    /* 
+       Provides inner space for the form elements to breathe.
+    */
     width: 300px;
-    /* Sets the width of the form */
+    /* 
+       Constrains the form’s width to 300px.
+    */
     height: 350px;
-    /* Sets the height of the form */
+    /* 
+       Sets the form’s height, ensuring a vertical layout that fits the container.
+    */
     flex-direction: column;
-    /* Arranges children in a column */
+    /* 
+       Stacks elements in a column layout,
+       making it natural for label-input structures.
+    */
     justify-content: space-between;
-    /* Adds space between children */
+    /* 
+       Distributes extra space between items evenly,
+       ensuring a balanced layout of form controls.
+    */
     overflow: auto;
-    /* Enables scrolling for overflowing content */
+    /* 
+       Allows the form to scroll if its contents exceed the set height.
+    */
+    /* 
+       The curly brace '}' ends the .task-form style block.
+    */
 }
 
+/* SECTION: TASK-FORM-HEADER */
 .task-form-header {
+    /* 
+       Usually placed at the top of the form,
+       which can contain a title or close button.
+    */
     display: flex;
-    /* Enables flexbox layout */
+    /* 
+       Arranges its children (like a close icon) horizontally.
+    */
     justify-content: flex-end;
-    /* Aligns children to the right */
+    /* 
+       Aligns the header items (e.g., close button) to the right side.
+    */
+    /* 
+       The curly brace '}' ends the .task-form-header rules.
+    */
 }
 
+/* SECTION: TASK-FORM-BODY */
 .task-form-body {
+    /* 
+       The main area of the form, typically holding labels and inputs.
+    */
     display: flex;
-    /* Enables flexbox layout */
+    /* 
+       Uses flexbox to manage label-input pairs neatly.
+    */
     flex-direction: column;
-    /* Arranges children in a column */
+    /* 
+       Stacks label-input elements vertically.
+    */
     justify-content: space-around;
-    /* Adds space around children */
+    /* 
+       Spaces them evenly from top to bottom.
+    */
+    /* 
+       The curly brace '}' ends the .task-form-body style rules.
+    */
 }
 
+/* SECTION: TASK-FORM-FOOTER */
 .task-form-footer {
+    /* 
+       The bottom section of the form,
+       potentially containing action buttons (e.g., Save, Cancel).
+    */
     display: flex;
-    /* Enables flexbox layout */
+    /* 
+       Uses flexbox for horizontal arrangement of footer elements.
+    */
     justify-content: center;
-    /* Centers children horizontally */
+    /* 
+       Centers any child elements horizontally (e.g., a save button).
+    */
+    /* 
+       The curly brace '}' ends the .task-form-footer style block.
+    */
 }
 
+/* SECTION: LABEL AND INPUT SELECTORS */
 .task-form-label,
 #title-input,
 #date-input,
 #description-input {
+    /* 
+       Catches both specific IDs and the .task-form-label class.
+       Grouped style ensures consistency for form labels and inputs.
+    */
     display: block;
-    /* Displays each element as a block */
+    /* 
+       Displays each element as a separate block,
+       positioning them on their own lines.
+    */
 }
 
 .task-form-label {
+    /* 
+       Styles specifically for labels within the task form.
+    */
     margin-bottom: 5px;
-    /* Adds spacing below the label */
+    /* 
+       Adds spacing below the label,
+       separating it from its associated input.
+    */
     font-size: 1.3rem;
-    /* Sets font size */
+    /* 
+       Sets a comfortable font size for reading labels.
+    */
     font-weight: bold;
-    /* Makes the text bold */
+    /* 
+       Emphasizes the text to signify a label's importance.
+    */
 }
 
 #title-input,
 #date-input,
 #description-input {
+    /* 
+       Applies rules to these specific input elements by ID.
+    */
     width: 100%;
-    /* Sets the width to 100% of the parent */
+    /* 
+       Spans the entire form's width,
+       simplifying the layout.
+    */
     margin-bottom: 10px;
-    /* Adds spacing below the input */
+    /* 
+       Adds space below each input field
+       for visual clarity and separation.
+    */
     padding: 2px;
-    /* Adds padding inside the input */
+    /* 
+       Provides minimal padding inside the input for readability.
+    */
+    /* 
+       The curly brace '}' ends rules for the inputs.
+    */
 }
 
+/* SECTION: CONFIRM CLOSE DIALOG (#confirm-close-dialog) */
 #confirm-close-dialog {
+    /* 
+       A container for a confirmation/prompt when closing the form without saving.
+    */
     padding: 10px;
-    /* Adds padding inside the dialog */
+    /* 
+       Internal padding for spacing text away from edges.
+    */
     margin: 10px auto;
-    /* Centers the dialog and adds vertical margin */
+    /* 
+       Centers the dialog horizontally and adds vertical spacing.
+    */
     border-radius: 15px;
-    /* Rounds the corners */
+    /* 
+       Curves the corners to align with a more modern UI approach.
+    */
+    /* 
+       The curly brace '}' ends the #confirm-close-dialog style block.
+    */
 }
 
+/* SECTION: CONFIRM CLOSE DIALOG BUTTON CONTAINER */
 .confirm-close-dialog-btn-container {
+    /* 
+       Houses the buttons within the close confirmation dialog.
+    */
     display: flex;
-    /* Enables flexbox layout */
+    /* 
+       Allows for horizontal alignment of the buttons.
+    */
     justify-content: center;
-    /* Centers children horizontally */
+    /* 
+       Centers the buttons horizontally,
+       making the dialog appear balanced.
+    */
     margin-top: 10px;
-    /* Adds spacing above the container */
+    /* 
+       Adds extra space above the button container,
+       separating it from the dialog message.
+    */
+    /* 
+       The curly brace '}' ends the .confirm-close-dialog-btn-container style block.
+    */
 }
 
+/* SECTION: DISCARD MESSAGE TEXT */
 .discard-message-text {
+    /* 
+       Possibly used to alert the user about discarding changes.
+    */
     font-weight: bold;
-    /* Makes the text bold */
+    /* 
+       Emphasizes the text,
+       ensuring the message stands out visually.
+    */
     font-size: 1.5rem;
-    /* Sets font size */
+    /* 
+       Sets a larger font size to catch user attention.
+    */
+    /* 
+       The curly brace '}' ends the .discard-message-text style block.
+    */
 }
 
+/* SECTION: TASKS CONTAINER (#tasks-container) */
 #tasks-container {
+    /* 
+       The main container holding all tasks.
+    */
     height: 100%;
-    /* Sets the height to fill the parent */
+    /* 
+       Takes up the entire height available within its parent,
+       which is .todo-app by default.
+    */
     overflow-y: auto;
-    /* Enables vertical scrolling for overflowing content */
+    /* 
+       Allows vertical scrolling if tasks exceed the container height.
+    */
+    /* 
+       The curly brace '}' ends the #tasks-container style rules.
+    */
 }
 
+/* SECTION: TASK CLASS */
 .task {
+    /* 
+       Each individual task entry in the list.
+    */
     margin: 5px 0;
-    /* Adds vertical spacing between tasks */
+    /* 
+       Adds vertical spacing between tasks,
+       preventing them from sticking together.
+    */
+    /* 
+       The curly brace '}' ends the .task style block.
+    */
 }
 
+/* SECTION: HIDDEN CLASS */
 .hidden {
+    /* 
+       A utility class for toggling visibility of elements without removing them from the DOM.
+    */
     display: none;
-    /* Hides the element */
+    /* 
+       Prevents the element from being displayed or occupying layout space.
+    */
+    /* 
+       The curly brace '}' ends the .hidden style block.
+    */
 }
 
+/* SECTION: MEDIA QUERY AT 576px */
 @media (min-width: 576px) {
 
-    /* Styles applied for screens larger than 576px */
+    /* 
+       Applies these rules only when the viewport width is at least 576px,
+       often for tablet-sized screens or larger.
+    */
     .todo-app,
     .task-form {
         width: 400px;
-        /* Increases width */
+        /* 
+           Increases the width from 300px to 400px for more screen real estate.
+        */
         height: 450px;
-        /* Increases height */
+        /* 
+           Expands the height as well, providing extra vertical space on bigger screens.
+        */
     }
 
     .task-form-label {
         font-size: 1.5rem;
-        /* Increases font size */
+        /* 
+           Further enlarges labels for better readability on bigger devices.
+        */
     }
 
     #title-input,
     #date-input {
         height: 2rem;
-        /* Increases input height */
+        /* 
+           Makes inputs taller, improving usability.
+        */
     }
 
     #title-input,
     #date-input,
     #description-input {
         padding: 5px;
-        /* Adds padding inside inputs */
+        /* 
+           Adds more padding inside the inputs,
+           giving them a comfortable click/tap area.
+        */
         margin-bottom: 20px;
-        /* Adds more spacing below inputs */
+        /* 
+           Additional spacing between input fields for a less crowded layout.
+        */
     }
+
+    /* 
+       The curly brace '}' ends the media query block.
+    */
 }
